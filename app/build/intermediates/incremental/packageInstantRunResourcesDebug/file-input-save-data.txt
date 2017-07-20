@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Jul 21 00:00:39 IST 2017
+#Fri Jul 21 02:50:01 IST 2017
 210.set=ANDROID_RESOURCE
 282.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-mdpi-v4\\ic_launcher.png
 14.set=ANDROID_RESOURCE
@@ -72,6 +72,7 @@
 17.set=ANDROID_RESOURCE
 73.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 229.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\switch_thumb_material_dark.xml
+302.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 225.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 204.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png
 127.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-hdpi-v4\\ic_launcher.png
@@ -288,7 +289,7 @@
 201.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 70.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\anim-v21\\design_bottom_sheet_slide_in.xml
 124.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
-299.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_seekbar_tick_mark_material.xml
+299.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\custom_generatematchlist.xml
 222.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml
 145.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_ic_search_api_material.xml
 253.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -302,6 +303,7 @@
 282.set=ANDROID_RESOURCE
 86.set=ANDROID_RESOURCE
 49.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
+302.set=ANDROID_RESOURCE
 243.set=ANDROID_RESOURCE
 184.set=ANDROID_RESOURCE
 24.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -365,7 +367,7 @@
 202.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 71.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\common_plus_signin_btn_icon_dark_normal.9.png
 125.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
-300.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\common_full_open_on_phone.png
+300.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_seekbar_tick_mark_material.xml
 223.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\profilelogin.xml
 146.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_pressed.9.png
 254.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -445,7 +447,7 @@
 203.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 72.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_screen_toolbar.xml
 126.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
-301.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-xxhdpi-v4\\ic_launcher.png
+301.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\common_full_open_on_phone.png
 224.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\anim\\abc_popup_enter.xml
 255.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 178.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -526,6 +528,7 @@
 204.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 73.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\common_google_signin_btn_icon_light.xml
 127.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
+302.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-xxhdpi-v4\\ic_launcher.png
 225.file=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png
 256.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 179.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -539,7 +542,7 @@
 181.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 121.set=ANDROID_RESOURCE
 227.set=ANDROID_RESOURCE
-count=302
+count=303
 273.set=ANDROID_RESOURCE
 27.base=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\resources-debug.ap_
 77.set=ANDROID_RESOURCE
