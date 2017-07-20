@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Harsh Goel\.android\build-cache\228d8141b2354f6d5867c2861193eb809367291f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="05d2e01f33fb2097b51fce3f938dc37a75fe2d6b">
+        <dex dex="C:\Github\NUSSPORTSMATCH\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f70f913601ec989d87434adf085e31aa90bcf8f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Github\NUSSPORTSMATCH\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2cab9ed1ea3afb3d1201c4f3f001c7b94245cb0a">
+        <dex dex="C:\Github\NUSSPORTSMATCH\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_50976d40863d9d5e4b8b9f690e23cce028e3c78a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Github\NUSSPORTSMATCH\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Github\NUSSPORTSMATCH\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_e52cf13f3fe99943bcb0959801561171cddb81e5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Harsh Goel\.android\build-cache\b7444e3c693b5bffe82dbc49ccbdb5fd96ab0e01\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f06a0705d7b8b9d18b00d056fe0e07bec75514e6">
+        <dex dex="C:\Github\NUSSPORTSMATCH\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3efebcfa1725c2066f217e0855f2ddaaa92dbcd8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Harsh Goel\.android\build-cache\b172502ef59f1f2ab38fd08ae710430566ec7036\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="36e2b438f9b0d68fb2482c8f389e249e32840cff">
+        <dex dex="C:\Github\NUSSPORTSMATCH\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b2ccf82726bc597d61b50903e0503970496cfab3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Harsh Goel\.android\build-cache\904900cfb2b21de52786d16b8c5a3cf548467ecb\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e719de687ac45141de3dd613907860a495580af0">
+        <dex dex="C:\Github\NUSSPORTSMATCH\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_81a0e3e3897b28eda60dac227369d7b31e74c00a\classes.dex" />
+    </item>
+
+</items>

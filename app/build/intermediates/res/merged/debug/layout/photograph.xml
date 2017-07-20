@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/tool_bar"
+        android:id="@+id/Photo_bar"
+        />
+    <Button
+        android:id="@+id/ClickPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="Click Photo"
+        android:layout_below="@+id/Photo_bar"
+        android:layout_toStartOf="@+id/Confirm" />
+
+    <Button
+        android:id="@+id/ChoosePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33dp"
+        android:text="Choose Photo"
+        android:layout_alignBaseline="@+id/ClickPhoto"
+        android:layout_alignBottom="@+id/ClickPhoto"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/ProfilePhoto"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_above="@+id/Confirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="99dp" />
+
+    <Button
+        android:id="@+id/Confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp"
+        android:onClick="confirmClick"
+        android:text="Confirm" />
+</RelativeLayout>

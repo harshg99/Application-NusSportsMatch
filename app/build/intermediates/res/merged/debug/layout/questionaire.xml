@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/tool_bar"
+    android:id="@+id/q_bar"/>
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBar2"
+        android:layout_below="@+id/seekBar2"
+        android:layout_marginTop="45dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBar3"
+        android:layout_below="@+id/Sports"
+        android:layout_marginTop="35dp" />
+
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Note"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="33dp"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <SeekBar
+        android:id="@+id/seekBar5"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBar4"
+        android:layout_alignTop="@+id/textView11" />
+
+    <SeekBar
+        android:id="@+id/seekBar6"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/seekBar5"
+        android:layout_alignStart="@+id/seekBar5"
+        android:layout_alignTop="@+id/textView12" />
+
+    <SeekBar
+        android:id="@+id/seekBar7"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignStart="@+id/seekBar6" />
+
+    <Button
+        android:id="@+id/Note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Note "
+        android:onClick="note"
+        android:textColor="@color/lightred"
+        android:layout_below="@+id/q_bar"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_below="@+id/textView11"
+        android:layout_marginTop="19dp"
+        android:text="Squash" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Badmninton"
+        android:layout_below="@+id/seekBar4"
+        android:layout_alignStart="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/ratingtabletennis"
+        android:text="Table Tennis" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="General"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:layout_alignBottom="@+id/Note"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/Sports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sports"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/seekBar3"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_marginTop="25dp" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Awareness"
+        android:layout_alignBottom="@+id/seekBar2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tennis"
+        android:layout_below="@+id/textView12"
+        android:layout_marginTop="19dp"
+        android:layout_alignStart="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fitness"
+        android:layout_alignTop="@+id/seekBar3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="31dp" />
+
+
+    <Button
+        android:id="@+id/Set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/sky_blue"
+        android:text="Set"
+        android:onClick="Set"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/awarerating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/5.00"
+        android:layout_above="@+id/textView4"
+        android:layout_alignEnd="@+id/seekBar2"
+        android:layout_marginEnd="21dp" />
+
+    <TextView
+        android:id="@+id/ratingtabletennis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/5.00"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/Sports"
+        android:layout_alignStart="@+id/fitnessrating" />
+
+    <TextView
+        android:id="@+id/fitnessrating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/5.00"
+        android:layout_above="@+id/textView6"
+        android:layout_alignStart="@+id/awarerating" />
+
+
+    <TextView
+        android:id="@+id/ratingbadminton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar5"
+        android:layout_alignStart="@+id/ratingtabletennis"
+        android:text="0/5.00" />
+    <TextView
+        android:id="@+id/ratingsquash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar6"
+        android:layout_alignStart="@+id/ratingtabletennis"
+        android:text="0/5.00" />
+    <TextView
+        android:id="@+id/ratingtennis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar7"
+        android:layout_alignStart="@+id/ratingtabletennis"
+        android:text="0/5.00" />
+</RelativeLayout>
+
