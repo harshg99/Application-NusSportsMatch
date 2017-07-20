@@ -10,6 +10,7 @@ import android.net.Uri;
 public class Player implements PlayerInterface{
     //class contains name,password ans string
     private Uri profilephoto;
+    private String gender;
     private String email;
     private String name;
     private String password;
@@ -32,7 +33,8 @@ public class Player implements PlayerInterface{
     }
     //static function tht initialises the random player data useing list interface and arraylist framework
 
-
+    public String getGender(){return gender;}
+    public void setGender(String a){gender=a;}
     public String getName(){
         return name;
     }

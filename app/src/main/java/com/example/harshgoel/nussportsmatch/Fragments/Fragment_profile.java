@@ -1,6 +1,7 @@
 package com.example.harshgoel.nussportsmatch.Fragments;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -58,6 +59,9 @@ public class Fragment_profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        View fragment_profile =inflater.inflate(R.layout.activity_profile,container,false);
         profilephoto=(ImageView)fragment_profile.findViewById(R.id.ProfilePhoto);
+        final ProgressDialog dialog=new ProgressDialog(getActivity());
+        dialog.setMessage("Retrieving...");
+        dialog.show();
         auth=FirebaseAuth.getInstance();
         profilename=(TextView)fragment_profile.findViewById(R.id.Name);
         userref= FirebaseDatabase.getInstance().getReference();
@@ -67,6 +71,7 @@ public class Fragment_profile extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot){
                 userplayer=dataSnapshot.getValue(Player.class);
                 profilename.setText(userplayer.getName());
+                dialog.cancel();
                 Log.d("UserPlayer:",userplayer.toString());
             }
 

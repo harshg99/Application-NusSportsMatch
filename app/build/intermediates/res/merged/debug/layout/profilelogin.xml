@@ -17,7 +17,7 @@
         android:id="@+id/profile_tab"
         android:layout_below="@id/profile_bar"
         app:tabGravity="center"
-        app:tabMode="fixed"
+        app:tabMode="scrollable"
         />
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"

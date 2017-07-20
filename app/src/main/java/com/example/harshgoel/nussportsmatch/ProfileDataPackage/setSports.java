@@ -1,5 +1,6 @@
 package com.example.harshgoel.nussportsmatch.ProfileDataPackage;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -58,12 +59,16 @@ public class setSports extends AppCompatActivity {
         badcomp=0;
         squashcomp=0;
         squashbox=(CheckBox)findViewById(R.id.Squash);
+        final ProgressDialog dialog=new ProgressDialog(this);
+        dialog.setMessage("Retrieving...");
+        dialog.show();
         auth=FirebaseAuth.getInstance();
         userref= FirebaseDatabase.getInstance().getReference();
         userref=userref.child("users").child(auth.getCurrentUser().getUid());
         userref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot){
+                dialog.cancel();
                 userplayer=dataSnapshot.getValue(Player.class);
                 Log.d("UserPlayer:",userplayer.toString());
                 if(userplayer.getTennis().getisAdded()){

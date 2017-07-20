@@ -39,10 +39,10 @@ public class SignIn extends AppCompatActivity {
         if (user != null) {
             // User is signed in
             Toast.makeText(getApplicationContext(), "Successfully registered", Toast.LENGTH_LONG).show();
-            com.example.harshgoel.nussportsmatch.SignIn.this.finish();
             Intent intent=new Intent()
                     .setClass(com.example.harshgoel.nussportsmatch.SignIn.this,AppLoginPage.class);
             startActivity(intent);
+            com.example.harshgoel.nussportsmatch.SignIn.this.finish();
 
 
 

@@ -17,5 +17,13 @@
     <string name="Password">Password</string>
     <string name="Name">Name</string>
     <string name="Rating">0</string>
+    <string-array name="SportsOptions">
+        <item>Tennis</item>
+        <item>Badminton</item>
+        <item>Squash</item>
+        <item>Table Tennis</item>
+        <item>Select to Sport to Matchup</item>
+    </string-array>
+
 
 </resources>

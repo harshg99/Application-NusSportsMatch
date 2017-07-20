@@ -1,5 +1,6 @@
 package com.example.harshgoel.nussportsmatch.ProfileDataPackage;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -79,7 +80,9 @@ public class Questionaire extends AppCompatActivity {
         rating_squash=(TextView)findViewById(R.id.ratingsquash) ;
         rating_badminton=(TextView)findViewById(R.id.ratingbadminton) ;
         rating_fitness=(TextView)findViewById(R.id.fitnessrating) ;
-
+        final ProgressDialog dialog=new ProgressDialog(this);
+        dialog.setMessage("Retrieving...");
+        dialog.show();
 
         awarerating=(SeekBar)findViewById(R.id.seekBar2) ;
         ttrating=(SeekBar)findViewById(R.id.seekBar4) ;
@@ -100,6 +103,7 @@ public class Questionaire extends AppCompatActivity {
         userref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot){
+                dialog.cancel();
                 userplayer=dataSnapshot.getValue(Player.class);
                 if(userplayer.getTennis().getisAdded()&&!userplayer.getTennis().isQuestionaireCompleted()){
                     tennisrating.setEnabled(true);

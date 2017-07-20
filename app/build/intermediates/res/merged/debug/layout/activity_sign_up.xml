@@ -11,16 +11,16 @@
     android:id="@+id/confirmbut"
     android:layout_width="150dp"
     android:layout_height="43dp"
-    android:layout_below="@+id/pass"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="93dp"
+    android:layout_marginTop="82dp"
     android:background="@color/darkblue"
     android:drawableTint="@color/blue"
     android:onClick="addprofile"
     android:text="Sign Up"
     android:textColor="@color/white"
     android:textSize="15sp"
-    android:textStyle="bold" />
+    android:textStyle="bold"
+    android:layout_below="@+id/confirmpass"
+    android:layout_centerHorizontal="true" />
 
 <EditText
     android:id="@+id/email"
@@ -72,8 +72,26 @@
     android:text="Or Sign In"
     android:onClick="signin"
     android:textColor="@color/blue"
+    android:background="?android:attr/selectableItemBackground"
     android:layout_below="@+id/confirmbut"
     android:layout_alignStart="@+id/confirmbut"
-    android:layout_marginTop="12dp"
-    android:background="?android:attr/selectableItemBackground"/>
+    android:layout_marginTop="12dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Male"
+        android:layout_below="@+id/confirmpass"
+        android:layout_alignStart="@+id/confirmpass" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female"
+        android:layout_alignBaseline="@+id/radioButton"
+        android:layout_alignBottom="@+id/radioButton"
+        android:layout_alignEnd="@+id/confirmpass" />
 </RelativeLayout>

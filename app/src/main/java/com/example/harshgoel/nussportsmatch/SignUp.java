@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 
@@ -44,6 +45,8 @@ public class SignUp extends AppCompatActivity {
     private DatabaseReference data;
     private FirebaseAuth.AuthStateListener mAuthListener;
     public ProgressDialog progressDialog;
+    public RadioButton malebut;
+    public RadioButton femalebut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +57,10 @@ public class SignUp extends AppCompatActivity {
         if (user != null) {
             // User is signed in
             Toast.makeText(getApplicationContext(), "Already Signed In", Toast.LENGTH_LONG).show();
-            com.example.harshgoel.nussportsmatch.SignUp.this.finish();
             Intent intent=new Intent()
                     .setClass(com.example.harshgoel.nussportsmatch.SignUp.this,AppLoginPage.class);
             startActivity(intent);
+            com.example.harshgoel.nussportsmatch.SignUp.this.finish();
 
         } else {
             // User is signed out
@@ -69,6 +72,30 @@ public class SignUp extends AppCompatActivity {
         // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         initialiseUI();
+        malebut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(femalebut.isChecked()){
+                    femalebut.setChecked(false);
+                    ((RadioButton)v).setChecked(true);
+                }
+                else{
+                    ((RadioButton)v).setChecked(true);
+                }
+            }
+        });
+        femalebut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(malebut.isChecked()){
+                    malebut.setChecked(false);
+                    ((RadioButton)v).setChecked(true);
+                }
+                else{
+                    ((RadioButton)v).setChecked(true);
+                }
+            }
+        });
 
     }
 
@@ -78,7 +105,8 @@ public class SignUp extends AppCompatActivity {
         pass = (EditText) findViewById(R.id.pass);
         confirmpass = (EditText) findViewById(R.id.confirmpass);
         confirmbut = (Button) findViewById(R.id.confirmbut);
-        auth = FirebaseAuth.getInstance();
+        malebut= (RadioButton) findViewById(R.id.radioButton);
+        femalebut= (RadioButton) findViewById(R.id.radioButton2);
         icon = (ImageView) findViewById(R.id.imageView);
         progressDialog=new ProgressDialog(SignUp.this);
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -119,6 +147,11 @@ public class SignUp extends AppCompatActivity {
             Toast.makeText(this,"Please confirm password",Toast.LENGTH_LONG).show();
             return;
         }
+        if(!malebut.isChecked()&&!femalebut.isChecked()){
+            Toast.makeText(this,"Please select gender",Toast.LENGTH_LONG).show();
+            return;
+        }
+
 
             boolean checkpass = analyse_password(password, confirmpassword);
         //Dialog box is shown
@@ -132,6 +165,12 @@ public class SignUp extends AppCompatActivity {
                             newplayer.setEmail(email.getText().toString().trim());
                             newplayer.setpassword(pass.getText().toString().trim());
                             newplayer.setName("Default_Name");
+                            if(malebut.isChecked()) {
+                                newplayer.setGender("Male");
+                            }
+                            else {
+                                newplayer.setGender("Female");
+                            }
                             progressDialog.setMessage("Signing Up");
                             progressDialog.show();
                             auth.createUserWithEmailAndPassword(newplayer.getEmail(), newplayer.getpassword())

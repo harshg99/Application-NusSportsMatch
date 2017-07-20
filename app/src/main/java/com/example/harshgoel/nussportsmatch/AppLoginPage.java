@@ -84,6 +84,7 @@ public class AppLoginPage extends AppCompatActivity {
         tab_layout=(TabLayout)findViewById(R.id.profile_tab);
         pager=(ViewPager)findViewById(R.id.Viewpager);
         pager.setAdapter(new ProfileTabLayoutAdapter(getSupportFragmentManager(),AppLoginPage.this));
+        pager.setCurrentItem(2);
         tab_layout.setupWithViewPager(pager);
     }
 }

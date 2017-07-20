@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.example.harshgoel.nussportsmatch.Fragments.Fragment_calendar;
 import com.example.harshgoel.nussportsmatch.Fragments.Fragment_chats;
 import com.example.harshgoel.nussportsmatch.Fragments.Fragment_match;
+import com.example.harshgoel.nussportsmatch.Fragments.Fragment_notifications;
 import com.example.harshgoel.nussportsmatch.Fragments.Fragment_profile;
 
 /**
@@ -15,9 +16,9 @@ import com.example.harshgoel.nussportsmatch.Fragments.Fragment_profile;
  */
 
 public class ProfileTabLayoutAdapter extends FragmentPagerAdapter {
-    public String[] titles=new String[]{"Match","Chats","Profile","Calendar"};
+    public String[] titles=new String[]{"Match","Chats","Profile","Calendar","Notifications"};
     private Context context;
-    private int pagecount=4;
+    private int pagecount=5;
     public ProfileTabLayoutAdapter(FragmentManager fm,Context context) {
         super(fm);
         this.context=context;
@@ -36,6 +37,9 @@ public class ProfileTabLayoutAdapter extends FragmentPagerAdapter {
         }
         else if(position==3){
             return  new Fragment_calendar();
+        }
+        else if(position==4){
+            return new Fragment_notifications();
         }
         else
         {

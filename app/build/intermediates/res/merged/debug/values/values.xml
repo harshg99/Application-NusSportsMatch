@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="SportsOptions">
+        <item>Tennis</item>
+        <item>Badminton</item>
+        <item>Squash</item>
+        <item>Table Tennis</item>
+        <item>Select to Sport to Matchup</item>
+    </string-array>
     <attr format="reference" name="constraintSet"/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
