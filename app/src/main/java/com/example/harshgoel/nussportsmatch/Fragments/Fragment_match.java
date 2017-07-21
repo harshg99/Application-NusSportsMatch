@@ -33,7 +33,7 @@ import java.util.List;
 public class Fragment_match extends Fragment {
     private Spinner sportSpinner;
     private ArrayAdapter<CharSequence> SpinnerAdapter;
-    Player[] matchgeneratedplayers;
+    private Player[] matchgeneratedplayers;
     public TextView datetext;
     public Button generatematch;
     public TextView timetext;
@@ -85,9 +85,16 @@ public class Fragment_match extends Fragment {
         SpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sportSpinner.setAdapter(SpinnerAdapter);
         sportSpinner.setSelection(SpinnerAdapter.getPosition("Select to Sport to Matchup"));
+        generatematch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                matchgeneratedplayers=generatematches();
+            }
+        });
 
         return fragment_match;
     }
+
     private Player[] generatematches(){
         List<Player> matches=new ArrayList<Player>();
         dataref.addValueEventListener(new ValueEventListener() {
