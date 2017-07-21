@@ -23,7 +23,7 @@
             android:id="@+id/send"
             android:layout_width="46dp"
             android:layout_height="47dp"
-            android:background="@drawable/send"/>
+            android:text="Send"/>
 
     </LinearLayout>
 </RelativeLayout>

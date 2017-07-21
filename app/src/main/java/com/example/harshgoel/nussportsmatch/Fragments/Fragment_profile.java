@@ -78,6 +78,17 @@ public class Fragment_profile extends Fragment {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.d("Database Reference:","Read ERROR");
+                dialog.cancel();
+                AlertDialog.Builder SelectSports=new AlertDialog.Builder(getActivity());
+                SelectSports.setTitle("No Internet Connection")
+                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        getActivity().finish();
+                    }
+                });
+                SelectSports.create().show();
             }
         });
         addphoto=(Button)fragment_profile.findViewById(R.id.addphoto);

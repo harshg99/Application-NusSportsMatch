@@ -1,264 +1,264 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:2:1-31:12
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:3:5-51
-		INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:3:5-51
+		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:5:5-29:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Rachiket Arya\.android\build-cache\697b706b55025cb6c66c95cf92ee6b6c3db3651c\output\AndroidManifest.xml:9:5-20
-MERGED from [com.google.firebase:firebase-auth:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\2a1a9b260610d1afb58c6a94f31bf965a749e19a\output\AndroidManifest.xml:20:5-21:19
-MERGED from [com.google.firebase:firebase-auth-common:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\3b4aa5422b9a018c36ac076b1ce3aed0daaee7ba\output\AndroidManifest.xml:20:5-21:19
-MERGED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\fb55bf1f1cc85716247cbae32145aa48729abc21\output\AndroidManifest.xml:19:5-23:19
-MERGED from [com.android.support:design:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\7cdd7391427eec3b36b6afc483f6ab47df8b3afb\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\e2eaca6bd55fdeb732a884ee9554c3fefddb84af\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\8e1ffb3f5f7e8b4c0f0fcaf7e725786e3f581acc\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\2f7a1330da41b93d24b8c75d22600f01b2e423e3\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\183f14c29588359b531e529d86d8c00365fe7386\output\AndroidManifest.xml:26:5-20
-MERGED from [com.google.firebase:firebase-core:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\d6c3832c2b5f60efd5bfe4cdb30cc40cb154d49d\output\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:26:5-41:19
-MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\803a1cf3d29f3dbea2060ba2ca4ecd6985c961ff\output\AndroidManifest.xml:26:5-41:19
-MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:30:5-59:19
-MERGED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\4bb80033618df7ed082dc7aa34299f8bc47a2da7\output\AndroidManifest.xml:5:5-12:19
-MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\827a70c6cefb176c2cdd2d456d747bde563d148b\output\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\894afefab3b760083c0e8dc325386e135c600290\output\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\bea1e8ca72a77d1cc6ab33729b2abe130fe74098\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\56c5eaa829ab0cf70e28b9451ae45864c9094e26\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\e293a0f90606f5ccaf7b6f6be9f45ec83e8ad491\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\de485cc881cc9dc5431946f93b753e515a5b2c63\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\a70138ddc4af3df9cad5e1613a34534c01dc1bfe\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\303e497e3d61eee3312549412e11438958c8274c\output\AndroidManifest.xml:29:5-20
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:5:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Harsh Goel\.android\build-cache\dd1ea912feeaf359b4b087060fc46ba4e6a4dc6e\output\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-auth:9.2.1] C:\Users\Harsh Goel\.android\build-cache\66b5234d99a76eb181e85b4f97cb2c4fdecc9a71\output\AndroidManifest.xml:20:5-21:19
+MERGED from [com.google.firebase:firebase-auth-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\43e62f3a09589a3e89ce0657bbd63fda7afe2864\output\AndroidManifest.xml:20:5-21:19
+MERGED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Harsh Goel\.android\build-cache\46c3627bff41abd275d5742e9d7a5f34a1cc443e\output\AndroidManifest.xml:19:5-23:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\Harsh Goel\.android\build-cache\370a42e7d6ca7c3a003db3c70c59e14b020e8811\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Harsh Goel\.android\build-cache\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Harsh Goel\.android\build-cache\68bc75be3f56683774862665a00d3d111da1bf29\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Harsh Goel\.android\build-cache\2ba97183450360f4d03bb8e49dce0232f368862c\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Harsh Goel\.android\build-cache\226d4712170530062597f09acd52f939974484c4\output\AndroidManifest.xml:26:5-20
+MERGED from [com.google.firebase:firebase-core:9.2.1] C:\Users\Harsh Goel\.android\build-cache\95112267b464a88cb66aa4751f270e5d887bfeca\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Harsh Goel\.android\build-cache\a16b6524d82307ab4c6907772dadb9f78d61694b\output\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\8d2c8dce695ff80bf857f3725789ed9fbc55547f\output\AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b2c2fec832cd015143e8642c09b0316148028e51\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Harsh Goel\.android\build-cache\5a4335ce50b7faf98532ee43bc3482f0caf75132\output\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Harsh Goel\.android\build-cache\33730318c85742770d8b5d928d035f54a0ef67e3\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Harsh Goel\.android\build-cache\badb705784db88b67520f978bb3ed7c476264674\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Harsh Goel\.android\build-cache\5723eb05ae87b1c4ee8216badc9e8857c24960e2\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Harsh Goel\.android\build-cache\84ee104bb46e3780df6a1402098888e6d2aa980a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Harsh Goel\.android\build-cache\0358cd5838846219c9d23dcb8b0d779e7ca3998c\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Harsh Goel\.android\build-cache\29e96fb85b252166046d2254c8e315a041b1b8aa\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:8:9-41
 	android:supportsRtl
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:10:9-35
 	android:roundIcon
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:9:9-54
 	android:allowBackup
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:6:9-35
 	android:icon
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:7:9-43
 	android:theme
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.example.harshgoel.nussportsmatch.SignUp
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:12:19-41
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:12:19-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:16:27-74
 activity#com.example.harshgoel.nussportsmatch.SignIn
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:19:9-21:20
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:19:9-21:20
 	android:name
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:19:19-41
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:19:19-41
 activity#com.example.harshgoel.nussportsmatch.AppLoginPage
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:22:9-23:20
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:22:9-23:20
 	android:name
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:22:19-47
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:22:19-47
 activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.handlephoto
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:24:9-25:20
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:24:9-25:20
 	android:name
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:24:19-65
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:24:19-65
 activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditProfile
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:26:9-67
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:26:9-67
 	android:name
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:26:19-65
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:26:19-65
 activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.setSports
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:27:9-65
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:27:9-65
 	android:name
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:27:19-63
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:27:19-63
 activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.Questionaire
-ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:28:9-68
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:28:9-68
 	android:name
-		ADDED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml:28:19-66
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:28:19-66
 uses-sdk
-INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Rachiket Arya\.android\build-cache\697b706b55025cb6c66c95cf92ee6b6c3db3651c\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-auth:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\2a1a9b260610d1afb58c6a94f31bf965a749e19a\output\AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-common:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\3b4aa5422b9a018c36ac076b1ce3aed0daaee7ba\output\AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-module:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\010c1ee5be61f26f4fc174dd2cc2a9c67cc915be\output\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-storage:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\91d36aab7a5898bf7f733f8b2d53d5046bd10f7a\output\AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-storage-common:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\b1b8bd68b0679b03be4c45f90ac8ccd3f3acb7b1\output\AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-database:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\0977c0938d562f98cea2f55b52bc865b24b631ff\output\AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-database-connection:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\31d555bff39293e202fa152eca4e11e4e9269c68\output\AndroidManifest.xml:5:5-43
-MERGED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\fb55bf1f1cc85716247cbae32145aa48729abc21\output\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:design:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\7cdd7391427eec3b36b6afc483f6ab47df8b3afb\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\e2eaca6bd55fdeb732a884ee9554c3fefddb84af\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\8e1ffb3f5f7e8b4c0f0fcaf7e725786e3f581acc\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\2f7a1330da41b93d24b8c75d22600f01b2e423e3\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\5fe58e7d1a2cb01f8278b74352d6757cf1b41a52\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\183f14c29588359b531e529d86d8c00365fe7386\output\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-core:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\d6c3832c2b5f60efd5bfe4cdb30cc40cb154d49d\output\AndroidManifest.xml:4:5-42
-MERGED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\803a1cf3d29f3dbea2060ba2ca4ecd6985c961ff\output\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\4bb80033618df7ed082dc7aa34299f8bc47a2da7\output\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\827a70c6cefb176c2cdd2d456d747bde563d148b\output\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\894afefab3b760083c0e8dc325386e135c600290\output\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\bea1e8ca72a77d1cc6ab33729b2abe130fe74098\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\56c5eaa829ab0cf70e28b9451ae45864c9094e26\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\e293a0f90606f5ccaf7b6f6be9f45ec83e8ad491\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\de485cc881cc9dc5431946f93b753e515a5b2c63\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\a70138ddc4af3df9cad5e1613a34534c01dc1bfe\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\303e497e3d61eee3312549412e11438958c8274c\output\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Harsh Goel\.android\build-cache\dd1ea912feeaf359b4b087060fc46ba4e6a4dc6e\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-auth:9.2.1] C:\Users\Harsh Goel\.android\build-cache\66b5234d99a76eb181e85b4f97cb2c4fdecc9a71\output\AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\43e62f3a09589a3e89ce0657bbd63fda7afe2864\output\AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-module:9.2.1] C:\Users\Harsh Goel\.android\build-cache\2ef597e39b7d6dae85c5957e21888380cea258b7\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-storage:9.2.1] C:\Users\Harsh Goel\.android\build-cache\904900cfb2b21de52786d16b8c5a3cf548467ecb\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-storage-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b172502ef59f1f2ab38fd08ae710430566ec7036\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-database:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b7444e3c693b5bffe82dbc49ccbdb5fd96ab0e01\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-database-connection:9.2.1] C:\Users\Harsh Goel\.android\build-cache\228d8141b2354f6d5867c2861193eb809367291f\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Harsh Goel\.android\build-cache\46c3627bff41abd275d5742e9d7a5f34a1cc443e\output\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:design:25.3.1] C:\Users\Harsh Goel\.android\build-cache\370a42e7d6ca7c3a003db3c70c59e14b020e8811\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Harsh Goel\.android\build-cache\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Harsh Goel\.android\build-cache\68bc75be3f56683774862665a00d3d111da1bf29\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Harsh Goel\.android\build-cache\2ba97183450360f4d03bb8e49dce0232f368862c\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Harsh Goel\.android\build-cache\f8615611323d4a490c95b741e61da942abca8cba\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Harsh Goel\.android\build-cache\226d4712170530062597f09acd52f939974484c4\output\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-core:9.2.1] C:\Users\Harsh Goel\.android\build-cache\95112267b464a88cb66aa4751f270e5d887bfeca\output\AndroidManifest.xml:4:5-42
+MERGED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Harsh Goel\.android\build-cache\a16b6524d82307ab4c6907772dadb9f78d61694b\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\8d2c8dce695ff80bf857f3725789ed9fbc55547f\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b2c2fec832cd015143e8642c09b0316148028e51\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Harsh Goel\.android\build-cache\5a4335ce50b7faf98532ee43bc3482f0caf75132\output\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Harsh Goel\.android\build-cache\33730318c85742770d8b5d928d035f54a0ef67e3\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Harsh Goel\.android\build-cache\badb705784db88b67520f978bb3ed7c476264674\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Harsh Goel\.android\build-cache\5723eb05ae87b1c4ee8216badc9e8857c24960e2\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Harsh Goel\.android\build-cache\84ee104bb46e3780df6a1402098888e6d2aa980a\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Harsh Goel\.android\build-cache\0358cd5838846219c9d23dcb8b0d779e7ca3998c\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Harsh Goel\.android\build-cache\29e96fb85b252166046d2254c8e315a041b1b8aa\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\7cdd7391427eec3b36b6afc483f6ab47df8b3afb\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Harsh Goel\.android\build-cache\370a42e7d6ca7c3a003db3c70c59e14b020e8811\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Rachiket Arya\AndroidStudioProjects\Application-NusSportsMatch\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\fb55bf1f1cc85716247cbae32145aa48729abc21\output\AndroidManifest.xml:20:9-22:45
+ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Harsh Goel\.android\build-cache\46c3627bff41abd275d5742e9d7a5f34a1cc443e\output\AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\fb55bf1f1cc85716247cbae32145aa48729abc21\output\AndroidManifest.xml:22:19-43
+		ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Harsh Goel\.android\build-cache\46c3627bff41abd275d5742e9d7a5f34a1cc443e\output\AndroidManifest.xml:22:19-43
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\fb55bf1f1cc85716247cbae32145aa48729abc21\output\AndroidManifest.xml:21:19-78
+		ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Harsh Goel\.android\build-cache\46c3627bff41abd275d5742e9d7a5f34a1cc443e\output\AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\fb55bf1f1cc85716247cbae32145aa48729abc21\output\AndroidManifest.xml:20:19-85
+		ADDED from [com.google.android.gms:play-services-base:9.2.1] C:\Users\Harsh Goel\.android\build-cache\46c3627bff41abd275d5742e9d7a5f34a1cc443e\output\AndroidManifest.xml:20:19-85
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\7cdd7391427eec3b36b6afc483f6ab47df8b3afb\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\e2eaca6bd55fdeb732a884ee9554c3fefddb84af\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\8e1ffb3f5f7e8b4c0f0fcaf7e725786e3f581acc\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\2f7a1330da41b93d24b8c75d22600f01b2e423e3\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\5fe58e7d1a2cb01f8278b74352d6757cf1b41a52\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\183f14c29588359b531e529d86d8c00365fe7386\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\bea1e8ca72a77d1cc6ab33729b2abe130fe74098\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\56c5eaa829ab0cf70e28b9451ae45864c9094e26\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\e293a0f90606f5ccaf7b6f6be9f45ec83e8ad491\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\de485cc881cc9dc5431946f93b753e515a5b2c63\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\a70138ddc4af3df9cad5e1613a34534c01dc1bfe\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\303e497e3d61eee3312549412e11438958c8274c\output\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:25.3.1] C:\Users\Harsh Goel\.android\build-cache\370a42e7d6ca7c3a003db3c70c59e14b020e8811\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Harsh Goel\.android\build-cache\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Harsh Goel\.android\build-cache\68bc75be3f56683774862665a00d3d111da1bf29\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Harsh Goel\.android\build-cache\2ba97183450360f4d03bb8e49dce0232f368862c\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Harsh Goel\.android\build-cache\f8615611323d4a490c95b741e61da942abca8cba\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Harsh Goel\.android\build-cache\226d4712170530062597f09acd52f939974484c4\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Harsh Goel\.android\build-cache\33730318c85742770d8b5d928d035f54a0ef67e3\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Harsh Goel\.android\build-cache\badb705784db88b67520f978bb3ed7c476264674\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Harsh Goel\.android\build-cache\5723eb05ae87b1c4ee8216badc9e8857c24960e2\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Harsh Goel\.android\build-cache\84ee104bb46e3780df6a1402098888e6d2aa980a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Harsh Goel\.android\build-cache\0358cd5838846219c9d23dcb8b0d779e7ca3998c\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Harsh Goel\.android\build-cache\29e96fb85b252166046d2254c8e315a041b1b8aa\output\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\7cdd7391427eec3b36b6afc483f6ab47df8b3afb\output\AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Harsh Goel\.android\build-cache\370a42e7d6ca7c3a003db3c70c59e14b020e8811\output\AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Rachiket Arya\.android\build-cache\7cdd7391427eec3b36b6afc483f6ab47df8b3afb\output\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Harsh Goel\.android\build-cache\370a42e7d6ca7c3a003db3c70c59e14b020e8811\output\AndroidManifest.xml:26:9-47
 uses-permission#android.permission.INTERNET
-ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\803a1cf3d29f3dbea2060ba2ca4ecd6985c961ff\output\AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:21:5-67
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Harsh Goel\.android\build-cache\a16b6524d82307ab4c6907772dadb9f78d61694b\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:21:5-67
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:21:22-64
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:21:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\803a1cf3d29f3dbea2060ba2ca4ecd6985c961ff\output\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:20:5-79
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Harsh Goel\.android\build-cache\a16b6524d82307ab4c6907772dadb9f78d61694b\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:20:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:22:22-76
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:22:22-76
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\803a1cf3d29f3dbea2060ba2ca4ecd6985c961ff\output\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:22:5-68
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Harsh Goel\.android\build-cache\a16b6524d82307ab4c6907772dadb9f78d61694b\output\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:22:5-68
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:24:22-65
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:24:22-65
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:28:7-34:18
-MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\803a1cf3d29f3dbea2060ba2ca4ecd6985c961ff\output\AndroidManifest.xml:28:7-34:18
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:28:7-34:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Harsh Goel\.android\build-cache\a16b6524d82307ab4c6907772dadb9f78d61694b\output\AndroidManifest.xml:28:7-34:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:30:11-33
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:30:11-33
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:29:11-83
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:29:11-83
 intent-filter#com.google.android.gms.measurement.UPLOAD
-ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:31:9-33:25
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:31:9-33:25
 action#com.google.android.gms.measurement.UPLOAD
-ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:32:11-77
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:32:11-77
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:32:19-75
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:32:19-75
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:36:7-39:37
-MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\803a1cf3d29f3dbea2060ba2ca4ecd6985c961ff\output\AndroidManifest.xml:36:7-39:37
+ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:36:7-39:37
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] C:\Users\Harsh Goel\.android\build-cache\a16b6524d82307ab4c6907772dadb9f78d61694b\output\AndroidManifest.xml:36:7-39:37
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:38:11-33
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:38:11-33
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:39:11-35
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:39:11-35
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\7a3a680d5ab7cb003ba624d2e1dede4e328262fc\output\AndroidManifest.xml:37:11-82
+		ADDED from [com.google.firebase:firebase-analytics:9.2.1] C:\Users\Harsh Goel\.android\build-cache\b734d88bb631290f8f003f99b8ba30de07950d04\output\AndroidManifest.xml:37:11-82
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:23:5-82
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:23:5-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:23:22-79
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:23:22-79
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:25:5-26:47
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:25:5-26:47
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:26:9-44
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:26:9-44
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:25:17-71
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:25:17-71
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:28:5-79
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:28:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:28:22-76
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:28:22-76
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:32:9-41:20
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:32:9-41:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:34:13-36
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:34:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:35:13-73
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:35:13-73
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:33:13-78
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:33:13-78
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:36:13-40:29
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:36:13-40:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:37:17-81
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:37:17-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:37:25-78
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:37:25-78
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:38:17-86
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:38:17-86
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:38:25-83
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:38:25-83
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:39:17-61
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:39:17-61
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:39:27-58
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:39:27-58
 receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:45:9-47:40
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:45:9-47:40
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:47:13-37
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:46:13-86
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:46:13-86
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:51:9-57:19
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:51:9-57:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:53:13-36
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:53:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:52:13-77
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:52:13-77
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:54:13-56:29
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:54:13-56:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:54:28-51
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:54:28-51
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:55:17-80
+ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:55:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\6ecb83c1f934cd37fd3029d19f6bbc7569dab7c4\output\AndroidManifest.xml:55:25-77
+		ADDED from [com.google.firebase:firebase-iid:9.2.1] C:\Users\Harsh Goel\.android\build-cache\4791ec158d94d9cc48665d916a6eaac9f0636575\output\AndroidManifest.xml:55:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\4bb80033618df7ed082dc7aa34299f8bc47a2da7\output\AndroidManifest.xml:7:9-11:39
+ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\8d2c8dce695ff80bf857f3725789ed9fbc55547f\output\AndroidManifest.xml:7:9-11:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\4bb80033618df7ed082dc7aa34299f8bc47a2da7\output\AndroidManifest.xml:8:13-72
+		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\8d2c8dce695ff80bf857f3725789ed9fbc55547f\output\AndroidManifest.xml:8:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\4bb80033618df7ed082dc7aa34299f8bc47a2da7\output\AndroidManifest.xml:10:13-37
+		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\8d2c8dce695ff80bf857f3725789ed9fbc55547f\output\AndroidManifest.xml:10:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\4bb80033618df7ed082dc7aa34299f8bc47a2da7\output\AndroidManifest.xml:11:13-36
+		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\8d2c8dce695ff80bf857f3725789ed9fbc55547f\output\AndroidManifest.xml:11:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\4bb80033618df7ed082dc7aa34299f8bc47a2da7\output\AndroidManifest.xml:9:13-58
+		ADDED from [com.google.firebase:firebase-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\8d2c8dce695ff80bf857f3725789ed9fbc55547f\output\AndroidManifest.xml:9:13-58
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\894afefab3b760083c0e8dc325386e135c600290\output\AndroidManifest.xml:21:9-23:69
+ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Harsh Goel\.android\build-cache\5a4335ce50b7faf98532ee43bc3482f0caf75132\output\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\894afefab3b760083c0e8dc325386e135c600290\output\AndroidManifest.xml:23:13-66
+		ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Harsh Goel\.android\build-cache\5a4335ce50b7faf98532ee43bc3482f0caf75132\output\AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Rachiket Arya\.android\build-cache\894afefab3b760083c0e8dc325386e135c600290\output\AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-basement:9.2.1] C:\Users\Harsh Goel\.android\build-cache\5a4335ce50b7faf98532ee43bc3482f0caf75132\output\AndroidManifest.xml:22:13-58

@@ -21,4 +21,6 @@
 <item name="lightred" type="color">#AFFE2222</item>
 <item name="lightyellow" type="color">#e9e4f58e</item>
     <color name="skyred">#ffd2d4</color>
+    <color name="verylightyellow">#f9fcd3</color>
+    <color name="niceblue">#b2f5f0</color>
 </resources>

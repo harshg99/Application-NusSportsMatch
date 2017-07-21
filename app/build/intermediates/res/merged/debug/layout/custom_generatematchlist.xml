@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/sky_blue">
+    android:background="@color/niceblue">
 
     <TextView
         android:id="@+id/Name"
@@ -10,6 +10,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="Name"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:textSize="30sp"/>
 
     <TextView
@@ -46,18 +48,20 @@
         android:layout_height="wrap_content"
         android:text="Net Skill"
         android:textSize="17sp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="14dp"
-        android:layout_below="@+id/Skill"
-        android:layout_toEndOf="@+id/Aware" />
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/Fitness"
+        android:layout_toEndOf="@+id/Aware"
+        android:layout_marginStart="16dp" />
 
     <Button
         android:id="@+id/Request"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Send Request"
-        android:layout_above="@+id/Aware"
-        android:layout_alignParentEnd="true" />
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp" />
 
 
 </RelativeLayout>

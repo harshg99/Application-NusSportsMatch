@@ -4,14 +4,6 @@
         "source": "C:\\Github\\NUSSPORTSMATCH\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Rachiket Arya\\AndroidStudioProjects\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
-        "source": "C:\\Users\\Rachiket Arya\\AndroidStudioProjects\\Application-NusSportsMatch\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\Rachiket Arya\\AndroidStudioProjects\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
-        "source": "C:\\Users\\Rachiket Arya\\AndroidStudioProjects\\Application-NusSportsMatch\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
         "source": "C:\\Github\\NUSSPORTSMATCH\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }
