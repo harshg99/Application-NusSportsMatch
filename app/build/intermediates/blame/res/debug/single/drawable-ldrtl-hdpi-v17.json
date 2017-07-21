@@ -4,11 +4,23 @@
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\Rachiket Arya\\AndroidStudioProjects\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "C:\\Users\\Rachiket Arya\\.android\\build-cache\\e2eaca6bd55fdeb732a884ee9554c3fefddb84af\\output\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Rachiket Arya\\AndroidStudioProjects\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "C:\\Users\\Rachiket Arya\\.android\\build-cache\\e2eaca6bd55fdeb732a884ee9554c3fefddb84af\\output\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Rachiket Arya\\AndroidStudioProjects\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "C:\\Users\\Rachiket Arya\\.android\\build-cache\\e2eaca6bd55fdeb732a884ee9554c3fefddb84af\\output\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     }
 ]
