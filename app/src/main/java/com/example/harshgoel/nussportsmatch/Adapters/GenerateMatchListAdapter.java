@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,13 @@ import android.widget.Toast;
 
 import com.example.harshgoel.nussportsmatch.Fragments.Fragment_match;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
+import com.example.harshgoel.nussportsmatch.Logic.Request;
 import com.example.harshgoel.nussportsmatch.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
 
 /**
  * Created by Harsh Goel on 7/21/2017.
@@ -22,9 +29,15 @@ import com.example.harshgoel.nussportsmatch.R;
 
 public class GenerateMatchListAdapter extends ArrayAdapter<Player> {
     public String sport;
-    public GenerateMatchListAdapter(Context context, Player[] listplayer,String sport){
+    public List<Request> req;
+    private FirebaseAuth auth;
+    private DatabaseReference ref;
+    public GenerateMatchListAdapter(Context context, Player[] listplayer,String sport,List<Request> req){
         super(context, R.layout.custom_generatematchlist,listplayer);
         this.sport=sport;
+        auth=FirebaseAuth.getInstance();
+        ref= FirebaseDatabase.getInstance().getReference();
+        this.req=req;
     }
 
     @NonNull
@@ -33,6 +46,7 @@ public class GenerateMatchListAdapter extends ArrayAdapter<Player> {
         LayoutInflater viewinflate=LayoutInflater.from(getContext());
         final View custom=viewinflate.inflate(R.layout.custom_generatematchlist,parent,false);
         final Player singleplayer=getItem(position);
+        final Request singlereq=req.get(position);
         TextView name =(TextView) custom.findViewById(R.id.Name);
         TextView fitrate =(TextView) custom.findViewById(R.id.Fitness);
         TextView awarerate=(TextView) custom.findViewById(R.id.Aware);
@@ -40,6 +54,7 @@ public class GenerateMatchListAdapter extends ArrayAdapter<Player> {
         TextView skillrate= (TextView) custom.findViewById(R.id.Skill);
         Button send=(Button)custom.findViewById(R.id.Request);
         name.setText(singleplayer.getName());
+        Log.d("Player "+position,singleplayer.toString());
         if(sport.equals("Tennis")) {
             fitrate.setText("Fitness :" +(float)((int)(singleplayer.getTennis().getRating().getRatingFitness()*100))/100);
             netrate.setText("Net Skill :" +(float)((int)(singleplayer.getTennis().getRating().getRatingNetSkill()*100))/100);
@@ -67,8 +82,14 @@ public class GenerateMatchListAdapter extends ArrayAdapter<Player> {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Toast.makeText(getContext(),"Request Sent To "+singleplayer.getName(),Toast.LENGTH_SHORT).show();
+                DatabaseReference ref2=FirebaseDatabase.getInstance().getReference();
+                ref2=ref2.child("Request").push();
+                singlereq.RequestID=ref2.getKey();
+                ref2.setValue(singlereq);
                 custom.setBackgroundColor(Color.WHITE);
+                v.setEnabled(false);
             }
         });
         custom.setOnClickListener(new View.OnClickListener() {

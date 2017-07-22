@@ -125,6 +125,7 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <color name="chatgreen">#e8fcce</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
@@ -145,6 +146,7 @@
     <color name="common_plus_signin_btn_text_light_focused">#FF737373</color>
     <color name="common_plus_signin_btn_text_light_pressed">#DE000000</color>
     <item name="darkblue" type="color">#FF0099CC</item>
+    <color name="darkestblue">#191b9b</color>
     <item name="darkgreen" type="color">#FF669900</item>
     <item name="darkorange" type="color">#FFFF8800</item>
     <item name="darkpurple" type="color">#FF9933CC</item>

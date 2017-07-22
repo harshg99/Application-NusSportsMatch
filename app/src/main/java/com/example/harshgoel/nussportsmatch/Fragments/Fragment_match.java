@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.example.harshgoel.nussportsmatch.Adapters.GenerateMatchListAdapter;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
 import com.example.harshgoel.nussportsmatch.Logic.Rating;
+import com.example.harshgoel.nussportsmatch.Logic.Request;
 import com.example.harshgoel.nussportsmatch.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -49,6 +50,7 @@ public class Fragment_match extends Fragment {
     private Spinner sportSpinner;
     private ArrayAdapter<CharSequence> SpinnerAdapter;
     private Player[] matchgeneratedplayers;
+    private List<Request> requestgenerate;
     public TextView datetext;
     public Button generatematch;
     public TextView timetext;
@@ -87,6 +89,7 @@ public class Fragment_match extends Fragment {
         View fragment_match=inflater.inflate(R.layout.sport_match,container,false);
         final ProgressDialog dialog=new ProgressDialog(getActivity());
         dialog.setMessage("Retrieving...");
+        requestgenerate=new ArrayList<Request>();
         dialog.show();
         dataauth=FirebaseAuth.getInstance();
         dataref=FirebaseDatabase.getInstance().getReference();
@@ -137,7 +140,21 @@ public class Fragment_match extends Fragment {
         generatematch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                generatematches();
+                if(datetext.getText().equals("Date")||timetext.getText().equals("Time")){
+                    AlertDialog.Builder alert=new AlertDialog.Builder(getContext());
+                    alert.setMessage("Please set Date and Time")
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                    alert.create().show();
+                }
+                else {
+                    generatematches();
+                }
+
 
             }
         });
@@ -200,25 +217,38 @@ public class Fragment_match extends Fragment {
                             if(otheruser.getGender().equals(thisplayer.getGender())){
                                 Rating otherUserRating;
                                 Rating thisUserRating;
+                                Request newreq=new Request();
+                                newreq.setDate((String)datetext.getText());
+                                newreq.setTime((String)timetext.getText());
+                                newreq.setPlayersendID(thisplayer.UserID);
+                                newreq.setPlayerrecievedID(otheruser.UserID);
+                                newreq.namesender=thisplayer.getName();
+                                newreq.namerecieve=otheruser.getName();
+                                newreq.Sport=sportSpinner.getSelectedItem().toString();
+                                newreq.accepted=0;
                                 switch (sportSelect) {
                                     case 0: {
                                         otherUserRating = otheruser.getTennis().getRating();
                                         thisUserRating = thisplayer.getTennis().getRating();
+                                        newreq.netrating=thisplayer.getTennis().getRating().getRatingNetSkill();
                                         break;
                                     }
                                     case 1: {
                                         otherUserRating = otheruser.getBadminton().getRating();
-                                        thisUserRating = thisplayer.getTennis().getRating();
+                                        thisUserRating = thisplayer.getBadminton().getRating();
+                                        newreq.netrating=thisplayer.getBadminton().getRating().getRatingNetSkill();
                                         break;
                                     }
                                     case 2: {
                                         otherUserRating = otheruser.getSquash().getRating();
-                                        thisUserRating = thisplayer.getTennis().getRating();
+                                        thisUserRating = thisplayer.getSquash().getRating();
+                                        newreq.netrating=thisplayer.getSquash().getRating().getRatingNetSkill();
                                         break;
                                     }
                                     case 3: {
                                         otherUserRating = otheruser.getTt().getRating();
-                                        thisUserRating = thisplayer.getTennis().getRating();
+                                        thisUserRating = thisplayer.getTt().getRating();
+                                        newreq.netrating=thisplayer.getTt().getRating().getRatingNetSkill();
                                         break;
                                     }
                                     default: {
@@ -230,6 +260,7 @@ public class Fragment_match extends Fragment {
                                         if (Math.abs(otherUserRating.getRatingNetSkill() - thisUserRating.getRatingNetSkill()) <= 0.2
                                                 && Math.abs(otherUserRating.getRatingSkill() - thisUserRating.getRatingSkill()) <= 0.5) {
                                             matches.add(otheruser);
+                                            requestgenerate.add(newreq);
                                         }
                                     }
 
@@ -239,7 +270,7 @@ public class Fragment_match extends Fragment {
                     if(matches.size()!=0) {
                         matchgeneratedplayers= matches.toArray(new Player[matches.size()]);
                         matchlist.setAdapter(new GenerateMatchListAdapter(getActivity(),matchgeneratedplayers,
-                                sportSpinner.getSelectedItem().toString()));
+                                sportSpinner.getSelectedItem().toString(),requestgenerate));
                         progressDialog.cancel();
                     }
                     else {

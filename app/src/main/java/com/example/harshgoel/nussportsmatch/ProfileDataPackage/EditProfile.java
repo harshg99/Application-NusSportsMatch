@@ -58,6 +58,7 @@ public class EditProfile extends AppCompatActivity {
         cname=0;
         cemail=0;
         data= FirebaseDatabase.getInstance().getReference();
+        data.child("users").child(auth.getCurrentUser().getUid()).child("UserID").setValue(auth.getCurrentUser().getUid());
 
     }
     public void ConfirmChanges(View v) {

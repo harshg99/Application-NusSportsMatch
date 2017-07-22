@@ -23,4 +23,6 @@
     <color name="skyred">#ffd2d4</color>
     <color name="verylightyellow">#f9fcd3</color>
     <color name="niceblue">#b2f5f0</color>
+    <color name="chatgreen">#e8fcce</color>
+    <color name="darkestblue">#191b9b</color>
 </resources>

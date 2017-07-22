@@ -3,6 +3,8 @@ package com.example.harshgoel.nussportsmatch.Logic;
 
 import android.net.Uri;
 
+import java.util.List;
+
 /**
  * Created by Harsh Goel on 6/26/2017.
  */
@@ -10,6 +12,7 @@ import android.net.Uri;
 public class Player implements PlayerInterface{
     //class contains name,password ans string
     private Uri profilephoto;
+    public String UserID;
     private String gender;
     private String email;
     private String name;

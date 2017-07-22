@@ -48,7 +48,6 @@ public class Fragment_profile extends Fragment {
     public Button setsports;
     public Button Logout;
     public Player userplayer;
-    public Button questionnaire;
     public static final int photo=10;
     private FirebaseAuth auth;
     private DatabaseReference userref;

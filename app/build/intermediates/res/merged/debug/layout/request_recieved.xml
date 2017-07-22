@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/niceblue">
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Name"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/NetSkill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Net Skill"
+        android:textSize="17sp"
+        android:layout_below="@+id/Name"
+        android:layout_alignEnd="@+id/Name" />
+
+
+    <Button
+        android:id="@+id/accept"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Accept" />
+
+    <Button
+        android:id="@+id/decline"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Decline"
+        android:layout_alignBaseline="@+id/NetSkill"
+        android:layout_alignBottom="@+id/NetSkill"
+        android:layout_alignStart="@+id/accept" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date:"
+        android:textSize="15sp"
+        android:layout_marginStart="62dp"
+        android:layout_above="@+id/NetSkill"
+        android:layout_toEndOf="@+id/Name" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        android:textSize="15sp"
+        android:layout_below="@+id/Name"
+        android:layout_alignStart="@+id/date" />
+
+    <TextView
+        android:id="@+id/Sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/date"
+        android:layout_alignStart="@+id/date"
+        android:text="Sport"
+        android:textColor="@color/purple"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>
