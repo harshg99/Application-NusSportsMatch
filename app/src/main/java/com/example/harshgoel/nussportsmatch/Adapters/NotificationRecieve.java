@@ -34,7 +34,7 @@ public class NotificationRecieve extends ArrayAdapter<Request> {
     private DatabaseReference ref;
     private FirebaseAuth auth;
     public NotificationRecieve(Context context, List<Request> listreq){
-        super(context, R.layout.custom_generatematchlist,listreq);
+        super(context, R.layout.request_recieved,listreq);
         ref= FirebaseDatabase.getInstance().getReference();
         auth=FirebaseAuth.getInstance();
     }
@@ -56,8 +56,8 @@ public class NotificationRecieve extends ArrayAdapter<Request> {
 
         final DatabaseReference reference=FirebaseDatabase.getInstance().getReference()
                 .child("Request").child(singlereq.RequestID).child("accepted");
-        Button accept=(Button)custom.findViewById(R.id.accept);
-        Button decline=(Button)custom.findViewById(R.id.decline);
+        final Button accept=(Button)custom.findViewById(R.id.accept);
+        final Button decline=(Button)custom.findViewById(R.id.decline);
         if(singlereq.accepted==1){
             custom.setBackgroundColor(Color.WHITE);
             accept.setEnabled(false);
@@ -77,6 +77,8 @@ public class NotificationRecieve extends ArrayAdapter<Request> {
                 reference.setValue(Integer.valueOf(1));
                 Toast.makeText(getContext(),"Request Accepted",Toast.LENGTH_SHORT).show();
                 custom.setBackgroundColor(Color.WHITE);
+                v.setEnabled(false);
+                decline.setEnabled(true);
             }
         });
         decline.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +87,8 @@ public class NotificationRecieve extends ArrayAdapter<Request> {
                 reference.setValue(Integer.valueOf(2));
                 Toast.makeText(getContext(),"Request Declined",Toast.LENGTH_SHORT).show();
                 custom.setBackgroundColor(Color.RED);
+                v.setEnabled(false);
+                accept.setEnabled(true);
             }
         });
         return custom;

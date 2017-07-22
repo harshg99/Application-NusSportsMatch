@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.example.harshgoel.nussportsmatch.Adapters.NotificationRecieve;
+import com.example.harshgoel.nussportsmatch.Adapters.NotificationSent;
 import com.example.harshgoel.nussportsmatch.Logic.Request;
 import com.example.harshgoel.nussportsmatch.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -48,13 +49,18 @@ public class Fragment_notifications extends Fragment{
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 List<Request>requests=new ArrayList<Request>();
+                List<Request>statuss=new ArrayList<Request>();
                 for(DataSnapshot singledata:dataSnapshot.getChildren()){
                     Request singlereq=singledata.getValue(Request.class);
                     if(singlereq.getPlayerrecievedID().equals(auth.getCurrentUser().getUid())) {
                         requests.add(singlereq);
                     }
+                    if(singlereq.getplayersendID().equals(auth.getCurrentUser().getUid())){
+                        statuss.add(singlereq);
+                    }
                 }
                 recieve.setAdapter(new NotificationRecieve(getContext(),requests));
+                status.setAdapter(new NotificationSent(getContext(),statuss));
                 progress.cancel();
             }
 

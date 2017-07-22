@@ -49,9 +49,9 @@
         android:layout_height="wrap_content"
         android:text="Date:"
         android:textSize="15sp"
-        android:layout_marginStart="62dp"
+        android:layout_marginEnd="70dp"
         android:layout_above="@+id/NetSkill"
-        android:layout_toEndOf="@+id/Name" />
+        android:layout_toStartOf="@+id/accept" />
 
     <TextView
         android:id="@+id/time"
