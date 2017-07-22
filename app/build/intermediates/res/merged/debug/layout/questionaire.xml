@@ -160,8 +160,8 @@
         android:layout_height="wrap_content"
         android:text="0/5.00"
         android:layout_above="@+id/textView4"
-        android:layout_alignEnd="@+id/seekBar2"
-        android:layout_marginEnd="21dp" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="41dp" />
 
     <TextView
         android:id="@+id/ratingtabletennis"
