@@ -6,7 +6,7 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1500737365227"
+    timestamp="1500738013757"
     token="1909912529772781054"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -86,7 +86,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1500737365227"
+        timestamp="1500738013757"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Github\NUSSPORTSMATCH\app\build\outputs\apk\app-debug.apk"
