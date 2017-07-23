@@ -133,7 +133,7 @@ public class SignUp extends AppCompatActivity {
         //adds the profilelogin if the password and confirm password strings match
         String textemail=email.getText().toString();
         String password = pass.getText().toString();
-        String confirmpassword = pass.getText().toString();
+        String confirmpassword = confirmpass.getText().toString();
         if(TextUtils.isEmpty(textemail)){
             Toast.makeText(this,"Please enter email",Toast.LENGTH_LONG).show();
             return;
@@ -209,6 +209,7 @@ public class SignUp extends AppCompatActivity {
     }
     public void inituserdata(Player k,String Uid){
         data.child("users").child(Uid).setValue(k);
+        data.child("users").child(Uid).child("UserID").setValue(Uid);
         sportsPlayer Tennis=new sportsPlayer();
         sportsPlayer squash =new sportsPlayer();
         sportsPlayer TT=new sportsPlayer();

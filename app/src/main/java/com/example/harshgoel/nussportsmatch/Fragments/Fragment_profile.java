@@ -70,7 +70,14 @@ public class Fragment_profile extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot){
                 userplayer=dataSnapshot.getValue(Player.class);
                 profilename.setText(userplayer.getName());
-                dialog.cancel();
+                if(userplayer.getGender().equals("Male")){
+                    profilephoto.setImageDrawable(getResources().getDrawable(R.drawable.male));
+                }
+                else{
+                    profilephoto.setImageDrawable(getResources().getDrawable(R.drawable.female));
+                }
+                     dialog.cancel();
+
                 Log.d("UserPlayer:",userplayer.toString());
             }
 

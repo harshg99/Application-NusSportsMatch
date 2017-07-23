@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:2:1-31:12
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:3:5-51
 		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:5:5-29:19
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:5:5-30:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Harsh Goel\.android\build-cache\dd1ea912feeaf359b4b087060fc46ba4e6a4dc6e\output\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth:9.2.1] C:\Users\Harsh Goel\.android\build-cache\66b5234d99a76eb181e85b4f97cb2c4fdecc9a71\output\AndroidManifest.xml:20:5-21:19
 MERGED from [com.google.firebase:firebase-auth-common:9.2.1] C:\Users\Harsh Goel\.android\build-cache\43e62f3a09589a3e89ce0657bbd63fda7afe2864\output\AndroidManifest.xml:20:5-21:19
@@ -87,6 +87,10 @@ activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.Questionaire
 ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:28:9-68
 	android:name
 		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:28:19-66
+activity#com.example.harshgoel.nussportsmatch.Chats.ChatMessageActivity
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:29:9-62
+	android:name
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:29:19-60
 uses-sdk
 INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Harsh Goel\.android\build-cache\dd1ea912feeaf359b4b087060fc46ba4e6a4dc6e\output\AndroidManifest.xml:5:5-7:41

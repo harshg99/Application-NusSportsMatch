@@ -12,26 +12,18 @@
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:text="Name: "
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_alignBottom="@+id/textname"
         android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/edit_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="Email: "
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/edit_name" />
 
     <TextView
         android:id="@+id/edit_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="Password: "
-        android:layout_alignBottom="@+id/textpassword"
+        android:textSize="18sp"
+        android:text="New Password:"
+        android:layout_marginBottom="75dp"
+        android:layout_above="@+id/Confirmchanges"
         android:layout_alignStart="@+id/edit_name" />
 
 
@@ -41,39 +33,29 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:layout_marginStart="14dp"
-        android:layout_above="@+id/textemail"
-        android:layout_toEndOf="@+id/edit_password"
-        android:layout_marginBottom="38dp" />
-
-    <EditText
-        android:id="@+id/textemail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignBottom="@+id/edit_email"
-        android:layout_alignStart="@+id/textname" />
+        android:layout_marginEnd="12dp"
+        android:layout_below="@+id/Back"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="67dp" />
 
     <EditText
         android:id="@+id/textpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edit_password"
+        android:layout_alignStart="@+id/textname"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/textemail"
-        android:layout_alignStart="@+id/textemail" />
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/Confirmchanges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirm Changes"
-        android:layout_marginTop="57dp"
         android:onClick="ConfirmChanges"
-        android:layout_below="@+id/edit_password"
-        android:layout_toEndOf="@+id/edit_name" />
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/edit_name"
+        android:layout_marginBottom="71dp" />
 
     <Button
         android:id="@+id/Back"
@@ -85,6 +67,25 @@
         android:background="?android:attr/selectableItemBackground"
         android:text="Back"
         android:onClick="back"/>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Old Password:"
+        android:layout_above="@+id/textpassword"
+        android:layout_alignStart="@+id/edit_password"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/textoldpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView13"
+        android:layout_alignStart="@+id/textpassword"
+        android:ems="10"
+        android:inputType="textPassword" />
 
 
 </RelativeLayout>

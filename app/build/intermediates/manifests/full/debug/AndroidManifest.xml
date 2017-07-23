@@ -45,6 +45,7 @@
         <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditProfile" />
         <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.setSports" />
         <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.Questionaire" />
+        <activity android:name="com.example.harshgoel.nussportsmatch.Chats.ChatMessageActivity" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

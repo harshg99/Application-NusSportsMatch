@@ -101,6 +101,17 @@ public class Fragment_match extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 thisplayer=dataSnapshot.getValue(Player.class);
                 dialog.cancel();
+                if(!thisplayer.getTennis().getisAdded()&&!thisplayer.getBadminton().getisAdded()&&!thisplayer.getSquash().getisAdded()
+                        &&!thisplayer.getTt().getisAdded()){
+                    sportSpinner.setEnabled(false);
+                    generatematch.setEnabled(false);
+                    Toast.makeText(getActivity(),"No Sport registered for",Toast.LENGTH_LONG);
+                }
+                else
+                {
+                    sportSpinner.setEnabled(true);
+                    generatematch.setEnabled(true);
+                }
             }
 
             @Override
@@ -140,9 +151,41 @@ public class Fragment_match extends Fragment {
         generatematch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(datetext.getText().equals("Date")||timetext.getText().equals("Time")){
-                    AlertDialog.Builder alert=new AlertDialog.Builder(getContext());
-                    alert.setMessage("Please set Date and Time")
+                boolean checksport=true;
+                sportSelect = Arrays.asList(getResources().getStringArray(R.array.SportsOptions))
+                        .indexOf(sportSpinner.getSelectedItem().toString());
+                switch (sportSelect){
+                    case 0:{
+                        if(!thisplayer.getTennis().getisAdded()) {
+                            checksport = false;
+                        }
+                        break;
+                    }
+                    case 1:{
+                        if(!thisplayer.getBadminton().getisAdded()) {
+                            checksport = false;
+                        }
+                        break;
+                    }
+                    case 2:{
+                        if(!thisplayer.getSquash().getisAdded()) {
+                            checksport = false;
+                        }
+                        break;
+                    }
+                    case 3:{
+                        if(!thisplayer.getTt().getisAdded()) {
+                            checksport = false;
+                        }
+                        break;
+                    }
+                }
+                if(checksport) {
+                    generatematches();
+                }
+                else{
+                    AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
+                    alert.setMessage("Sport not registered")
                             .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
@@ -151,11 +194,6 @@ public class Fragment_match extends Fragment {
                             });
                     alert.create().show();
                 }
-                else {
-                    generatematches();
-                }
-
-
             }
         });
         dateselect.setOnClickListener(new View.OnClickListener() {
@@ -198,14 +236,36 @@ public class Fragment_match extends Fragment {
         return fragment_match;
     }
 
-    private void generatematches(){
-        final List<Player> matches=new ArrayList<Player>();
-        sportSelect=Arrays.asList(getResources().getStringArray(R.array.SportsOptions))
+    private void generatematches() {
+        final List<Player> matches = new ArrayList<Player>();
+        sportSelect = Arrays.asList(getResources().getStringArray(R.array.SportsOptions))
                 .indexOf(sportSpinner.getSelectedItem().toString());
-        final ProgressDialog progressDialog=new ProgressDialog(getActivity());
-        progressDialog.setMessage("Generating..");
-        progressDialog.show();
-        if(sportSelect!=4) {
+
+        if (datetext.getText().equals("Date") || timetext.getText().equals("Time")) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
+            alert.setMessage("Please set Date and Time")
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+            alert.create().show();
+        } else if (sportSelect == 4) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
+            alert.setMessage("No Sport Selected")
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+            alert.create().show();
+            matchgeneratedplayers = null;
+        } else {
+            final ProgressDialog progressDialog = new ProgressDialog(getActivity());
+            progressDialog.setMessage("Generating..");
+            progressDialog.show();
             dataref.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
@@ -214,74 +274,74 @@ public class Fragment_match extends Fragment {
                         Player otheruser = players.getValue(Player.class);
                         Log.d("User:", otheruser.toString());
                         if (!otheruser.toString().equals(thisplayer.toString())) {
-                            if(otheruser.getGender().equals(thisplayer.getGender())){
+                            if (otheruser.getGender().equals(thisplayer.getGender())) {
                                 Rating otherUserRating;
                                 Rating thisUserRating;
-                                Request newreq=new Request();
-                                newreq.setDate((String)datetext.getText());
-                                newreq.setTime((String)timetext.getText());
+                                Request newreq = new Request();
+                                newreq.setDate((String) datetext.getText());
+                                newreq.setTime((String) timetext.getText());
                                 newreq.setPlayersendID(thisplayer.UserID);
                                 newreq.setPlayerrecievedID(otheruser.UserID);
-                                newreq.namesender=thisplayer.getName();
-                                newreq.namerecieve=otheruser.getName();
-                                newreq.Sport=sportSpinner.getSelectedItem().toString();
-                                newreq.accepted=0;
+                                newreq.namesender = thisplayer.getName();
+                                newreq.namerecieve = otheruser.getName();
+                                newreq.Sport = sportSpinner.getSelectedItem().toString();
+                                newreq.accepted = 0;
                                 switch (sportSelect) {
                                     case 0: {
                                         otherUserRating = otheruser.getTennis().getRating();
                                         thisUserRating = thisplayer.getTennis().getRating();
-                                        newreq.netrating=thisplayer.getTennis().getRating().getRatingNetSkill();
+                                        newreq.netrating = thisplayer.getTennis().getRating().getRatingNetSkill();
                                         break;
                                     }
                                     case 1: {
                                         otherUserRating = otheruser.getBadminton().getRating();
                                         thisUserRating = thisplayer.getBadminton().getRating();
-                                        newreq.netrating=thisplayer.getBadminton().getRating().getRatingNetSkill();
+                                        newreq.netrating = thisplayer.getBadminton().getRating().getRatingNetSkill();
                                         break;
                                     }
                                     case 2: {
                                         otherUserRating = otheruser.getSquash().getRating();
                                         thisUserRating = thisplayer.getSquash().getRating();
-                                        newreq.netrating=thisplayer.getSquash().getRating().getRatingNetSkill();
+                                        newreq.netrating = thisplayer.getSquash().getRating().getRatingNetSkill();
                                         break;
                                     }
                                     case 3: {
                                         otherUserRating = otheruser.getTt().getRating();
                                         thisUserRating = thisplayer.getTt().getRating();
-                                        newreq.netrating=thisplayer.getTt().getRating().getRatingNetSkill();
+                                        newreq.netrating = thisplayer.getTt().getRating().getRatingNetSkill();
                                         break;
                                     }
                                     default: {
-                                        otherUserRating=thisUserRating=null;
+                                        otherUserRating = thisUserRating = null;
                                     }
                                 }
-                                    if(otherUserRating!=null && thisUserRating!=null) {
+                                if (otherUserRating != null && thisUserRating != null) {
 
-                                        if (Math.abs(otherUserRating.getRatingNetSkill() - thisUserRating.getRatingNetSkill()) <= 0.2
-                                                && Math.abs(otherUserRating.getRatingSkill() - thisUserRating.getRatingSkill()) <= 0.5) {
-                                            matches.add(otheruser);
-                                            requestgenerate.add(newreq);
-                                        }
+                                    if (Math.abs(otherUserRating.getRatingNetSkill() - thisUserRating.getRatingNetSkill()) <= 0.2
+                                            && Math.abs(otherUserRating.getRatingSkill() - thisUserRating.getRatingSkill()) <= 0.5) {
+                                        matches.add(otheruser);
+                                        requestgenerate.add(newreq);
                                     }
-
                                 }
+
                             }
                         }
-                    if(matches.size()!=0) {
-                        matchgeneratedplayers= matches.toArray(new Player[matches.size()]);
-                        matchlist.setAdapter(new GenerateMatchListAdapter(getActivity(),matchgeneratedplayers,
-                                sportSpinner.getSelectedItem().toString(),requestgenerate));
+                    }
+                    if (matches.size() != 0) {
+                        matchgeneratedplayers = matches.toArray(new Player[matches.size()]);
+                        matchlist.setAdapter(new GenerateMatchListAdapter(getActivity(), matchgeneratedplayers,
+                                sportSpinner.getSelectedItem().toString(), requestgenerate));
+                        progressDialog.cancel();
+                    } else {
+                        Toast.makeText(getContext(), "Could not generate matches for the sport.", Toast.LENGTH_LONG).show();
                         progressDialog.cancel();
                     }
-                    else {
-                        Toast.makeText(getContext(),"Could not generate matches for the sport.",Toast.LENGTH_LONG).show();
-                        progressDialog.cancel();
-                    }
-                    }
+                }
+
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
                     progressDialog.cancel();
-                    AlertDialog.Builder alert=new AlertDialog.Builder(getContext());
+                    AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
                     alert.setMessage("Cannot Connect to the internet")
                             .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                 @Override
@@ -292,23 +352,10 @@ public class Fragment_match extends Fragment {
                     alert.create().show();
 
 
-
                 }
             });
-            Log.d("Matches",""+matches.size());
+            Log.d("Matches", "" + matches.size());
 
-        }
-        else{
-            AlertDialog.Builder alert=new AlertDialog.Builder(getContext());
-            alert.setMessage("No Sport Selected")
-                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
-            alert.create().show();
-            matchgeneratedplayers=null;
         }
 
     }

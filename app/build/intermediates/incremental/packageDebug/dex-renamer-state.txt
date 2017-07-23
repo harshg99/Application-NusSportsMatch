@@ -1,4 +1,4 @@
-#Sat Jul 22 21:25:38 IST 2017
+#Mon Jul 24 00:11:54 IST 2017
 base.0=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_e52cf13f3fe99943bcb0959801561171cddb81e5
 renamed.1=classes2.dex
 renamed.0=classes.dex

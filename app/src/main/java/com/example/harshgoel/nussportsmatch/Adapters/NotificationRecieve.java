@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.harshgoel.nussportsmatch.Chats.chatbar;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
 import com.example.harshgoel.nussportsmatch.Logic.Request;
 import com.example.harshgoel.nussportsmatch.R;
@@ -24,6 +25,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.sql.Time;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -77,6 +80,41 @@ public class NotificationRecieve extends ArrayAdapter<Request> {
                 reference.setValue(Integer.valueOf(1));
                 Toast.makeText(getContext(),"Request Accepted",Toast.LENGTH_SHORT).show();
                 custom.setBackgroundColor(Color.WHITE);
+                final DatabaseReference ref=FirebaseDatabase.getInstance().getReference().child("chats");
+                final chatbar newchatbar1=new chatbar();
+                newchatbar1.setSenderofmessagename(singlereq.namerecieve);
+                newchatbar1.setSenderofmessageid(singlereq.getPlayerrecievedID());
+                newchatbar1.setGetRecieverofmessageid(singlereq.getplayersendID());
+                newchatbar1.setRecieverofmessage(singlereq.namesender);
+                newchatbar1.setTime(Calendar.getInstance().get(Calendar.HOUR_OF_DAY)+":"+Calendar.getInstance().get(Calendar.MINUTE));
+                newchatbar1.setLastmessage("New Chat");
+                ref.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        List<chatbar>chatsall=new ArrayList<chatbar>();
+                        boolean contains=false;
+                        for(DataSnapshot alldata:dataSnapshot.getChildren()){
+                            chatbar singlechat=alldata.getValue(chatbar.class);
+                            if(singlechat.getGetRecieverofmessageid().equals(newchatbar1.getGetRecieverofmessageid())&&
+                                    singlechat.getSenderofmessageid().equals(newchatbar1.getSenderofmessageid())){
+                                contains=true;
+                            }
+                        }
+                        if(!contains){
+                            DatabaseReference refer=ref;
+                            refer=refer.push();
+                            newchatbar1.setKey(refer.getKey());
+                            refer.setValue(newchatbar1);
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
                 v.setEnabled(false);
                 decline.setEnabled(true);
             }

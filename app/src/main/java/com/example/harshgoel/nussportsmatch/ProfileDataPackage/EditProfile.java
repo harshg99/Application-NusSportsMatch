@@ -5,7 +5,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,7 +20,12 @@ import android.widget.Toast;
 
 import com.example.harshgoel.nussportsmatch.AppLoginPage;
 import com.example.harshgoel.nussportsmatch.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -38,6 +45,7 @@ public class EditProfile extends AppCompatActivity {
     private int cemail;
     public EditText emailchange;
     public EditText passwordchange;
+    public EditText passwordold;
     public EditText namechange;
     private FirebaseAuth auth;
     public Toolbar toolbar;
@@ -49,29 +57,26 @@ public class EditProfile extends AppCompatActivity {
         setContentView(R.layout.edit_profile);
         namechange= (EditText) findViewById(R.id.textname);
         passwordchange= (EditText) findViewById(R.id.textpassword);
-        emailchange= (EditText) findViewById(R.id.textemail);
         confirm=(Button)findViewById(R.id.Confirmchanges);
+        passwordold=(EditText)findViewById(R.id.textoldpassword);
         toolbar=(Toolbar)findViewById(R.id.edit_bar);
         setSupportActionBar(toolbar);
         auth=FirebaseAuth.getInstance();
         cpass=0;
         cname=0;
-        cemail=0;
         data= FirebaseDatabase.getInstance().getReference();
-        data.child("users").child(auth.getCurrentUser().getUid()).child("UserID").setValue(auth.getCurrentUser().getUid());
-
     }
     public void ConfirmChanges(View v) {
         checkfilled();
         Log.d("Value thrown "," cpass "+cpass+" cname "+cname+" cemail "+cemail);
-        if(cemail>0 && cpass>0 && cname>0) {
+        if(cpass>0 && cname>0) {
             finish();
             Intent c = new Intent(EditProfile.this, AppLoginPage.class);
             startActivity(c);
         }
     }
     public void back(View v){
-        if(cemail>0 && cpass>0 && cname>0){
+        if(cpass>0 && cname>0){
             finish();
             Intent c = new Intent(EditProfile.this, AppLoginPage.class);
             startActivity(c);
@@ -98,31 +103,7 @@ public class EditProfile extends AppCompatActivity {
         }
     }
     public void checkfilled(){
-        if(TextUtils.isEmpty(emailchange.getText().toString())){
-            AlertDialog.Builder dialogbox = new AlertDialog.Builder(this);
-            dialogbox.setMessage("Do you want to keep original email?")
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            cemail=1;
-                            dialog.cancel();
-                        }
-                    })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                            Toast.makeText(EditProfile.this,"Please enter email",Toast.LENGTH_LONG).show();
-                        }
-                    });
-            dialogbox.create().show();
-        }
-        else {
-            cemail = 2;
-            Map<String,Object> emailfield=new HashMap<String,Object>();
-            emailfield.put("email",emailchange.getText().toString().trim());
-            data.child("users").child(auth.getCurrentUser().getUid()).updateChildren(emailfield);
-        }
+
         if(TextUtils.isEmpty(passwordchange.getText().toString())){
             AlertDialog.Builder dialogbox = new AlertDialog.Builder(this);
             dialogbox.setMessage("Do you want to keep original password?")
@@ -147,7 +128,43 @@ public class EditProfile extends AppCompatActivity {
             cpass = 2;
             Map<String, Object> passfield = new HashMap<String, Object>();
             passfield.put("password", passwordchange.getText().toString().trim());
+            final String oldpass=passwordold.getText().toString().trim();
+            final String newPass=passwordchange.getText().toString().trim();
             data.child("users").child(auth.getCurrentUser().getUid()).updateChildren(passfield);
+            if(!oldpass.isEmpty()) {
+                final FirebaseUser user = auth.getCurrentUser();
+                AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), oldpass);
+
+                user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            user.updatePassword(newPass).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (!task.isSuccessful()) {
+                                        Toast.makeText(EditProfile.this, "Something went wrong. Please try again later", Toast.LENGTH_LONG).show();
+                                    } else {
+                                        Toast.makeText(EditProfile.this, "Password Successfully Modified", Toast.LENGTH_LONG);
+                                    }
+                                }
+                            });
+                        } else {
+
+                            Toast.makeText(EditProfile.this, "Authentication Failed", Toast.LENGTH_LONG);
+                        }
+                    }
+                });
+            }
+            else{
+                AlertDialog.Builder dialogs=new AlertDialog.Builder(this);
+                dialogs.setMessage("Password Field Empty").setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+            }
         }
         if(TextUtils.isEmpty(namechange.getText().toString())) {
             AlertDialog.Builder dialogbox = new AlertDialog.Builder(this);

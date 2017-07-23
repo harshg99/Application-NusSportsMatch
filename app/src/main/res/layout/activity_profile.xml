@@ -35,39 +35,35 @@
 
     <Button
         android:id="@+id/addphoto"
-        android:layout_width="133dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add photo"
+        android:background="@drawable/buttonshape"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="0dp" />
     <Button
         android:id="@+id/edit_profile"
-        android:layout_width="133dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/buttonshape"
         android:layout_height="wrap_content"
         android:text="Edit Profile"
         android:layout_gravity="center" />
     <Button
         android:id="@+id/selectsports"
-        android:layout_width="133dp"
-        android:layout_height="wrap_content"
-        android:text="Sports"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="251dp"/>
-
-    <Button
-        android:id="@+id/questionnaire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Complete Questionnaire"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="330dp"
-        android:visibility="gone"/>
+        android:text="Sports"
+        android:background="@drawable/buttonshape"
+        android:layout_gravity="center"
+        android:layout_marginLeft="130dp"/>
+
 
     <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="@drawable/buttonshape"
         android:layout_marginTop="160dp"
         android:text="Logout" />
 

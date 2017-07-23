@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:text="Select Sport for Match-Up"
+        android:textColor="@color/chatblack"
         android:textSize="22sp"
         android:layout_centerHorizontal="true" />
 
@@ -29,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="Date"
+        android:textColor="@color/niceblack"
         android:textSize="17sp"
         android:textStyle="bold"
         android:layout_below="@+id/SpinnerSportsSelect"
@@ -50,6 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Time"
+        android:textColor="@color/niceblack"
         android:textSize="17sp"
         android:textStyle="bold"
         android:layout_alignBaseline="@+id/button3"
@@ -71,6 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Generate Matches"
+        android:background="@drawable/buttontype2"
         android:layout_below="@+id/button3"
         android:layout_toEndOf="@+id/textView7" />
 

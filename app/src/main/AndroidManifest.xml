@@ -26,6 +26,7 @@
         <activity android:name=".ProfileDataPackage.EditProfile"/>
         <activity android:name=".ProfileDataPackage.setSports"/>
         <activity android:name=".ProfileDataPackage.Questionaire"/>
+        <activity android:name=".Chats.ChatMessageActivity"/>
     </application>
 
 </manifest>
