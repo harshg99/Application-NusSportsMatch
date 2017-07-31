@@ -1,9 +1,14 @@
 package com.example.harshgoel.nussportsmatch;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -12,19 +17,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.harshgoel.nussportsmatch.Connection.ConnectionManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 import static android.content.ContentValues.TAG;
 
 public class SignIn extends AppCompatActivity {
     public EditText password;
     public EditText email;
+    public RelativeLayout layout;
     public Button Login;
     public Button sign_up;
     public ImageView icon;
@@ -36,7 +48,7 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
-        if (user != null) {
+        if (user != null && user.isEmailVerified()) {
             // User is signed in
             Toast.makeText(getApplicationContext(), "Successfully registered", Toast.LENGTH_LONG).show();
             Intent intent=new Intent()
@@ -83,6 +95,7 @@ public class SignIn extends AppCompatActivity {
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
+                            progressDialog.cancel();
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast alert=Toast.makeText(SignIn.this, "Incorrect Username/Password",
                                     Toast.LENGTH_SHORT);
@@ -94,14 +107,27 @@ public class SignIn extends AppCompatActivity {
 
                         }
                         else{
-                            Toast alert=Toast.makeText(SignIn.this, "SignIn Successful",
-                                    Toast.LENGTH_SHORT);
-                            alert.setGravity(Gravity.CENTER,0,10);
-                            alert.show();
-                            finish();
-                            Intent intent = new Intent(SignIn.this, AppLoginPage.class);
-                            startActivity(intent);
-
+                            FirebaseUser user=mAuth.getCurrentUser();
+                            progressDialog.cancel();
+                            if(user.isEmailVerified()) {
+                                Toast alert = Toast.makeText(SignIn.this, "SignIn Successful",
+                                        Toast.LENGTH_SHORT);
+                                alert.setGravity(Gravity.CENTER, 0, 10);
+                                alert.show();
+                                finish();
+                                Intent intent = new Intent(SignIn.this, AppLoginPage.class);
+                                startActivity(intent);
+                            }
+                            else{
+                                layout.setAlpha((float)0.5);
+                                Snackbar.make(layout,"Please Verify Email",Snackbar.LENGTH_INDEFINITE)
+                                        .setAction("OK", new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                SignIn.this.finish();
+                                            }
+                                        }).show();
+                            }
 
                         }
 
@@ -120,9 +146,11 @@ public class SignIn extends AppCompatActivity {
     }
     //initialising the UI elements
     public void initialiseUI(){
+        layout=(RelativeLayout)findViewById(R.id.signinlayout);
         password=(EditText)findViewById(R.id.password);
         email=(EditText)findViewById(R.id.email);
         Login=(Button)findViewById(R.id.logout);
+        new ConnectionManager(layout,SignIn.this).execute();
         sign_up=(Button)findViewById(R.id.signup);
         icon = (ImageView) findViewById(R.id.imageView2);
         progressDialog=new ProgressDialog(SignIn.this);
@@ -155,5 +183,7 @@ public class SignIn extends AppCompatActivity {
     }
 /*To confirm if tool bar is removed
 */
+//Accessing the network state
+
 
 }

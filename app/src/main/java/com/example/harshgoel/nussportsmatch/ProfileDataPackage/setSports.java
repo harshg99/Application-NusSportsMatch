@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -38,6 +40,7 @@ public class setSports extends AppCompatActivity {
     public CheckBox Badmintonbox;
     public CheckBox squashbox;
     public CheckBox ttbox;
+    public Toolbar tool;
     public Button confirmBUT;
     private FirebaseAuth auth;
     private DatabaseReference userref;
@@ -50,6 +53,10 @@ public class setSports extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_sports);
+        tool=(Toolbar)findViewById(R.id.set_Bar);
+        setSupportActionBar(tool);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         confirmBUT=(Button)findViewById(R.id.Confirm);
         tennisbox=(CheckBox)findViewById(R.id.Tennis);
         Badmintonbox=(CheckBox)findViewById(R.id.badminton);
@@ -128,4 +135,17 @@ public class setSports extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                Intent i=new Intent(this,AppLoginPage.class);
+                startActivity(i);
+                return true;
+            default:return super.onOptionsItemSelected(item);
+
+        }
+
+    }
 }

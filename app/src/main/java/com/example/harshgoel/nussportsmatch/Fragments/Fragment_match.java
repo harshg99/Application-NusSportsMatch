@@ -280,8 +280,8 @@ public class Fragment_match extends Fragment {
                                 Request newreq = new Request();
                                 newreq.setDate((String) datetext.getText());
                                 newreq.setTime((String) timetext.getText());
-                                newreq.setPlayersendID(thisplayer.UserID);
-                                newreq.setPlayerrecievedID(otheruser.UserID);
+                                newreq.setPlayersendID(thisplayer.getUserID());
+                                newreq.setPlayerrecievedID(otheruser.getUserID());
                                 newreq.namesender = thisplayer.getName();
                                 newreq.namerecieve = otheruser.getName();
                                 newreq.Sport = sportSpinner.getSelectedItem().toString();
@@ -358,5 +358,33 @@ public class Fragment_match extends Fragment {
 
         }
 
+    }
+    public class checkfields{
+        private boolean flagthis;
+        private boolean flaggender;
+        private boolean flagrating;
+        public boolean isFlagthis(){
+            return flagthis;
+        }
+
+        public boolean isFlaggender() {
+            return flaggender;
+        }
+
+        public boolean isFlagrating() {
+            return flagrating;
+        }
+
+        public void setFlaggender(boolean flaggender) {
+            this.flaggender = flaggender;
+        }
+
+        public void setFlagrating(boolean flagrating) {
+            this.flagrating = flagrating;
+        }
+
+        public void setFlagthis(boolean flagthis) {
+            this.flagthis = flagthis;
+        }
     }
 }

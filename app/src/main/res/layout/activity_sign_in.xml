@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
+    android:id="@+id/signinlayout"
     tools:context="com.example.harshgoel.nussportsmatch.SignIn">
 
 
@@ -12,8 +13,8 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:lines="1"
         android:layout_marginLeft="85dp"
+        android:inputType="textPersonName"
         android:ems="10"
         android:hint="Email"
         android:layout_above="@+id/password"

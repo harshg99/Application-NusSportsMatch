@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,6 +49,7 @@ public class EditProfile extends AppCompatActivity {
     public EditText passwordold;
     public EditText namechange;
     private FirebaseAuth auth;
+    private boolean ifreauth=true;
     public Toolbar toolbar;
     private DatabaseReference data;
 
@@ -61,6 +63,8 @@ public class EditProfile extends AppCompatActivity {
         passwordold=(EditText)findViewById(R.id.textoldpassword);
         toolbar=(Toolbar)findViewById(R.id.edit_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         auth=FirebaseAuth.getInstance();
         cpass=0;
         cname=0;
@@ -73,33 +77,6 @@ public class EditProfile extends AppCompatActivity {
             finish();
             Intent c = new Intent(EditProfile.this, AppLoginPage.class);
             startActivity(c);
-        }
-    }
-    public void back(View v){
-        if(cpass>0 && cname>0){
-            finish();
-            Intent c = new Intent(EditProfile.this, AppLoginPage.class);
-            startActivity(c);
-        }
-        else
-        {
-            AlertDialog.Builder dialogbox = new AlertDialog.Builder(this);
-            dialogbox.setMessage("Are you sure you want to exit?")
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                            Intent c = new Intent(EditProfile.this, AppLoginPage.class);
-                            startActivity(c);
-                        }
-                    })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
-            dialogbox.create().show();
         }
     }
     public void checkfilled(){
@@ -126,11 +103,8 @@ public class EditProfile extends AppCompatActivity {
         }
         else {
             cpass = 2;
-            Map<String, Object> passfield = new HashMap<String, Object>();
-            passfield.put("password", passwordchange.getText().toString().trim());
             final String oldpass=passwordold.getText().toString().trim();
             final String newPass=passwordchange.getText().toString().trim();
-            data.child("users").child(auth.getCurrentUser().getUid()).updateChildren(passfield);
             if(!oldpass.isEmpty()) {
                 final FirebaseUser user = auth.getCurrentUser();
                 AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), oldpass);
@@ -139,22 +113,26 @@ public class EditProfile extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
+                            ifreauth=true;
                             user.updatePassword(newPass).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (!task.isSuccessful()) {
                                         Toast.makeText(EditProfile.this, "Something went wrong. Please try again later", Toast.LENGTH_LONG).show();
                                     } else {
-                                        Toast.makeText(EditProfile.this, "Password Successfully Modified", Toast.LENGTH_LONG);
+                                        Toast.makeText(EditProfile.this, "Password Successfully Modified", Toast.LENGTH_LONG).show();
                                     }
                                 }
                             });
                         } else {
+                            ifreauth=false;
 
-                            Toast.makeText(EditProfile.this, "Authentication Failed", Toast.LENGTH_LONG);
                         }
                     }
                 });
+                Map<String, Object> passfield = new HashMap<String, Object>();
+                passfield.put("password", passwordchange.getText().toString().trim());
+                data.child("users").child(auth.getCurrentUser().getUid()).updateChildren(passfield);
             }
             else{
                 AlertDialog.Builder dialogs=new AlertDialog.Builder(this);
@@ -192,7 +170,47 @@ public class EditProfile extends AppCompatActivity {
             namefield.put("name", namechange.getText().toString().trim());
             data.child("users").child(auth.getCurrentUser().getUid()).updateChildren(namefield);
         }
+        if(!ifreauth) {
+            Toast.makeText(EditProfile.this, "Authentication Failed", Toast.LENGTH_LONG).show();
+            Intent newintent = new Intent().setClass(EditProfile.this, EditProfile.class);
+            startActivity(newintent);
+            EditProfile.this.finish();
+        }
+
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                if (cpass > 0 && cname > 0) {
+                    finish();
+                    Intent c = new Intent(EditProfile.this, AppLoginPage.class);
+                    startActivity(c);
+                } else {
+                    AlertDialog.Builder dialogbox = new AlertDialog.Builder(this);
+                    dialogbox.setMessage("Are you sure you want to exit?")
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    finish();
+                                    Intent c = new Intent(EditProfile.this, AppLoginPage.class);
+                                    startActivity(c);
+                                }
+                            })
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                    dialogbox.create().show();
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
 }
 

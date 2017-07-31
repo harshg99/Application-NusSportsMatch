@@ -82,15 +82,16 @@ public class Fragment_chats extends Fragment {
 
                     }
                 }
-
-                chats_list.setAdapter(new ChatBarAdapter(getActivity(),chats));
-                chats_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent i=new Intent(getActivity(), ChatMessageActivity.class);
-                        startActivity(i);
-                    }
-                });
+                if(getActivity()!=null) {
+                    chats_list.setAdapter(new ChatBarAdapter(getActivity(), chats));
+                    chats_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Intent i = new Intent(getActivity(), ChatMessageActivity.class);
+                            startActivity(i);
+                        }
+                    });
+                }
             }
 
             @Override

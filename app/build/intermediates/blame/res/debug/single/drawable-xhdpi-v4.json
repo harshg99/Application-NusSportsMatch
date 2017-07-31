@@ -16,6 +16,10 @@
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\46c3627bff41abd275d5742e9d7a5f34a1cc443e\\output\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_text_dark_pressed.9.png"
     },
     {
+        "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\googleg_standard_color_18.png",
+        "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\e2dcd7b36979f1aab824f420e82e1f5d50f058a6\\output\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_plus_signin_btn_text_dark_normal.9.png",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\46c3627bff41abd275d5742e9d7a5f34a1cc443e\\output\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_text_dark_normal.9.png"
     },
@@ -62,6 +66,10 @@
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_plus_signin_btn_icon_light_normal.9.png",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\46c3627bff41abd275d5742e9d7a5f34a1cc443e\\output\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_icon_light_normal.9.png"
+    },
+    {
+        "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\googleg_disabled_color_18.png",
+        "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\e2dcd7b36979f1aab824f420e82e1f5d50f058a6\\output\\res\\drawable-xhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_plus_signin_btn_text_light_disabled.9.png",
@@ -117,7 +125,7 @@
     },
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_full_open_on_phone.png",
-        "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\46c3627bff41abd275d5742e9d7a5f34a1cc443e\\output\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
+        "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\e2dcd7b36979f1aab824f420e82e1f5d50f058a6\\output\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
     },
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\design_ic_visibility.png",
@@ -138,6 +146,14 @@
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\e2dcd7b36979f1aab824f420e82e1f5d50f058a6\\output\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\e2dcd7b36979f1aab824f420e82e1f5d50f058a6\\output\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_plus_signin_btn_text_dark_focused.9.png",
@@ -220,6 +236,10 @@
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\e2dcd7b36979f1aab824f420e82e1f5d50f058a6\\output\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_disabled.9.png",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\46c3627bff41abd275d5742e9d7a5f34a1cc443e\\output\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_disabled.9.png"
     },
@@ -238,6 +258,10 @@
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\e2dcd7b36979f1aab824f420e82e1f5d50f058a6\\output\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",

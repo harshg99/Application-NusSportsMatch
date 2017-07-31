@@ -1,6 +1,11 @@
 package com.example.harshgoel.nussportsmatch;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.support.design.widget.Snackbar;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.DialogInterface;
@@ -15,9 +20,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 
+import com.example.harshgoel.nussportsmatch.Connection.ConnectionManager;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
 import com.example.harshgoel.nussportsmatch.Logic.sportsPlayer;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,6 +35,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 import static android.content.ContentValues.TAG;
 
 /**
@@ -37,6 +48,7 @@ import static android.content.ContentValues.TAG;
 public class SignUp extends AppCompatActivity {
     //UI components
     public EditText email;
+    public RelativeLayout layout;
     public EditText pass;
     public EditText confirmpass;
     public Button confirmbut;
@@ -54,9 +66,8 @@ public class SignUp extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         FirebaseUser user = auth.getCurrentUser();
         data= FirebaseDatabase.getInstance().getReference();
-        if (user != null) {
+        if (user != null && user.isEmailVerified()) {
             // User is signed in
-            Toast.makeText(getApplicationContext(), "Already Signed In", Toast.LENGTH_LONG).show();
             Intent intent=new Intent()
                     .setClass(com.example.harshgoel.nussportsmatch.SignUp.this,AppLoginPage.class);
             startActivity(intent);
@@ -101,14 +112,17 @@ public class SignUp extends AppCompatActivity {
 
     //initialises the UI of the signup activity
     public void initialiseUI() {
+
         email = (EditText) findViewById(R.id.email);
         pass = (EditText) findViewById(R.id.pass);
+        layout=(RelativeLayout)findViewById(R.id.signuplayout);
         confirmpass = (EditText) findViewById(R.id.confirmpass);
         confirmbut = (Button) findViewById(R.id.confirmbut);
         malebut= (RadioButton) findViewById(R.id.radioButton);
         femalebut= (RadioButton) findViewById(R.id.radioButton2);
         icon = (ImageView) findViewById(R.id.imageView);
         progressDialog=new ProgressDialog(SignUp.this);
+        new ConnectionManager(layout,SignUp.this).execute();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -116,8 +130,19 @@ public class SignUp extends AppCompatActivity {
                 if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-
-
+                    if(!user.isEmailVerified()){
+                        user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(SignUp.this,"Email Sent",Toast.LENGTH_SHORT);
+                                }
+                                else{
+                                    Toast.makeText(SignUp.this, "Email ID doesnt exist", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
                 } else {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
@@ -134,6 +159,7 @@ public class SignUp extends AppCompatActivity {
         String textemail=email.getText().toString();
         String password = pass.getText().toString();
         String confirmpassword = confirmpass.getText().toString();
+
         if(TextUtils.isEmpty(textemail)){
             Toast.makeText(this,"Please enter email",Toast.LENGTH_LONG).show();
             return;
@@ -173,13 +199,17 @@ public class SignUp extends AppCompatActivity {
                             }
                             progressDialog.setMessage("Signing Up");
                             progressDialog.show();
+                            newplayer.setAddress("Not Entered");
+                            newplayer.setMajor("Not Entered");
+                            newplayer.setFaculty("Not Entered");
+                            newplayer.setYear("Not Entered");
                             auth.createUserWithEmailAndPassword(newplayer.getEmail(), newplayer.getpassword())
                                     .addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
                                         @Override
                                         public void onComplete(@NonNull Task<AuthResult> task) {
                                             //checking if success
                                             if (task.isSuccessful()) {
-                                                //display some message her
+
                                                 inituserdata(newplayer,auth.getCurrentUser().getUid());
                                                 Toast.makeText(getApplicationContext(), "Successfully registered", Toast.LENGTH_LONG).show();
                                                 Intent intent=new Intent()
@@ -207,6 +237,7 @@ public class SignUp extends AppCompatActivity {
         }
 
     }
+    //initialises the data in the firebase
     public void inituserdata(Player k,String Uid){
         data.child("users").child(Uid).setValue(k);
         data.child("users").child(Uid).child("UserID").setValue(Uid);
@@ -232,6 +263,7 @@ public class SignUp extends AppCompatActivity {
                 .child("questionaireCompleted").setValue(badminton.isQuestionaireCompleted());
 
     }
+    //Method to analyse the password for its viability
     public boolean analyse_password(String pass1, String pass2) {
 
         if (pass1.equals(pass2)) {
@@ -262,6 +294,8 @@ public class SignUp extends AppCompatActivity {
             return false;
         }
     }
+
+    //Intent for siging in if the user has registered
     public void signin(View view){
         finish();
         Intent i=new Intent(this,SignIn.class);
@@ -280,6 +314,8 @@ public class SignUp extends AppCompatActivity {
             auth.removeAuthStateListener(mAuthListener);
         }
     }
+
+
 }
 
 

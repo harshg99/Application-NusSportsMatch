@@ -12,15 +12,23 @@ import java.util.List;
 public class Player implements PlayerInterface{
     //class contains name,password ans string
     private Uri profilephoto;
-    public String UserID;
+
+    private String major;
+    private String faculty;
+    private String year;
+    private String address;
+
+    private String UserID;
     private String gender;
     private String email;
     private String name;
     private String password;
+
     private sportsPlayer tennis;
     private sportsPlayer squash;
     private sportsPlayer tt;
     private sportsPlayer badminton;
+
     // functions overriden from the interface
     public void setEmail(String s){
         email=s;
@@ -58,6 +66,46 @@ public class Player implements PlayerInterface{
     public void setTt(sportsPlayer K){tt=K;}
     public void setSquash(sportsPlayer K){squash=K;}
     public void setBadminton(sportsPlayer K){badminton=K;}
+
+    public String getMajor() {
+        return major;
+    }
+
+    public String getFaculty() {
+        return faculty;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getUserID() {
+        return UserID;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setUserID(String userID) {
+        UserID = userID;
+    }
 
     @Override
     public String toString() {

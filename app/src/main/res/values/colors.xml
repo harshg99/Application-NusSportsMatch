@@ -27,4 +27,9 @@
     <color name="darkestblue">#191b9b</color>
     <color name="chatblack">#0e2940</color>
     <color name="niceblack">#15040a</color>
+    <color name="grey">#767676</color>
+    <color name="ltgrey">#dadada</color>
+    <color name="ltltgrey">#e4e4e4</color>
+    <color name="bwgrey">#9f9f9f</color>
+
 </resources>

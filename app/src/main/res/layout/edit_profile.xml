@@ -33,10 +33,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:layout_marginEnd="12dp"
-        android:layout_below="@+id/Back"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="67dp" />
+        android:layout_above="@+id/textoldpassword"
+        android:layout_toEndOf="@+id/edit_password"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="38dp" />
 
     <EditText
         android:id="@+id/textpassword"
@@ -56,17 +56,6 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/edit_name"
         android:layout_marginBottom="71dp" />
-
-    <Button
-        android:id="@+id/Back"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:layout_alignStart="@+id/edit_name"
-        android:layout_below="@+id/edit_bar"
-        android:layout_marginTop="16dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:text="Back"
-        android:onClick="back"/>
 
     <TextView
         android:id="@+id/textView13"
