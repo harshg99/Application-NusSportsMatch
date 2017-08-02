@@ -24,7 +24,9 @@ public class sportsPlayer {
     public void setQuestionaireCompleted(boolean a){
         questionaireCompleted=a;
     }
-
+    public void setSportsRate(Rating SportsRate){
+        this.SportsRate=SportsRate;
+    }
     @Override
     public String toString() {
         return ("SportsRate: "+SportsRate.toString()+" add: "+getisAdded()+" qc: "+isQuestionaireCompleted());

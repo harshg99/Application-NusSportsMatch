@@ -26,6 +26,7 @@
     <uses-permission android:name="com.example.harshgoel.nussportsmatch.permission.C2D_MESSAGE" />
 
     <application
+        android:name="com.example.harshgoel.nussportsmatch.ThisApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -49,6 +50,8 @@
         <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.setSports" />
         <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.Questionaire" />
         <activity android:name="com.example.harshgoel.nussportsmatch.Chats.ChatMessageActivity" />
+        <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditContent" />
+        <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditSecurity" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

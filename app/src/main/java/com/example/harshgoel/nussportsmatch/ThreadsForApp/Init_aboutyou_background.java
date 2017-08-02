@@ -4,10 +4,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.example.harshgoel.nussportsmatch.Adapters.AboutYouAdapter;
+import com.example.harshgoel.nussportsmatch.ListViewReplacement;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
+import com.example.harshgoel.nussportsmatch.R;
 import com.example.harshgoel.nussportsmatch.SignIn;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -21,16 +25,16 @@ import java.util.Map;
  */
 
 public class Init_aboutyou_background extends AsyncTask<Void,Void,List<String>> {
-    private View view;
-    private ListView thislist;
+    private Activity activity;
     private Player thisplayer;
     private Context context;
+    private int linearLayout;
+    public Init_aboutyou_background(Activity activity,Context context, int linearLayout,Player thisplayer){
 
-    public Init_aboutyou_background(Context context,View parentview, ListView parentlist,Player thisplayer){
-        view=parentview;
-        thislist=parentlist;
         this.context=context;
         this.thisplayer=thisplayer;
+        this.linearLayout=linearLayout;
+        this.activity=activity;
     }
 
     @Override
@@ -46,6 +50,10 @@ public class Init_aboutyou_background extends AsyncTask<Void,Void,List<String>> 
 
     @Override
     protected void onPostExecute(List<String> strings) {
-        thislist.setAdapter(new AboutYouAdapter(context,strings));
+        ListAdapter adapter=new AboutYouAdapter(context,strings);
+        ListViewReplacement list=new ListViewReplacement(activity,context,linearLayout);
+        list.setAdapter(adapter);
+        list.setHeadFoot(R.layout.header_aboutyou,R.layout.footer_aboutyou);
+        list.setList();
     }
 }

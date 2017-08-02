@@ -6,7 +6,7 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1501530069390"
+    timestamp="1501696037378"
     token="1909912529772781054"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,28 +23,24 @@
         name="verifier"
         duration="0" />
 
-    <artifact
-        location="C:\Github\NUSSPORTSMATCH\app\build\outputs\apk\app-debug.apk"
-        type="SPLIT_MAIN" />
-
     <build
         build-mode="FULL"
-        timestamp="1501529312100"
+        timestamp="1501695672391"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Github\NUSSPORTSMATCH\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Github\NUSSPORTSMATCH\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
             location="C:\Github\NUSSPORTSMATCH\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Github\NUSSPORTSMATCH\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Github\NUSSPORTSMATCH\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Github\NUSSPORTSMATCH\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
             location="C:\Github\NUSSPORTSMATCH\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Github\NUSSPORTSMATCH\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Github\NUSSPORTSMATCH\app\build\outputs\apk\app-debug.apk"
@@ -70,19 +66,15 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1501529767970"
+        timestamp="1501695971570"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Github\NUSSPORTSMATCH\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Github\NUSSPORTSMATCH\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1501530069390"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Github\NUSSPORTSMATCH\app\build\outputs\apk\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
+        timestamp="1501696037378"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

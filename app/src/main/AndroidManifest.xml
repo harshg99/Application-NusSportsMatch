@@ -11,7 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".ThisApplication">
         <activity android:name=".SignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +31,8 @@
         <activity android:name=".ProfileDataPackage.setSports"/>
         <activity android:name=".ProfileDataPackage.Questionaire"/>
         <activity android:name=".Chats.ChatMessageActivity"/>
+        <activity android:name=".ProfileDataPackage.EditContent"/>
+        <activity android:name=".ProfileDataPackage.EditSecurity"/>
 
     </application>
 

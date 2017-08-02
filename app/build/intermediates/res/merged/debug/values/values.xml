@@ -171,6 +171,7 @@
     <item name="lightyellow" type="color">#e9e4f58e</item>
     <color name="ltgrey">#dadada</color>
     <color name="ltltgrey">#e4e4e4</color>
+    <color name="ltltltgrey">#f2f1f1</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -29,7 +30,6 @@ public class handlephoto extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photograph);
         initialiseUi();
-
         clickphoto.setOnClickListener(new View.OnClickListener() {
                                            @Override
                                            public void onClick(View v) {
@@ -59,6 +59,8 @@ public class handlephoto extends AppCompatActivity {
         profilephoto=(ImageView)findViewById(R.id.ProfilePhoto);
         photobar=(Toolbar)findViewById(R.id.Photo_bar);
         setSupportActionBar(photobar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     protected void onActivityResult(int requestCode,int resultCode,Intent data){
         super.onActivityResult(requestCode,resultCode,data);
@@ -66,6 +68,19 @@ public class handlephoto extends AppCompatActivity {
         profilephoto.setImageBitmap(m);
         profilephoto.setScaleType(ImageView.ScaleType.FIT_XY);
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                Intent c = new Intent(handlephoto.this, AppLoginPage.class);
+                startActivity(c);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 
 
