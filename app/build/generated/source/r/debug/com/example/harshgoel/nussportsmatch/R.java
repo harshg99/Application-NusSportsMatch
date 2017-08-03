@@ -3637,16 +3637,18 @@ containing a value of this type.
         public static final int photograph=0x7f04004c;
         public static final int profilelogin=0x7f04004d;
         public static final int questionaire=0x7f04004e;
-        public static final int request_recieved=0x7f04004f;
-        public static final int request_sent=0x7f040050;
-        public static final int select_dialog_item_material=0x7f040051;
-        public static final int select_dialog_multichoice_material=0x7f040052;
-        public static final int select_dialog_singlechoice_material=0x7f040053;
-        public static final int set_sports=0x7f040054;
-        public static final int sport_match=0x7f040055;
-        public static final int support_simple_spinner_dropdown_item=0x7f040056;
-        public static final int tool_bar=0x7f040057;
-        public static final int update_profile=0x7f040058;
+        public static final int register_for_sports_middle=0x7f04004f;
+        public static final int request_recieved=0x7f040050;
+        public static final int request_sent=0x7f040051;
+        public static final int select_dialog_item_material=0x7f040052;
+        public static final int select_dialog_multichoice_material=0x7f040053;
+        public static final int select_dialog_singlechoice_material=0x7f040054;
+        public static final int set_sports=0x7f040055;
+        public static final int setsportsnew=0x7f040056;
+        public static final int sport_match=0x7f040057;
+        public static final int support_simple_spinner_dropdown_item=0x7f040058;
+        public static final int tool_bar=0x7f040059;
+        public static final int update_profile=0x7f04005a;
     }
     public static final class menu {
         public static final int apploginpagemenu=0x7f100000;

@@ -3,8 +3,10 @@ package com.example.harshgoel.nussportsmatch.Fragments;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -25,12 +27,18 @@ import com.example.harshgoel.nussportsmatch.ProfileDataPackage.setSports;
 import com.example.harshgoel.nussportsmatch.R;
 import com.example.harshgoel.nussportsmatch.ThreadsForApp.Init_Sports_Background;
 import com.example.harshgoel.nussportsmatch.ThreadsForApp.Init_aboutyou_background;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by Harsh Goel on 7/17/2017.
@@ -48,6 +56,7 @@ public class Fragment_profile extends Fragment {
     private FirebaseAuth auth;
     private DatabaseReference userref;
     private ExpandableListView sportsreg;
+    private StorageReference storref;
 
     @Nullable
     @Override
@@ -63,18 +72,29 @@ public class Fragment_profile extends Fragment {
         userref= FirebaseDatabase.getInstance().getReference();
         userref=userref.child("users").child(auth.getCurrentUser().getUid());
         userref.keepSynced(true);
+        storref= FirebaseStorage.getInstance().getReference().child("Photos").child(auth.getCurrentUser().getUid());
 
         userref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot){
                 userplayer=dataSnapshot.getValue(Player.class);
                 profilename.setText(userplayer.getName());
-                if(userplayer.getGender().equals("Male")){
-                    profilephoto.setImageDrawable(getResources().getDrawable(R.drawable.male));
-                    profilephoto.setScaleType(ImageView.ScaleType.FIT_XY);
+                if(userplayer.getProfilephoto().isEmpty()) {
+                    if (userplayer.getGender().equals("Male")) {
+                        profilephoto.setImageDrawable(getResources().getDrawable(R.drawable.male));
+                        profilephoto.setScaleType(ImageView.ScaleType.FIT_XY);
+                    } else {
+                        profilephoto.setImageDrawable(getResources().getDrawable(R.drawable.female));
+                        profilephoto.setScaleType(ImageView.ScaleType.FIT_XY);
+                    }
                 }
                 else{
-                    profilephoto.setImageDrawable(getResources().getDrawable(R.drawable.female));
+                    storref.child(userplayer.getProfilephoto()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            Picasso.with(getContext()).load(uri).fit().into(profilephoto);
+                        }
+                    });
                 }
                 new Init_aboutyou_background(getActivity(),getContext(),R.id.whoareyoulayout,userplayer)
                         .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
