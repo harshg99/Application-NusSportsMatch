@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:2:1-39:12
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:2:1-50:12
 	package
 		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:3:5-51
 		INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml
@@ -31,8 +31,16 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:6:5-75
 	android:name
 		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:6:22-73
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:8:22-78
 application
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:8:5-37:19
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:10:5-48:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Harsh Goel\.android\build-cache\dd1ea912feeaf359b4b087060fc46ba4e6a4dc6e\output\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth:11.0.2] C:\Users\Harsh Goel\.android\build-cache\c8d035aee4f669e0d836ee4e831400667e17d414\output\AndroidManifest.xml:19:5-20:19
 MERGED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Harsh Goel\.android\build-cache\e2dcd7b36979f1aab824f420e82e1f5d50f058a6\output\AndroidManifest.xml:18:5-20:19
@@ -55,69 +63,85 @@ MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Harsh Goel\.an
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Harsh Goel\.android\build-cache\0358cd5838846219c9d23dcb8b0d779e7ca3998c\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Harsh Goel\.android\build-cache\29e96fb85b252166046d2254c8e315a041b1b8aa\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:13:9-41
 	android:supportsRtl
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:15:9-35
 	android:roundIcon
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:14:9-54
 	android:allowBackup
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:11:9-35
 	android:icon
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:12:9-43
 	android:theme
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:14:9-40
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:16:9-40
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:15:9-40
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:17:9-40
+provider#android.support.v4.content.FileProvider
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:18:9-26:20
+	android:authorities
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:20:13-67
+	android:grantUriPermissions
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:22:13-47
+	android:exported
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:19:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:23:13-25:64
+	android:resource
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:25:17-51
+	android:name
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:24:17-67
 activity#com.example.harshgoel.nussportsmatch.SignUp
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:16:9-22:20
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:27:9-33:20
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:16:19-41
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:27:19-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:28:13-32:29
 action#android.intent.action.MAIN
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:31:27-74
 activity#com.example.harshgoel.nussportsmatch.SignIn
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:23:9-25:20
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:34:9-36:20
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:23:19-41
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:34:19-41
 activity#com.example.harshgoel.nussportsmatch.AppLoginPage
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:26:9-27:20
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:37:9-38:20
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:26:19-47
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:37:19-47
 activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.handlephoto
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:28:9-29:20
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:39:9-40:20
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:28:19-65
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:39:19-65
 activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditProfile
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:30:9-67
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:41:9-67
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:30:19-65
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:41:19-65
 activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.setSports
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:31:9-65
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:42:9-65
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:31:19-63
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:42:19-63
 activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.Questionaire
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:32:9-68
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:43:9-68
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:32:19-66
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:43:19-66
 activity#com.example.harshgoel.nussportsmatch.Chats.ChatMessageActivity
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:33:9-62
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:44:9-62
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:33:19-60
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:44:19-60
 activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditContent
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:34:9-67
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:45:9-67
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:34:19-65
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:45:19-65
 activity#com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditSecurity
-ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:35:9-68
+ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:46:9-68
 	android:name
-		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:35:19-66
+		ADDED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml:46:19-66
 uses-sdk
 INJECTED from C:\Github\NUSSPORTSMATCH\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Harsh Goel\.android\build-cache\dd1ea912feeaf359b4b087060fc46ba4e6a4dc6e\output\AndroidManifest.xml:5:5-7:41

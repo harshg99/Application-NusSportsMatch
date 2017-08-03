@@ -71,6 +71,7 @@ public class Fragment_profile extends Fragment {
                 profilename.setText(userplayer.getName());
                 if(userplayer.getGender().equals("Male")){
                     profilephoto.setImageDrawable(getResources().getDrawable(R.drawable.male));
+                    profilephoto.setScaleType(ImageView.ScaleType.FIT_XY);
                 }
                 else{
                     profilephoto.setImageDrawable(getResources().getDrawable(R.drawable.female));

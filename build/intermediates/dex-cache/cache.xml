@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="7d391cb52ae2bafb95c314379f754210955f7829">
+        sha1="e4018f8e156c61bf274cf494a8430268edea8abe">
         <dex dex="C:\Github\NUSSPORTSMATCH\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_50976d40863d9d5e4b8b9f690e23cce028e3c78a\classes.dex" />
     </item>
     <item
@@ -45,6 +45,15 @@
         revision="25.0.3"
         sha1="a71be5f29a1c1e3fd3e84472742668f101a5b936">
         <dex dex="C:\Github\NUSSPORTSMATCH\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4abded341576daa1b10b6f73c1eea57233705f21\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Harsh Goel\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Github\NUSSPORTSMATCH\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_ad558a85871656e7dfb74b181d35fb00069139fa\classes.dex" />
     </item>
     <item
         is-multidex="true"

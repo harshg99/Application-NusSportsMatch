@@ -11,7 +11,7 @@ import java.util.List;
 //declration of the player class
 public class Player implements PlayerInterface{
     //class contains name,password ans string
-    private Uri profilephoto;
+    private String profilephoto;
 
     private String major;
     private String faculty;
@@ -52,10 +52,10 @@ public class Player implements PlayerInterface{
     public void setName(String k){
         name=k;
     }
-    public Uri getProfilephoto(){
+    public String getProfilephoto(){
         return profilephoto;
     }
-    public void setProfilephoto(Uri photo){
+    public void setProfilephoto(String photo){
         profilephoto=photo;
     }
     public sportsPlayer getTennis(){return tennis;}
