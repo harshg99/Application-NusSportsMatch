@@ -13,8 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.harshgoel.nussportsmatch.Adapters.register_new_sportsAdapter;
 import com.example.harshgoel.nussportsmatch.AppLoginPage;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
 import com.example.harshgoel.nussportsmatch.Logic.sportsPlayer;
@@ -26,6 +28,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -36,60 +39,44 @@ import java.util.Map;
 
 public class setSports extends AppCompatActivity {
 
-    public CheckBox tennisbox;
-    public CheckBox Badmintonbox;
-    public CheckBox squashbox;
-    public CheckBox ttbox;
+
     public Toolbar tool;
-    public Button confirmBUT;
     private FirebaseAuth auth;
     private DatabaseReference userref;
     public Player userplayer;
-    private int tenniscomp;
-    private int ttcomp;
-    private int badcomp;
-    private int squashcomp;
+    private ListView regunregsportlist;
+    private List<sportsPlayer>listofsports;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.set_sports);
+        setContentView(R.layout.setsportsnew);
         tool=(Toolbar)findViewById(R.id.set_Bar);
         setSupportActionBar(tool);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        confirmBUT=(Button)findViewById(R.id.Confirm);
-        tennisbox=(CheckBox)findViewById(R.id.Tennis);
-        Badmintonbox=(CheckBox)findViewById(R.id.badminton);
-        ttbox=(CheckBox)findViewById(R.id.TableTennis);
-        tenniscomp=0;
-        ttcomp=0;
-        badcomp=0;
-        squashcomp=0;
-        squashbox=(CheckBox)findViewById(R.id.Squash);
+
         final ProgressDialog dialog=new ProgressDialog(this);
         dialog.setMessage("Retrieving...");
         dialog.show();
         auth=FirebaseAuth.getInstance();
         userref= FirebaseDatabase.getInstance().getReference();
         userref=userref.child("users").child(auth.getCurrentUser().getUid());
+        regunregsportlist=(ListView)findViewById(R.id.RegisterListView);
+        listofsports=new ArrayList<sportsPlayer>();
+
+
         userref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot){
                 dialog.cancel();
                 userplayer=dataSnapshot.getValue(Player.class);
                 Log.d("UserPlayer:",userplayer.toString());
-                if(userplayer.getTennis().getisAdded()){
-                    tennisbox.setChecked(true);
-                }
-                if(userplayer.getSquash().getisAdded()){
-                    squashbox.setChecked(true);
-                }
-                if(userplayer.getBadminton().getisAdded()){
-                    Badmintonbox.setChecked(true);
-                }
-                if(userplayer.getTt().getisAdded()){
-                    ttbox.setChecked(true);
-                }
+                listofsports.add(userplayer.getTennis());
+                listofsports.add(userplayer.getSquash());
+                listofsports.add(userplayer.getBadminton());
+                listofsports.add(userplayer.getTt());
+                regunregsportlist.setAdapter(new register_new_sportsAdapter(setSports.this,setSports.this,listofsports));
             }
 
             @Override
@@ -97,42 +84,6 @@ public class setSports extends AppCompatActivity {
                 Log.d("Database Reference:","Read ERROR");
             }
         });
-
-    }
-    public void ConfirmSports(View v) {
-        if (tennisbox.isChecked())
-            userplayer.getTennis().setAdded(true);
-        else
-            userplayer.getTennis().setAdded(false);
-        if (squashbox.isChecked())
-            userplayer.getSquash().setAdded(true);
-        else
-            userplayer.getSquash().setAdded(false);
-        if (ttbox.isChecked())
-            userplayer.getTt().setAdded(true);
-        else
-            userplayer.getTt().setAdded(false);
-        if (Badmintonbox.isChecked())
-            userplayer.getBadminton().setAdded(true);
-        else
-            userplayer.getBadminton().setAdded(false);
-
-        userref.child("tennis").child("isAdded").setValue(userplayer.getTennis().getisAdded());
-        userref.child("squash").child("isAdded").setValue(userplayer.getSquash().getisAdded());
-        userref.child("badminton").child("isAdded").setValue(userplayer.getBadminton().getisAdded());
-        userref.child("tt").child("isAdded").setValue(userplayer.getTt().getisAdded());
-        if ((!userplayer.getTennis().isQuestionaireCompleted()&&userplayer.getTennis().getisAdded())
-                || (!userplayer.getBadminton().isQuestionaireCompleted()&&userplayer.getBadminton().getisAdded())
-                || (!userplayer.getSquash().isQuestionaireCompleted()&&userplayer.getSquash().getisAdded())
-                || (!userplayer.getTt().isQuestionaireCompleted()&&userplayer.getTt().getisAdded())) {
-            this.finish();
-            Intent intent = new Intent().setClass(setSports.this, Questionaire.class);
-            startActivity(intent);
-        } else {
-            this.finish();
-            Intent intent = new Intent().setClass(this, AppLoginPage.class);
-            startActivity(intent);
-        }
     }
 
     @Override

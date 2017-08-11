@@ -46,7 +46,7 @@
         </FrameLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="135dp"
+            android:layout_height="145dp"
             android:layout_below="@id/Frame_profile"
             android:background="@color/ltltltgrey"
             android:id="@+id/relativeprofilebuts">
@@ -63,9 +63,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Edit Photo"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/buttonshape"
                 android:layout_alignTop="@id/edit_profile"
-                android:layout_toLeftOf="@id/edit_profile"
+                android:layout_alignParentStart="true"
                 />
             <Button
                 android:id="@+id/viewprofile"
@@ -74,17 +75,22 @@
                 android:text="View "
                 android:background="@drawable/buttonshape"
                 android:layout_alignTop="@id/edit_profile"
-                android:layout_toRightOf="@id/edit_profile"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
                 />
 
             <Button
                 android:id="@+id/selectsports"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:text="Register/Unregister for a sport"
                 android:background="@drawable/register_button_shape"
                 android:layout_below="@id/edit_profile"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="15dp"
                 />
 
         </RelativeLayout>
@@ -103,7 +109,7 @@
             android:id="@+id/sportslayout"
             android:layout_alignParentBottom="true"
             android:layout_below="@id/whoareyoulayout"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"

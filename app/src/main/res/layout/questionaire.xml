@@ -105,13 +105,13 @@
         android:id="@+id/Sports"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sports"
+        android:layout_below="@+id/seekBar3"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:text="Skill"
         android:textColor="@color/black"
         android:textSize="17sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/seekBar3"
-        android:layout_toEndOf="@+id/textView4"
-        android:layout_marginTop="25dp" />
+        android:textStyle="bold" />
 
 
     <TextView

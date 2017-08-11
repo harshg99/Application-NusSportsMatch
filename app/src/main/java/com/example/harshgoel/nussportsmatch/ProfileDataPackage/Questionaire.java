@@ -27,6 +27,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -65,21 +66,29 @@ public class Questionaire extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionaire);
+
+        ArrayList<String> skills=getIntent().getStringArrayListExtra("Skills");
+        String sport=getIntent().getStringExtra("sport");
+
         awarevalue=0;
         fitvalue=0;
         tennisvalue=0;
         ttvalue=0;
         squashvalue=0;
         badmintonvalue=0;
+
         value=new ArrayList<Float>();
+
         rating_awareness=(TextView)findViewById(R.id.awarerating) ;
         rating_tennis=(TextView)findViewById(R.id.ratingtennis) ;
         rating_tt=(TextView)findViewById(R.id.ratingtabletennis) ;
         rating_squash=(TextView)findViewById(R.id.ratingsquash) ;
         rating_badminton=(TextView)findViewById(R.id.ratingbadminton) ;
         rating_fitness=(TextView)findViewById(R.id.fitnessrating) ;
+
         final ProgressDialog dialog=new ProgressDialog(this);
         dialog.setMessage("Retrieving...");
         dialog.show();
@@ -94,6 +103,7 @@ public class Questionaire extends AppCompatActivity {
         note=(Button)findViewById(R.id.Note);
         set=(Button) findViewById(R.id.Set);
         set.setEnabled(false);
+
         Toolbar k=(Toolbar)findViewById(R.id.q_bar);
         setSupportActionBar(k);
 
