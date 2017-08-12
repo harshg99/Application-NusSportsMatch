@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recieved Requests"
+        android:textSize="25sp"
+        android:textColor="@color/darkestblue"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp" />
+
+    <ListView
+        android:id="@+id/listViewsentrequests"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView8"></ListView>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sent Requests"
+        android:textColor="@color/darkestblue"
+        android:textSize="25sp"
+        android:layout_below="@+id/listViewsentrequests"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:id="@+id/listViewrecieverequest"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView9"></ListView>
+</RelativeLayout>

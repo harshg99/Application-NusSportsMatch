@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">NUS Sports Match</string>
+
+    <string name="first_button">Sport Selection</string>
+    <string name="second_button">View Profile</string>
+    <string name="third_button">Chats</string>
+    <string name="fourth_button">Calendar</string>
+
+    <string name="exact">match_parent</string>
+
+    <string name="sport_1">Badminton</string>
+    <string name="sport_2">Table Tennis</string>
+    <string name="sport_3">Tennis</string>
+    <string name="sport_4">Squash</string>
+
+    <string name="name_1">Rachiket Arya</string>
+    <string name="Password">Password</string>
+    <string name="Name">Name</string>
+    <string name="Rating">0</string>
+    <string-array name="SportsOptions">
+        <item>Tennis</item>
+        <item>Badminton</item>
+        <item>Squash</item>
+        <item>Table Tennis</item>
+        <item>Select Sport to Matchup</item>
+    </string-array>
+
+
+</resources>

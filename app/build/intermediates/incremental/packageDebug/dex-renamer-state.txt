@@ -1,0 +1,7 @@
+#Fri Aug 04 03:02:14 GST 2017
+base.0=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_e52cf13f3fe99943bcb0959801561171cddb81e5
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_50976d40863d9d5e4b8b9f690e23cce028e3c78a\\classes.dex
+base.1=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_50976d40863d9d5e4b8b9f690e23cce028e3c78a
+file.0=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_e52cf13f3fe99943bcb0959801561171cddb81e5\\classes.dex

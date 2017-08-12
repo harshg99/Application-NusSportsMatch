@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="colorPrimary">#3F51B5</color>
+<color name="colorPrimaryDark">#303F9F</color>
+<color name="colorAccent">#FF4081</color>
+<item name="blue" type="color">#FF33B5E5</item>
+<item name="purple" type="color">#FFAA66CC</item>
+<item name="green" type="color">#FF99CC00</item>
+<item name="orange" type="color">#FFFFBB33</item>
+<item name="red" type="color">#FFFF4444</item>
+<item name="darkblue" type="color">#FF0099CC</item>
+<item name="darkpurple" type="color">#FF9933CC</item>
+<item name="darkgreen" type="color">#FF669900</item>
+<item name="darkorange" type="color">#FFFF8800</item>
+<item name="darkred" type="color">#FFCC0000</item>
+<item name="yellow" type="color">#FFFF00</item>
+<item name="white" type="color">#FAFFFFFA</item>
+<item name="sky_blue" type="color">#AABFFF</item>
+<item name="black" type="color">#000000</item>
+<item name="lightorange" type="color">#F6CC98</item>
+<item name="lightred" type="color">#AFFE2222</item>
+<item name="lightyellow" type="color">#e9e4f58e</item>
+    <color name="skyred">#ffd2d4</color>
+    <color name="verylightyellow">#f9fdbb</color>
+    <color name="niceblue">#b2f5f0</color>
+    <color name="chatgreen">#effddd</color>
+    <color name="darkestblue">#191b9b</color>
+    <color name="chatblack">#0e2940</color>
+    <color name="niceblack">#15040a</color>
+    <color name="grey">#767676</color>
+    <color name="ltgrey">#dadada</color>
+    <color name="ltltgrey">#e4e4e4</color>
+    <color name="ltltltgrey">#f2f1f1</color>
+    <color name="bwgrey">#9f9f9f</color>
+
+</resources>
