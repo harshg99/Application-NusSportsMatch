@@ -16,12 +16,24 @@
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
     },
     {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+    },
+    {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\layout-v11\\notification_template_big_media.xml"
     },
     {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\layout-v11\\notification_template_big_media.xml"
+    },
+    {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
     },
     {
         "merged": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
@@ -40,11 +52,23 @@
         "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
     },
     {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\layout-v11\\notification_media_action.xml"
+    },
+    {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
     },
     {
         "merged": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
         "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
     }
 ]

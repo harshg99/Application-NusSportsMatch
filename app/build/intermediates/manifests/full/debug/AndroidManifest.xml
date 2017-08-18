@@ -64,6 +64,26 @@
         <activity android:name="com.example.harshgoel.nussportsmatch.Chats.ChatMessageActivity" />
         <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditContent" />
         <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditSecurity" />
+        <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.profileView" />
+
+        <service android:name="com.example.harshgoel.nussportsmatch.Service.NotificationService" >
+            <intent-filter>
+                <action android:name="com.example.harshgoel.nussportsmatch.Service.NotificationService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.example.harshgoel.nussportsmatch.NotificationBroadcastReciever.RestartNotificationService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="Restart" >
+            <intent-filter>
+                <action android:name="com.example.harshgoel.restartservice" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

@@ -24,6 +24,8 @@ public class ListViewReplacement {
     public ListViewReplacement(Activity activity,Context context,int resourceLayout){
         this.activity=activity;
         this.context=context;
+        resourceFooter=null;
+        resourceHeader=null;
         layout=(LinearLayout)activity.findViewById(resourceLayout);
     }
     public void setAdapter(ListAdapter adapter){
@@ -43,11 +45,19 @@ public class ListViewReplacement {
         setResourceFooter(rf);
         setResourceHeader(rh);
     }
-    public void setList(){
-        layout.addView(resourceHeader);
-        for(int i=0;i<adapter.getCount();i++){
-            layout.addView(adapter.getView(i,null,layout));
+    public void setList() {
+        if (layout != null) {
+            if (resourceHeader != null) {
+                layout.addView(resourceHeader);
+            }
+            if (adapter != null) {
+                for (int i = 0; i < adapter.getCount(); i++) {
+                    layout.addView(adapter.getView(i, null, layout));
+                }
+            }
+            if (resourceFooter != null) {
+                layout.addView(resourceFooter);
+            }
         }
-        layout.addView(resourceFooter);
     }
 }

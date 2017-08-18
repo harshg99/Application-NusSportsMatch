@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "D:\\Github\\ansm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",
         "source": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
@@ -14,5 +18,9 @@
     {
         "merged": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
         "source": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "source": "D:\\Github\\ansm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     }
 ]

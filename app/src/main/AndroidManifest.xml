@@ -44,6 +44,24 @@
         <activity android:name=".Chats.ChatMessageActivity"/>
         <activity android:name=".ProfileDataPackage.EditContent"/>
         <activity android:name=".ProfileDataPackage.EditSecurity"/>
+        <activity android:name=".ProfileDataPackage.profileView"/>
+        <service
+            android:name=".Service.NotificationService">
+        <intent-filter>
+            <action android:name="com.example.harshgoel.nussportsmatch.Service.NotificationService" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </service>
+        <receiver android:name=".NotificationBroadcastReciever.RestartNotificationService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="Restart">
+            <intent-filter>
+                <action android:name="com.example.harshgoel.restartservice"/>
+            </intent-filter>
+        </receiver>
+
 
     </application>
 

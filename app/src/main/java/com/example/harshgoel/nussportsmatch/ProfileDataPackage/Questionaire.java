@@ -39,29 +39,32 @@ import java.util.Map;
 
 public class Questionaire extends AppCompatActivity {
     public TextView rating_awareness;
-    public TextView rating_tennis;
-    public TextView rating_tt;
-    public TextView rating_badminton;
-    public TextView rating_squash;
+    public TextView rating_skill4;
+    public TextView rating_skill1;
+    public TextView rating_skill2;
+    public TextView rating_skill3;
     public TextView rating_fitness;
     public SeekBar awarerating;
-    public SeekBar tennisrating;
-    public SeekBar ttrating;
-    public SeekBar squashrating;
-    public SeekBar badmintonrating;
+    public SeekBar skill4;
+    public SeekBar skill1;
+    public SeekBar skill3;
+    public SeekBar skill2;
     public SeekBar fitnessrating;
     public Button note;
     public Button set;
     private float awarevalue;
     private float fitvalue;
-    private float tennisvalue;
-    private float ttvalue;
-    private float squashvalue;
-    private float badmintonvalue;
+    private float skill4value;
+    private float skill1value;
+    private float skill3value;
+    private float skill2value;
     private FirebaseAuth auth;
     private DatabaseReference userref;
     private Player userplayer;
     public List<Float> value;
+    private String sport;
+    private ArrayList<String> skills;
+    private List<TextView>textfields;
 
 
     @Override
@@ -70,23 +73,17 @@ public class Questionaire extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionaire);
 
-        ArrayList<String> skills=getIntent().getStringArrayListExtra("Skills");
-        String sport=getIntent().getStringExtra("sport");
-
-        awarevalue=0;
-        fitvalue=0;
-        tennisvalue=0;
-        ttvalue=0;
-        squashvalue=0;
-        badmintonvalue=0;
+        skills=getIntent().getStringArrayListExtra("Skills");
+        sport=getIntent().getStringExtra("sport");
+        assignskilltext();
 
         value=new ArrayList<Float>();
 
         rating_awareness=(TextView)findViewById(R.id.awarerating) ;
-        rating_tennis=(TextView)findViewById(R.id.ratingtennis) ;
-        rating_tt=(TextView)findViewById(R.id.ratingtabletennis) ;
-        rating_squash=(TextView)findViewById(R.id.ratingsquash) ;
-        rating_badminton=(TextView)findViewById(R.id.ratingbadminton) ;
+        rating_skill4=(TextView)findViewById(R.id.ratingtennis) ;
+        rating_skill1=(TextView)findViewById(R.id.ratingtabletennis) ;
+        rating_skill3=(TextView)findViewById(R.id.ratingsquash) ;
+        rating_skill2=(TextView)findViewById(R.id.ratingbadminton) ;
         rating_fitness=(TextView)findViewById(R.id.fitnessrating) ;
 
         final ProgressDialog dialog=new ProgressDialog(this);
@@ -94,10 +91,10 @@ public class Questionaire extends AppCompatActivity {
         dialog.show();
 
         awarerating=(SeekBar)findViewById(R.id.seekBar2) ;
-        ttrating=(SeekBar)findViewById(R.id.seekBar4) ;
-        tennisrating=(SeekBar)findViewById(R.id.seekBar7);
-        squashrating=(SeekBar)findViewById(R.id.seekBar6);
-        badmintonrating=(SeekBar)findViewById(R.id.seekBar5);
+        skill1=(SeekBar)findViewById(R.id.seekBar4) ;
+        skill4=(SeekBar)findViewById(R.id.seekBar7);
+        skill3=(SeekBar)findViewById(R.id.seekBar6);
+        skill2=(SeekBar)findViewById(R.id.seekBar5);
         fitnessrating=(SeekBar)findViewById(R.id.seekBar3) ;
 
         note=(Button)findViewById(R.id.Note);
@@ -105,57 +102,37 @@ public class Questionaire extends AppCompatActivity {
         set.setEnabled(false);
 
         Toolbar k=(Toolbar)findViewById(R.id.q_bar);
+        k.setTitle(sport.toUpperCase());
         setSupportActionBar(k);
+
 
         auth=FirebaseAuth.getInstance();
         userref= FirebaseDatabase.getInstance().getReference();
         userref=userref.child("users").child(auth.getCurrentUser().getUid());
+
         userref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot){
-                dialog.cancel();
+            public void onDataChange(DataSnapshot dataSnapshot) {
                 userplayer=dataSnapshot.getValue(Player.class);
-                if(userplayer.getTennis().getisAdded()&&!userplayer.getTennis().isQuestionaireCompleted()){
-                    tennisrating.setEnabled(true);
-                    userplayer.getTennis().setQuestionaireCompleted(true);
-                }
-                else{
-                    tennisrating.setEnabled(false);
-                    tennisrating.setProgress((int)(userplayer.getTennis().getRating().getRatingSkill()*20));
-                }
-                if(userplayer.getSquash().getisAdded()&&!userplayer.getSquash().isQuestionaireCompleted()){
-                    squashrating.setEnabled(true);
-                    userplayer.getSquash().setQuestionaireCompleted(true);
-                }
-                else{
-                    squashrating.setEnabled(false);
-                    squashrating.setProgress((int)(userplayer.getSquash().getRating().getRatingSkill()*20));
-                }
-
-                if(userplayer.getBadminton().getisAdded()&&!userplayer.getBadminton().isQuestionaireCompleted()){
-                    badmintonrating.setEnabled(true);
-                    userplayer.getBadminton().setQuestionaireCompleted(true);
-                }
-                else{
-                    badmintonrating.setEnabled(false);
-                    badmintonrating.setProgress((int)(userplayer.getBadminton().getRating().getRatingSkill()*20));
-                }
-                if(userplayer.getTt().getisAdded()&&!userplayer.getTt().isQuestionaireCompleted()){
-                    ttrating.setEnabled(true);
-                    userplayer.getTt().setQuestionaireCompleted(true);
-                }
-                else{
-                    ttrating.setEnabled(false);
-                    ttrating.setProgress((int)(userplayer.getTt().getRating().getRatingSkill()*20));
-                }
+                dialog.cancel();
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.d("Database Reference:","Read ERROR");
+
             }
         });
-
+        AlertDialog.Builder info=new AlertDialog.Builder(Questionaire.this);
+        info.setMessage("This Questionaire is a personal assessment of your skill in the sport.Please assess wisely as they determine"+
+                "as it is going to be used for matching up. "
+        );
+        info.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        info.show();
         awarerating.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -175,11 +152,11 @@ public class Questionaire extends AppCompatActivity {
                 buttonenabled();
             }
         });
-        tennisrating.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        skill4.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tennisvalue=(float)progress/20;
-                rating_tennis.setText(tennisvalue+"/5.00");
+                skill4value=(float)progress/20;
+                rating_skill4.setText(skill4value+"/5.00");
 
             }
 
@@ -190,15 +167,15 @@ public class Questionaire extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(Questionaire.this,"Rating At:"+tennisvalue,Toast.LENGTH_SHORT);
+                Toast.makeText(Questionaire.this,"Rating At:"+skill4value,Toast.LENGTH_SHORT);
                 buttonenabled();
             }
         });
-        ttrating.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        skill1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                ttvalue=(float)progress/20;
-                rating_tt.setText(ttvalue+"/5.00");
+                skill1value=(float)progress/20;
+                rating_skill1.setText(skill1value+"/5.00");
 
             }
 
@@ -209,15 +186,15 @@ public class Questionaire extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(Questionaire.this,"Rating At:"+ttvalue,Toast.LENGTH_SHORT);
+                Toast.makeText(Questionaire.this,"Rating At:"+skill1value,Toast.LENGTH_SHORT);
                 buttonenabled();
             }
         });
-        badmintonrating.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        skill2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                badmintonvalue=(float)progress/20;
-                rating_badminton.setText(badmintonvalue+"/5.00");
+                skill2value=(float)progress/20;
+                rating_skill2.setText(skill2value+"/5.00");
 
             }
 
@@ -228,7 +205,7 @@ public class Questionaire extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(Questionaire.this,"Rating At:"+badmintonvalue,Toast.LENGTH_SHORT);
+                Toast.makeText(Questionaire.this,"Rating At:"+skill2value,Toast.LENGTH_SHORT);
                 buttonenabled();
             }
         });
@@ -251,11 +228,11 @@ public class Questionaire extends AppCompatActivity {
                 buttonenabled();
             }
         });
-        squashrating.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        skill3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                squashvalue=(float)progress/20;
-                rating_squash.setText(squashvalue+"/5.00");
+                skill3value=(float)progress/20;
+                rating_skill3.setText(skill3value+"/5.00");
 
             }
 
@@ -266,27 +243,32 @@ public class Questionaire extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(Questionaire.this,"Rating At:"+squashvalue,Toast.LENGTH_SHORT);
+                Toast.makeText(Questionaire.this,"Rating At:"+skill3value,Toast.LENGTH_SHORT);
                 buttonenabled();
             }
         });
     }
     public void Set(View V){
-        if(tennisrating.isEnabled()){
-            userplayer.getTennis().setRating(new Rating(awarevalue,tennisvalue,fitvalue));
+        double skillvalue=(skill1value+skill2value+skill3value+skill4value)/4;
+        if(sport.equals("tennis")) {
+            userplayer.getTennis().setRating(new Rating(awarevalue, skillvalue, fitvalue));
+            userplayer.getTennis().setAdded(true);
+            userplayer.getTennis().setQuestionaireCompleted(true);
         }
-        if(squashrating.isEnabled()){
-            value.add(squashvalue);
-            userplayer.getSquash().setRating(new Rating(awarevalue,squashvalue,fitvalue));
+        else if(sport.equals("squash")){
+            userplayer.getSquash().setRating(new Rating(awarevalue, skillvalue, fitvalue));
+            userplayer.getSquash().setAdded(true);
+            userplayer.getSquash().setQuestionaireCompleted(true);
         }
-
-        if(badmintonrating.isEnabled()) {
-            value.add(badmintonvalue);
-            userplayer.getBadminton().setRating(new Rating(awarevalue,badmintonvalue,fitvalue));
+        else if(sport.equals("badminton")){
+            userplayer.getBadminton().setRating(new Rating(awarevalue, skillvalue, fitvalue));
+            userplayer.getBadminton().setAdded(true);
+            userplayer.getBadminton().setQuestionaireCompleted(true);
         }
-        if(ttrating.isEnabled()) {
-            value.add(ttvalue);
-            userplayer.getTt().setRating(new Rating(awarevalue,ttvalue,fitvalue));
+        else if(sport.equals("tt")) {
+            userplayer.getTt().setRating(new Rating(awarevalue, skillvalue, fitvalue));
+            userplayer.getTt().setAdded(true);
+            userplayer.getTt().setQuestionaireCompleted(true);
         }
         userref.setValue(userplayer);
         Intent k=new Intent().setClass(this, AppLoginPage.class);
@@ -298,18 +280,18 @@ public class Questionaire extends AppCompatActivity {
         value.clear();
         if(fitvalue>0.8 && awarevalue>0.8){
             boolean val=true;
-            if(tennisrating.isEnabled()){
-                value.add(tennisvalue);
+            if(skill4.isEnabled()){
+                value.add(skill4value);
             }
-            if(squashrating.isEnabled()){
-                value.add(squashvalue);
+            if(skill3.isEnabled()){
+                value.add(skill3value);
             }
 
-            if(badmintonrating.isEnabled()) {
-                value.add(badmintonvalue);
+            if(skill2.isEnabled()) {
+                value.add(skill2value);
             }
-            if(ttrating.isEnabled()) {
-                value.add(ttvalue);
+            if(skill1.isEnabled()) {
+                value.add(skill1value);
             }
             Log.d("Size :",value.size()+"");
             for(int i=value.size()-1;i>=0;i--){
@@ -329,7 +311,11 @@ public class Questionaire extends AppCompatActivity {
     }
     public void note(View v){
         AlertDialog.Builder notice=new AlertDialog.Builder(this);
-        notice.setMessage("This is a Questionaire to determine your initial matchup. Please be frank with your ratings. Ratings must be atleast 0.8. This cannot be changed later.")
+        notice.setTitle("Guide");
+        notice.setMessage("There are two broad categories for assessment. In the General category you rate yourself based on factors generally needed to play the sport well" +
+                ".The Skill category consists of those skills which are considered to be essential for that sport. A rating of 5 means that you are best in the university with regards to that ability." +
+                "A rating of 4 @ above means that " +
+                "you are University level. A rating of above 3 means that you are faculty level and so on. ")
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -337,5 +323,16 @@ public class Questionaire extends AppCompatActivity {
                     }
                 });
         notice.create().show();
+    }
+    private void assignskilltext(){
+        textfields=new ArrayList<TextView>();
+        textfields.add((TextView)findViewById(R.id.textView10));
+        textfields.add((TextView)findViewById(R.id.textView11));
+        textfields.add((TextView)findViewById(R.id.textView12));
+        textfields.add((TextView)findViewById(R.id.textView5));
+
+        for(int i=0;i<textfields.size();i++){
+            textfields.get(i).setText(skills.get(i));
+        }
     }
 }

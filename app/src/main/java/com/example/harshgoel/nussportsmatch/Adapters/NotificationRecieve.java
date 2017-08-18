@@ -1,6 +1,7 @@
 package com.example.harshgoel.nussportsmatch.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 import com.example.harshgoel.nussportsmatch.Chats.chatbar;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
 import com.example.harshgoel.nussportsmatch.Logic.Request;
+import com.example.harshgoel.nussportsmatch.ProfileDataPackage.profileView;
 import com.example.harshgoel.nussportsmatch.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -36,10 +38,12 @@ import java.util.List;
 public class NotificationRecieve extends ArrayAdapter<Request> {
     private DatabaseReference ref;
     private FirebaseAuth auth;
+    private  Context context;
     public NotificationRecieve(Context context, List<Request> listreq){
         super(context, R.layout.request_recieved,listreq);
         ref= FirebaseDatabase.getInstance().getReference();
         auth=FirebaseAuth.getInstance();
+        this.context=context;
     }
     @NonNull
     @Override
@@ -64,16 +68,30 @@ public class NotificationRecieve extends ArrayAdapter<Request> {
         if(singlereq.accepted==1){
             custom.setBackgroundColor(Color.WHITE);
             accept.setEnabled(false);
-            decline.setEnabled(true);
+            decline.setEnabled(false);
         }
         else if(singlereq.accepted==2){
             custom.setBackgroundColor(Color.RED);
-            accept.setEnabled(true);
+            accept.setEnabled(false);
             decline.setEnabled(false);
         }
+        DatabaseReference ref=FirebaseDatabase.getInstance().getReference().child("users").child(singlereq.getplayersendID()).child("name");
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String namep=(String)dataSnapshot.getValue();
+                name.setText(namep);
+                netrate.setText(((float)((int)(singlereq.netrating*100))/100)+"");
+            }
 
-        name.setText(singlereq.namesender);
-        netrate.setText(((float)((int)(singlereq.netrating*100))/100)+"");
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
         accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,7 +134,7 @@ public class NotificationRecieve extends ArrayAdapter<Request> {
                 });
 
                 v.setEnabled(false);
-                decline.setEnabled(true);
+                decline.setEnabled(false);
             }
         });
         decline.setOnClickListener(new View.OnClickListener() {
@@ -126,10 +144,20 @@ public class NotificationRecieve extends ArrayAdapter<Request> {
                 Toast.makeText(getContext(),"Request Declined",Toast.LENGTH_SHORT).show();
                 custom.setBackgroundColor(Color.RED);
                 v.setEnabled(false);
-                accept.setEnabled(true);
+                accept.setEnabled(false);
+            }
+        });
+        custom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context,profileView.class);
+                intent.putExtra("Player",singlereq.getplayersendID());
+                context.startActivity(intent);
+
             }
         });
         return custom;
     }
+
 
 }

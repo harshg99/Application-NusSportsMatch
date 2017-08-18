@@ -1,4 +1,4 @@
-#Thu Jul 27 02:34:37 GST 2017
-base.0=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6
+#Mon Aug 14 22:08:11 SGT 2017
+base.0=D\:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6
 renamed.0=classes.dex
-file.0=C\:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6\\classes.dex
+file.0=D\:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6\\classes.dex

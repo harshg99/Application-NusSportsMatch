@@ -23,6 +23,7 @@ import android.widget.TextView;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
 import com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditProfile;
 import com.example.harshgoel.nussportsmatch.ProfileDataPackage.handlephoto;
+import com.example.harshgoel.nussportsmatch.ProfileDataPackage.profileView;
 import com.example.harshgoel.nussportsmatch.ProfileDataPackage.setSports;
 import com.example.harshgoel.nussportsmatch.R;
 import com.example.harshgoel.nussportsmatch.ThreadsForApp.Init_Sports_Background;
@@ -52,6 +53,7 @@ public class Fragment_profile extends Fragment {
     public Button editprofile;
     public Button setsports;
     public Player userplayer;
+    public Button view;
     public static final int photo=10;
     private FirebaseAuth auth;
     private DatabaseReference userref;
@@ -79,6 +81,7 @@ public class Fragment_profile extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot){
                 userplayer=dataSnapshot.getValue(Player.class);
                 profilename.setText(userplayer.getName());
+
                 if(userplayer.getProfilephoto().isEmpty()) {
                     if (userplayer.getGender().equals("Male")) {
                         profilephoto.setImageDrawable(getResources().getDrawable(R.drawable.male));
@@ -124,6 +127,7 @@ public class Fragment_profile extends Fragment {
         addphoto=(Button)fragment_profile.findViewById(R.id.addphoto);
         editprofile=(Button)fragment_profile.findViewById(R.id.edit_profile);
         setsports=(Button)fragment_profile.findViewById(R.id.selectsports);
+        view=(Button)fragment_profile.findViewById(R.id.viewprofile);
 
 
 
@@ -151,6 +155,15 @@ public class Fragment_profile extends Fragment {
             public void onClick(View v) {
                 Intent intent=new Intent()
                         .setClass(getActivity(), setSports.class);
+                startActivity(intent);
+            }
+        });
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent()
+                        .setClass(getActivity(), profileView.class);
+                intent.putExtra("Player",auth.getCurrentUser().getUid());
                 startActivity(intent);
             }
         });

@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -59,6 +60,8 @@ public class Fragment_notifications extends Fragment{
                         statuss.add(singlereq);
                     }
                 }
+                Collections.reverse(requests);
+                Collections.reverse(statuss);
                 recieve.setAdapter(new NotificationRecieve(getContext(),requests));
                 status.setAdapter(new NotificationSent(getContext(),statuss));
                 progress.cancel();

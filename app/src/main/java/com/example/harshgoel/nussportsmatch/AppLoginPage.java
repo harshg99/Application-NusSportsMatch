@@ -1,5 +1,7 @@
 package com.example.harshgoel.nussportsmatch;
 
+import android.app.ActivityManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,6 +19,7 @@ import android.widget.Button;
 import android.widget.TableLayout;
 import com.example.harshgoel.nussportsmatch.Adapters.ProfileTabLayoutAdapter;
 
+import com.example.harshgoel.nussportsmatch.Service.NotificationService;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -99,4 +103,26 @@ public class AppLoginPage extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    @Override
+    protected void onStop() {
+        if(!isNotificationServiceRunning(NotificationService.class)) {
+            Intent intent = new Intent(this, NotificationService.class);
+            intent.putExtra("Account", author.getCurrentUser().getUid());
+            startService(intent);
+        }
+        super.onStop();
+    }
+    private boolean isNotificationServiceRunning(Class<?> serviceClass){
+        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (serviceClass.getName().equals(service.service.getClassName())) {
+                Log.i ("isMyServiceRunning?", true+"");
+                return true;
+            }
+        }
+        Log.i ("isMyServiceRunning?", false+"");
+        return false;
+    }
+
 }

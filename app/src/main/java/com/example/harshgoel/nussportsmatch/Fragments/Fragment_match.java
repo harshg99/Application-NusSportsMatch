@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.harshgoel.nussportsmatch.Adapters.GenerateMatchListAdapter;
+import com.example.harshgoel.nussportsmatch.ListViewReplacement;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
 import com.example.harshgoel.nussportsmatch.Logic.Rating;
 import com.example.harshgoel.nussportsmatch.Logic.Request;
@@ -41,6 +43,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Harsh Goel on 7/16/2017.
@@ -56,7 +59,8 @@ public class Fragment_match extends Fragment {
     public TextView timetext;
     public Button dateselect;
     public Button timeselect;
-    public ListView matchlist;
+    public int matchlayout;
+    private ListViewReplacement matchlist;
     public DatabaseReference dataref;
     public DatabaseReference datarefthis;
     public FirebaseAuth dataauth;
@@ -86,7 +90,7 @@ public class Fragment_match extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View fragment_match=inflater.inflate(R.layout.sport_match,container,false);
+        View fragment_match=inflater.inflate(R.layout.sports_match_layout,container,false);
         final ProgressDialog dialog=new ProgressDialog(getActivity());
         dialog.setMessage("Retrieving...");
         requestgenerate=new ArrayList<Request>();
@@ -137,10 +141,12 @@ public class Fragment_match extends Fragment {
         timetext=(TextView)fragment_match.findViewById(R.id.textView7);
         dateselect=(Button)fragment_match.findViewById(R.id.button2);
         timeselect=(Button)fragment_match.findViewById(R.id.button3);
-        matchlist=(ListView)fragment_match.findViewById(R.id.ListMatch);
+        matchlayout=R.id.ListMatch;
         generatematch=(Button)fragment_match.findViewById(R.id.generate);
 
-        matchlist.setAdapter(null);
+        matchlist=new ListViewReplacement(getActivity(),getContext(),matchlayout);
+        ((LinearLayout)fragment_match.findViewById(matchlayout)).removeAllViews();
+
         SpinnerAdapter =
                 ArrayAdapter.createFromResource(getActivity(),
                         R.array.SportsOptions,
@@ -237,6 +243,7 @@ public class Fragment_match extends Fragment {
     }
 
     private void generatematches() {
+
         final List<Player> matches = new ArrayList<Player>();
         sportSelect = Arrays.asList(getResources().getStringArray(R.array.SportsOptions))
                 .indexOf(sportSpinner.getSelectedItem().toString());
@@ -328,9 +335,21 @@ public class Fragment_match extends Fragment {
                         }
                     }
                     if (matches.size() != 0) {
-                        matchgeneratedplayers = matches.toArray(new Player[matches.size()]);
+                        if(matches.size()<10) {
+                            matchgeneratedplayers = matches.toArray(new Player[matches.size()]);
+                        }
+                        else{
+                            for(int i=0;i<10;i++){
+                                Random rand=new Random(i);
+                                int sel=rand.nextInt(matches.size());
+                                matchgeneratedplayers[i]=matches.remove(sel);
+
+                            }
+                        }
+                        matchlist = new ListViewReplacement(getActivity(), getContext(), matchlayout);
                         matchlist.setAdapter(new GenerateMatchListAdapter(getActivity(), matchgeneratedplayers,
                                 sportSpinner.getSelectedItem().toString(), requestgenerate));
+                        matchlist.setList();
                         progressDialog.cancel();
                     } else {
                         Toast.makeText(getContext(), "Could not generate matches for the sport.", Toast.LENGTH_LONG).show();

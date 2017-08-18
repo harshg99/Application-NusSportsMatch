@@ -241,6 +241,7 @@ public class SignUp extends AppCompatActivity {
     public void inituserdata(Player k,String Uid){
         data.child("users").child(Uid).setValue(k);
         data.child("users").child(Uid).child("UserID").setValue(Uid);
+        data.child("users").child(Uid).child("profilephoto").setValue("");
         sportsPlayer Tennis=new sportsPlayer();
         sportsPlayer squash =new sportsPlayer();
         sportsPlayer TT=new sportsPlayer();

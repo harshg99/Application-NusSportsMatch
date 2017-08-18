@@ -4,6 +4,10 @@
         "source": "C:\\Github\\NUSSPORTSMATCH\\app\\src\\main\\res\\menu\\apploginpagemenu.xml"
     },
     {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\menu\\apploginpagemenu.xml",
+        "source": "D:\\Github\\ansm\\app\\src\\main\\res\\menu\\apploginpagemenu.xml"
+    },
+    {
         "merged": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\menu\\apploginpagemenu.xml",
         "source": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\src\\main\\res\\menu\\apploginpagemenu.xml"
     }

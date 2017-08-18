@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="?android:attr/selectableItemBackground"
-        android:text="Note "
+        android:text="Guide "
         android:onClick="note"
         android:textColor="@color/lightred"
         android:layout_below="@+id/q_bar"
@@ -71,14 +71,14 @@
         android:layout_alignStart="@+id/textView11"
         android:layout_below="@+id/textView11"
         android:layout_marginTop="19dp"
-        android:text="Squash" />
+        android:text="" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
-        android:text="Badmninton"
+        android:text=""
         android:layout_below="@+id/seekBar4"
         android:layout_alignStart="@+id/textView10" />
 
@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView6"
         android:layout_below="@+id/ratingtabletennis"
-        android:text="Table Tennis" />
+        android:text="" />
 
     <TextView
         android:id="@+id/textView2"
@@ -128,7 +128,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tennis"
+        android:text=""
         android:layout_below="@+id/textView12"
         android:layout_marginTop="19dp"
         android:layout_alignStart="@+id/textView10" />

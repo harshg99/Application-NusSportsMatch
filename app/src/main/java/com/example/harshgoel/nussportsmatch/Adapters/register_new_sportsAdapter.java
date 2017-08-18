@@ -59,8 +59,8 @@ public class register_new_sportsAdapter extends ArrayAdapter<sportsPlayer> {
         final sportsPlayer singlesport=getItem(position);
 
         TextView sporthead=(TextView)custom.findViewById(R.id.HeadingSport);
-        Button reg=(Button)custom.findViewById(R.id.Register);
-        Button unreg=(Button)custom.findViewById(R.id.UnRegister);
+        final Button reg=(Button)custom.findViewById(R.id.Register);
+        final Button unreg=(Button)custom.findViewById(R.id.UnRegister);
 
         sporthead.setText(sport.get(position));
         if(singlesport.getisAdded()){
@@ -80,9 +80,12 @@ public class register_new_sportsAdapter extends ArrayAdapter<sportsPlayer> {
             public void onClick(View v) {
                 if(singlesport.isQuestionaireCompleted()){
                     userref.child(sport.get(position).toLowerCase()).child("isAdded").setValue(true);
+                    v.setEnabled(false);
+                    v.setAlpha(0.1f);
+                    unreg.setEnabled(true);
+                    unreg.setAlpha(1f);
                 }
                 else{
-                    userref.child(sport.get(position).toLowerCase()).child("isAdded").setValue(true);
                     activity.finish();
                     Intent intent = new Intent().setClass(context, Questionaire.class);
                     intent.putExtra("sport",sport.get(position).toLowerCase());
@@ -95,11 +98,12 @@ public class register_new_sportsAdapter extends ArrayAdapter<sportsPlayer> {
             @Override
             public void onClick(View v) {
                 userref.child(sport.get(position).toLowerCase()).child("isAdded").setValue(false);
+                v.setEnabled(false);
+                v.setAlpha(0.1f);
+                reg.setEnabled(true);
+                reg.setAlpha(1f);
             }
         });
-
-
-
         return custom;
     }
     private void datainit(){

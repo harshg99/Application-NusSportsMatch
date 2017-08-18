@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -30,9 +32,11 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.MatchResult;
 
 
 /**
@@ -41,6 +45,8 @@ import java.util.Date;
 
 public class handlephoto extends AppCompatActivity {
 
+    private File dir;
+    private String mCurrentPhotoPath;
     public Button clickphoto;
     public Button choosephoto;
     public Button confirm;
@@ -112,7 +118,12 @@ public class handlephoto extends AppCompatActivity {
     protected void onActivityResult(int requestCode,int resultCode,Intent data){
 
             if (requestCode == 0 && resultCode == RESULT_OK){
-                Picasso.with(handlephoto.this).load(photo).into(profilephoto);
+                Bitmap bmp=BitmapFactory.decodeFile(mCurrentPhotoPath);
+                bmp=rotateimage(bmp);
+                storetoexisting(bmp);
+                profilephoto.setImageURI(photo);
+                profilephoto.setScaleType(ImageView.ScaleType.FIT_XY);
+
             } else if (requestCode == 1 && resultCode == RESULT_OK) {
                 if(data!=null) {
                 Uri uri=data.getData();
@@ -137,7 +148,7 @@ public class handlephoto extends AppCompatActivity {
 
         }
     }
-    private String mCurrentPhotoPath;
+
 
     private File createImageFile() throws IOException {
         // Create an image file name
@@ -151,6 +162,7 @@ public class handlephoto extends AppCompatActivity {
         );
 
         // Save a file: path for use with ACTION_VIEW intents
+        dir=image;
         mCurrentPhotoPath = image.getAbsolutePath();
         return image;
     }
@@ -178,5 +190,37 @@ public class handlephoto extends AppCompatActivity {
         }
     }
 
+    private Bitmap rotateimage(Bitmap bmp){
+        ExifInterface exifInterface=null;
+        try{
+            exifInterface=new ExifInterface(mCurrentPhotoPath);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        int orientation=exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION,ExifInterface.ORIENTATION_UNDEFINED);
+        Matrix matrix=new Matrix();
+        switch (orientation) {
+            case ExifInterface.ORIENTATION_ROTATE_90:
+                matrix.setRotate(90);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_180:
+                matrix.setRotate(180);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_270:
+                matrix.setRotate(270);
+        }
+        Bitmap rotatebmp=Bitmap.createBitmap(bmp,0,0,bmp.getWidth(),bmp.getHeight(),matrix,true);
+        return  rotatebmp;
+    }
+    private void storetoexisting(Bitmap bmp){
+        try {
+            FileOutputStream store = new FileOutputStream(dir);
+            bmp.compress(Bitmap.CompressFormat.JPEG,90,store);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 
 }
