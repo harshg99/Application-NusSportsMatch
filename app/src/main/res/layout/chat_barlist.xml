@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/chatgreen">
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingTop="9dp"
+    android:background="@color/ltltltgrey">
 
     <TextView
         android:id="@+id/nameofchat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:textSize="20sp"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:text="Name" />
+        android:text="Name"
+        android:layout_marginTop="7dp"
+        android:layout_alignStart="@+id/profilepic"
+        android:layout_marginStart="85dp"
+        android:layout_alignParentTop="true" />
 
     <TextView
         android:id="@+id/lastmessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_marginStart="95dp"
+        android:text="Last Message"
         android:layout_below="@+id/nameofchat"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="17dp"
-        android:text="Last Message" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="7dp" />
 
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="51dp"
+        android:text="Time"
         android:layout_above="@+id/lastmessage"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="18dp"
-        android:text="Time" />
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@color/black" />
+
 
 </RelativeLayout>

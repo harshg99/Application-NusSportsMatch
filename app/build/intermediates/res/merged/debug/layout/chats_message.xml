@@ -6,21 +6,27 @@
 
 
     <TextView
-        android:id="@+id/other"
+        android:id="@+id/messageother"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_height="30dp"
+        android:textColor="@color/black"
+        android:text=""
+        android:padding="4dp"
+        android:layout_marginStart="15dp"
         android:textSize="17sp"
         android:background="?android:attr/selectableItemBackground"/>
 
     <TextView
-        android:id="@+id/thisuser"
+        android:id="@+id/messagethisuser"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_gravity="end"
+        android:textColor="@color/black"
         android:textSize="17sp"
+        android:padding="4dp"
+        android:layout_marginEnd="15dp"
         android:background="?android:attr/selectableItemBackground"
-        android:text="TextView" />
+        android:text="" />
 
 
 </FrameLayout>

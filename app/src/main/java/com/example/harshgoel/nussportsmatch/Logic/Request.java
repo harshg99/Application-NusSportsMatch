@@ -6,8 +6,8 @@ package com.example.harshgoel.nussportsmatch.Logic;
 
 public class Request {
     private String playersendID;
-    public String namesender;
-    public String namerecieve;
+    public String namesender;//original person who sent the request
+    public String namerecieve;//person who recieves the request
     public double netrating;
     private String playerrecievedID;
     private String date;
@@ -44,6 +44,7 @@ public class Request {
     public void setTime(String time){
         this.time=time;
     }
+
 
     @Override
     public String toString() {

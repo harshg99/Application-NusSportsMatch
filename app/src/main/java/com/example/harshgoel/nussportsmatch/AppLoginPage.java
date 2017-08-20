@@ -106,23 +106,8 @@ public class AppLoginPage extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-        if(!isNotificationServiceRunning(NotificationService.class)) {
-            Intent intent = new Intent(this, NotificationService.class);
-            intent.putExtra("Account", author.getCurrentUser().getUid());
-            startService(intent);
-        }
+
         super.onStop();
-    }
-    private boolean isNotificationServiceRunning(Class<?> serviceClass){
-        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
-            if (serviceClass.getName().equals(service.service.getClassName())) {
-                Log.i ("isMyServiceRunning?", true+"");
-                return true;
-            }
-        }
-        Log.i ("isMyServiceRunning?", false+"");
-        return false;
     }
 
 }

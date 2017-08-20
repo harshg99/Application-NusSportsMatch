@@ -85,6 +85,7 @@ public class NotificationService extends Service {
     public void onDestroy(){
         Log.e(TAG, "onDestroy");
         super.onDestroy();
+        Log.d("RESTARTING sERVICE","currentdestroyed");
         Intent broadcastIntent = new Intent("com.example.harshgoel.restartservice");
         broadcastIntent.putExtra("Account",accountuid);
         sendBroadcast(broadcastIntent);

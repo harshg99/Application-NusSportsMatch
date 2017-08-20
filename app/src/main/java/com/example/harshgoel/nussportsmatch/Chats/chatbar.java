@@ -5,39 +5,53 @@ package com.example.harshgoel.nussportsmatch.Chats;
  */
 
 public class chatbar {
-    private String recieverofmessage;
-    private String senderofmessagename;
-    private String getRecieverofmessageid;
-    private String senderofmessageid;
+    private String player1;//sender of the request
+    private String player2;//reciever of  the request
+    private String player1id;
+    private String player2id;
     private String key;
     private String lastmessage;
     private String time;
-    public String getRecieverofmessage() {
-        return recieverofmessage;
-    }
+
 
     public String getLastmessage() {
         return lastmessage;
     }
 
-    public String getGetRecieverofmessageid() {
-        return getRecieverofmessageid;
+    public String getPlayer1() {
+        return player1;
     }
 
-    public String getSenderofmessagename() {
-        return senderofmessagename;
+    public void setPlayer1(String player1) {
+        this.player1 = player1;
+    }
+
+    public String getPlayer2() {
+        return player2;
+    }
+
+    public void setPlayer2(String player2) {
+        this.player2 = player2;
+    }
+
+    public String getPlayer1id() {
+        return player1id;
+    }
+
+    public void setPlayer1id(String player1id) {
+        this.player1id = player1id;
+    }
+
+    public String getPlayer2id() {
+        return player2id;
+    }
+
+    public void setPlayer2id(String player2id) {
+        this.player2id = player2id;
     }
 
     public String getTime() {
         return time;
-    }
-
-    public String getSenderofmessageid() {
-        return senderofmessageid;
-    }
-
-    public void setGetRecieverofmessageid(String getRecieverofmessageid) {
-        this.getRecieverofmessageid = getRecieverofmessageid;
     }
 
     public String getKey() {
@@ -52,19 +66,9 @@ public class chatbar {
         this.lastmessage = lastmessage;
     }
 
-    public void setRecieverofmessage(String recieverofmessage) {
-        this.recieverofmessage = recieverofmessage;
-    }
-
-    public void setSenderofmessageid(String senderofmessageid) {
-        this.senderofmessageid = senderofmessageid;
-    }
-
     public void setTime(String time) {
         this.time = time;
     }
 
-    public void setSenderofmessagename(String senderofmessagename) {
-        this.senderofmessagename = senderofmessagename;
-    }
+
 }

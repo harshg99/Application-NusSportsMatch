@@ -2,10 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/chatgreen">
+    android:background="@color/ltltltgrey">
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:divider="@drawable/divider_chats"
+        android:dividerHeight="0.4dp"
         android:id="@+id/ChatListView"/>
 </LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+<item android:state_pressed="true" >
+    <shape android:shape="oval"  >
+    <corners android:radius="10dip" />
+    <stroke android:width="0.2dip" android:color="#fdfaaf" />
+    <solid android:color="@color/ltred"/>
+    <size android:width="50dp"
+        android:height="50dp"/>
+    </shape>
+
+</item>
+<item android:state_focused="true">
+    <shape android:shape="oval"  >
+        <corners android:radius="10dip" />
+        <stroke android:width="0.2dip" android:color="#fdfaaf" />
+        <solid android:color="@color/vltred"/>
+        <size android:width="50dp"
+            android:height="50dp"/>
+    </shape>
+</item>
+<item >
+    <shape android:shape="oval"  >
+        <corners android:radius="10dip" />
+        <stroke android:width="0.2dip" android:color="#fdfaaf" />
+        <solid android:color="@color/vltred"/>
+        <size android:width="50dp"
+            android:height="50dp"/>
+    </shape>
+</item>
+
+</selector>

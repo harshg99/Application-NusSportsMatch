@@ -57,40 +57,18 @@ public class Fragment_chats extends Fragment {
                 for(DataSnapshot datachats:dataSnapshot.getChildren()) {
                     chatbar singlechat = datachats.getValue(chatbar.class);
                     if (singlechat != null) {
-                        if (singlechat.getSenderofmessageid().equals(thisuid)
-                                || singlechat.getGetRecieverofmessageid().equals(thisuid)) {
-                            chats.add(singlechat);
+                        if(singlechat.getPlayer1id()!=null || singlechat.getPlayer2id()!=null) {
+                            if (singlechat.getPlayer1id().equals(thisuid)
+                                    || singlechat.getPlayer2id().equals(thisuid)) {
+                                chats.add(singlechat);
+                            }
                         }
-                        /*
-                        else if(!singlechat.getSenderofmessageid().equals(auth.getCurrentUser().getUid())
-                                || !singlechat.getGetRecieverofmessageid().equals(auth.getCurrentUser().getUid())) {
-                            chatbar tomechat = new chatbar();
-                            tomechat.setLastmessage("Chat to yourself");
-                            tomechat.setRecieverofmessage("ME");
-                            tomechat.setGetRecieverofmessageid(auth.getCurrentUser().getUid());
-                            tomechat.setSenderofmessagename("ME");
-                            tomechat.setSenderofmessageid(auth.getCurrentUser().getUid());
-                            Calendar c = Calendar.getInstance();
-                            tomechat.setTime(c.get(Calendar.HOUR_OF_DAY) + ":" + c.get(Calendar.MINUTE));
-                            DatabaseReference refer = ref;
-                            refer = refer.push();
-                            tomechat.setKey(refer.getKey());
-                            refer.setValue(tomechat);
-                            chats.add(tomechat);
-                        }
-                        */
 
                     }
                 }
                 if(getActivity()!=null) {
-                    chats_list.setAdapter(new ChatBarAdapter(getActivity(), chats));
-                    chats_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            Intent i = new Intent(getActivity(), ChatMessageActivity.class);
-                            startActivity(i);
-                        }
-                    });
+                    chats_list.setAdapter(new ChatBarAdapter(getActivity(), chats,getActivity()));
+
                 }
             }
 

@@ -1,6 +1,7 @@
 package com.example.harshgoel.nussportsmatch.Fragments;
 
 import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,8 @@ import com.example.harshgoel.nussportsmatch.Adapters.NotificationRecieve;
 import com.example.harshgoel.nussportsmatch.Adapters.NotificationSent;
 import com.example.harshgoel.nussportsmatch.Logic.Request;
 import com.example.harshgoel.nussportsmatch.R;
+import com.example.harshgoel.nussportsmatch.ThreadsForApp.request_s;
+import com.example.harshgoel.nussportsmatch.ThreadsForApp.requests_r;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -60,16 +63,13 @@ public class Fragment_notifications extends Fragment{
                         statuss.add(singlereq);
                     }
                 }
-                Collections.reverse(requests);
-                Collections.reverse(statuss);
-                recieve.setAdapter(new NotificationRecieve(getContext(),requests));
-                status.setAdapter(new NotificationSent(getContext(),statuss));
+                new request_s(status,getContext(),statuss).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                new requests_r(recieve,getContext(),requests).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                 progress.cancel();
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
             }
         });
 

@@ -10,6 +10,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/messagetype"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="5.5dip"
             android:id="@+id/messageView"
             android:layout_below="@+id/chat_toolbar" />
         <EditText
@@ -22,15 +24,19 @@
             android:background="@drawable/chattextshape"
             android:layout_alignParentBottom="true"
             android:layout_alignTop="@+id/send"
-            android:text="This is supposed to be a chatbox"
+            android:hint="Type a message"
             android:layout_weight="4"
             android:layout_toLeftOf="@+id/send"/>
 
-        <android.support.design.widget.FloatingActionButton
+        <ImageButton
             android:id="@+id/send"
             android:layout_width="46dp"
             android:layout_height="47dp"
-            android:text="Send"
+            android:background="@drawable/circle"
             android:layout_alignParentBottom="true"
+            android:src="@drawable/send"
+            android:scaleType="centerCrop"
+            android:elevation="5dp"
+            android:padding="10dp"
             android:layout_alignParentEnd="true"/>
 </RelativeLayout>
