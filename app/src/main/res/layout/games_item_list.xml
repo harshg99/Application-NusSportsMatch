@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ltltltgrey">
+
+
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@color/black" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/chatblack"
+
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/profilepic"
+        android:layout_toStartOf="@+id/imageButton" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/calendar"
+        android:scaleType="fitXY"
+        android:background="@color/ltltltgrey"
+        android:layout_alignBottom="@+id/textView14"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/ViewRate"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="13dp"
+        android:textSize="14sp"
+        android:textColor="@color/darkestblue"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="View Your Rating"
+        android:layout_below="@+id/profilepic"
+        android:layout_alignStart="@+id/profilepic"
+        android:layout_marginStart="34dp" />
+
+    <Button
+        android:id="@+id/Rate"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="@color/darkestblue"
+        android:layout_alignEnd="@+id/textView14"
+        android:layout_alignTop="@+id/ViewRate"
+        android:layout_marginEnd="18dp"
+        android:text="Rate Player" />
+
+</RelativeLayout>

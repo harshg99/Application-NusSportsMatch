@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.example.harshgoel.nussportsmatch.Connection.ConnectionManager;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
+import com.example.harshgoel.nussportsmatch.Logic.RatingCount;
 import com.example.harshgoel.nussportsmatch.Logic.sportsPlayer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -262,6 +263,17 @@ public class SignUp extends AppCompatActivity {
         data.child("users").child(auth.getCurrentUser().getUid()).child("badminton").child("isAdded").setValue(badminton.getisAdded());
         data.child("users").child(auth.getCurrentUser().getUid()).child("badminton")
                 .child("questionaireCompleted").setValue(badminton.isQuestionaireCompleted());
+        userratingcount();
+
+    }
+
+    public void userratingcount(){
+        RatingCount ratingCount=new RatingCount();
+        ratingCount.setBadmintoncount(0);
+        ratingCount.setTenniscount(0);
+        ratingCount.setTtcount(0);
+        ratingCount.setSquashcount(0);
+        data.child("ratingcount").child(auth.getCurrentUser().getUid()).setValue(ratingCount);
 
     }
     //Method to analyse the password for its viability

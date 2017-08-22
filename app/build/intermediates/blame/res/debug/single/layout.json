@@ -420,6 +420,10 @@
         "source": "C:\\Github\\NUSSPORTSMATCH\\app\\src\\main\\res\\layout\\sport_match.xml"
     },
     {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\layout\\games_item_list.xml",
+        "source": "D:\\Github\\ansm\\app\\src\\main\\res\\layout\\games_item_list.xml"
+    },
+    {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_sign_up.xml",
         "source": "C:\\Github\\NUSSPORTSMATCH\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
     },

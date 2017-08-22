@@ -15,6 +15,9 @@ public class Request {
     public String Sport;
     public String RequestID;
     public int accepted;
+
+    private long datetimemillis;
+
     public String getplayersendID(){
         return playersendID;
     }
@@ -45,6 +48,13 @@ public class Request {
         this.time=time;
     }
 
+    public long getDatetimemillis() {
+        return datetimemillis;
+    }
+
+    public void setDatetimemillis(long datetimemillis) {
+        this.datetimemillis = datetimemillis;
+    }
 
     @Override
     public String toString() {

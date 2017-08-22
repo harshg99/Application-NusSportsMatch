@@ -39,38 +39,39 @@ public class NotificationService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId){
         Log.e(TAG, "onStartCommand");
         super.onStartCommand(intent, flags, startId);
-        accountuid=intent.getStringExtra("Account");
-        ref.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                Request newreq=dataSnapshot.getValue(Request.class);
-                String name=newreq.namesender;
-                if(newreq.getPlayerrecievedID().equals(accountuid)){
-                    notification(name);
+        if(intent!=null) {
+            accountuid = intent.getStringExtra("Account");
+            ref.addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                    Request newreq = dataSnapshot.getValue(Request.class);
+                    String name = newreq.namesender;
+                    if (newreq.getPlayerrecievedID().equals(accountuid)) {
+                        notification(name);
+                    }
                 }
-            }
 
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
 
-            }
+                }
 
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
 
-            }
+                }
 
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
 
-            }
+                }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
-
+                }
+            });
+        }
         return START_STICKY;
     }
 

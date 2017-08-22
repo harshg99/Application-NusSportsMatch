@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.harshgoel.nussportsmatch.Chats.chatbar;
+import com.example.harshgoel.nussportsmatch.Logic.Game;
 import com.example.harshgoel.nussportsmatch.Logic.Player;
 import com.example.harshgoel.nussportsmatch.Logic.Request;
 import com.example.harshgoel.nussportsmatch.ProfileDataPackage.profileView;
@@ -151,6 +152,25 @@ public class NotificationRecieve extends ArrayAdapter<Request> {
 
                     }
                 });
+
+                DatabaseReference ref2=FirebaseDatabase.getInstance().getReference().child("game");
+                ref2=ref2.push();
+                Game newgame=new Game();
+                {
+
+                    newgame.setPlayer1id(singlereq.getplayersendID());
+                    newgame.setPlayer2id(singlereq.getPlayerrecievedID());
+                    newgame.setDatetimemillis(singlereq.getDatetimemillis());
+                    newgame.setKey(ref2.getKey());
+                    newgame.setDate(singlereq.getDate());
+                    newgame.setTime(singlereq.getTime());
+                    newgame.setSport(singlereq.Sport);
+                    newgame.setReminderplayer1(false);
+                    newgame.setRatingotherplayer2(false);
+                    newgame.setRatingotherplayer1(false);
+                    newgame.setReminderplayer2(false);
+                }
+                ref2.setValue(newgame);
                 accept.setAlpha(0);
                 decline.setAlpha(0);
                 v.setEnabled(false);

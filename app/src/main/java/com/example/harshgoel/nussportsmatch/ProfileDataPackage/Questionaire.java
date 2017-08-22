@@ -249,26 +249,32 @@ public class Questionaire extends AppCompatActivity {
         });
     }
     public void Set(View V){
+        DatabaseReference ref_count=FirebaseDatabase.getInstance().getReference().child("ratingcount")
+                .child(auth.getCurrentUser().getUid());
         double skillvalue=(skill1value+skill2value+skill3value+skill4value)/4;
         if(sport.equals("tennis")) {
             userplayer.getTennis().setRating(new Rating(awarevalue, skillvalue, fitvalue));
             userplayer.getTennis().setAdded(true);
             userplayer.getTennis().setQuestionaireCompleted(true);
+            ref_count.child("tenniscount").setValue(1);
         }
         else if(sport.equals("squash")){
             userplayer.getSquash().setRating(new Rating(awarevalue, skillvalue, fitvalue));
             userplayer.getSquash().setAdded(true);
             userplayer.getSquash().setQuestionaireCompleted(true);
+            ref_count.child("squashcount").setValue(1);
         }
         else if(sport.equals("badminton")){
             userplayer.getBadminton().setRating(new Rating(awarevalue, skillvalue, fitvalue));
             userplayer.getBadminton().setAdded(true);
             userplayer.getBadminton().setQuestionaireCompleted(true);
+            ref_count.child("badmintoncount").setValue(1);
         }
         else if(sport.equals("tt")) {
             userplayer.getTt().setRating(new Rating(awarevalue, skillvalue, fitvalue));
             userplayer.getTt().setAdded(true);
             userplayer.getTt().setQuestionaireCompleted(true);
+            ref_count.child("ttcount").setValue(1);
         }
         userref.setValue(userplayer);
         Intent k=new Intent().setClass(this, AppLoginPage.class);

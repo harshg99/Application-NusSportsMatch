@@ -22,9 +22,11 @@ public class ThisApplication extends Application {
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         FirebaseAuth author=FirebaseAuth.getInstance();
         if(!isNotificationServiceRunning(NotificationService.class)) {
-            Intent intent = new Intent(this, NotificationService.class);
-            intent.putExtra("Account", author.getCurrentUser().getUid());
-            startService(intent);
+            if(author!=null && author.getCurrentUser()!=null) {
+                Intent intent = new Intent(this, NotificationService.class);
+                intent.putExtra("Account", author.getCurrentUser().getUid());
+                startService(intent);
+            }
         }
     }
     private boolean isNotificationServiceRunning(Class<?> serviceClass){

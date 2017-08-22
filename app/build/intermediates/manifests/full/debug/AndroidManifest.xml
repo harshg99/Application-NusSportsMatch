@@ -65,6 +65,8 @@
         <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditContent" />
         <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.EditSecurity" />
         <activity android:name="com.example.harshgoel.nussportsmatch.ProfileDataPackage.profileView" />
+        <activity android:name="com.example.harshgoel.nussportsmatch.Rate_Others.Rate" />
+        <activity android:name="com.example.harshgoel.nussportsmatch.Rate_Others.ViewRate" />
 
         <service android:name="com.example.harshgoel.nussportsmatch.Service.NotificationService" >
             <intent-filter>

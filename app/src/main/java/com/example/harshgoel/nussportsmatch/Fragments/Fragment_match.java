@@ -284,6 +284,8 @@ public class Fragment_match extends Fragment {
                             if (otheruser.getGender().equals(thisplayer.getGender())) {
                                 Rating otherUserRating;
                                 Rating thisUserRating;
+
+
                                 Request newreq = new Request();
                                 newreq.setDate((String) datetext.getText());
                                 newreq.setTime((String) timetext.getText());
@@ -293,6 +295,13 @@ public class Fragment_match extends Fragment {
                                 newreq.namerecieve = otheruser.getName();
                                 newreq.Sport = sportSpinner.getSelectedItem().toString();
                                 newreq.accepted = 0;
+                                Calendar calendar = Calendar.getInstance();
+                                calendar.set(selectdate.year, selectdate.month, selectdate.day,
+                                        selecttime.hour, selecttime.minute, 0);
+                                newreq.setDatetimemillis(calendar.getTimeInMillis());
+
+
+
                                 switch (sportSelect) {
                                     case 0: {
                                         otherUserRating = otheruser.getTennis().getRating();

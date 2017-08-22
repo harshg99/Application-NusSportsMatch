@@ -45,6 +45,8 @@
         <activity android:name=".ProfileDataPackage.EditContent"/>
         <activity android:name=".ProfileDataPackage.EditSecurity"/>
         <activity android:name=".ProfileDataPackage.profileView"/>
+        <activity android:name=".Rate_Others.Rate"/>
+        <activity android:name=".Rate_Others.ViewRate"/>
         <service
             android:name=".Service.NotificationService">
         <intent-filter>

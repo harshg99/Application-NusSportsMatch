@@ -27,11 +27,11 @@
     <color name="darkestblue">#191b9b</color>
     <color name="chatblack">#0e2940</color>
     <color name="niceblack">#15040a</color>
-    <color name="grey">#767676</color>
+    <color name="grey">#9c9c9c</color>
     <color name="ltgrey">#dadada</color>
     <color name="ltltgrey">#e4e4e4</color>
     <color name="ltltltgrey">#f2f1f1</color>
-    <color name="bwgrey">#9f9f9f</color>
+    <color name="bwgrey">#d0d0d0</color>
     <color name="ltgreen">#d3fab7</color>
     <color name="ltred">#f99898</color>
     <color name="vltred">#f4c3c3</color>
