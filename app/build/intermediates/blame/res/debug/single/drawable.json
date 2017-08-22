@@ -4,12 +4,12 @@
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\e2dcd7b36979f1aab824f420e82e1f5d50f058a6\\output\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
     },
     {
-        "merged": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
-        "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\drawable\\abc_vector_test.xml"
-    },
-    {
         "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tt.png",
         "source": "D:\\Github\\ansm\\app\\src\\main\\res\\drawable\\tt.png"
+    },
+    {
+        "merged": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sports.xml",
@@ -144,12 +144,12 @@
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_listsportsreg.xml",
-        "source": "D:\\Github\\ansm\\app\\src\\main\\res\\drawable\\bottom_listsportsreg.xml"
-    },
-    {
         "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_listsportsreg.xml",
+        "source": "D:\\Github\\ansm\\app\\src\\main\\res\\drawable\\bottom_listsportsreg.xml"
     },
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\editcontent_bottom.xml",
@@ -212,20 +212,20 @@
         "source": "D:\\Github\\ansm\\app\\src\\main\\res\\drawable\\logout.png"
     },
     {
-        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
-    },
-    {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_dark.xml",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\46c3627bff41abd275d5742e9d7a5f34a1cc443e\\output\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\register_button_shape.xml",
-        "source": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\src\\main\\res\\drawable\\register_button_shape.xml"
+        "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\harsh\\.android\\build-cache\\c871c90fea31021ace0968c3a8b1b909e0e04790\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "C:\\Github\\NUSSPORTSMATCH\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "C:\\Users\\Harsh Goel\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\register_button_shape.xml",
+        "source": "D:\\Github\\NusSportsMatch\\Application-NusSportsMatch\\app\\src\\main\\res\\drawable\\register_button_shape.xml"
     },
     {
         "merged": "D:\\Github\\ansm\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",

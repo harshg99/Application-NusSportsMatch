@@ -1,13 +1,21 @@
 package com.example.harshgoel.nussportsmatch.Rate_Others;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.example.harshgoel.nussportsmatch.AppLoginPage;
 import com.example.harshgoel.nussportsmatch.Logic.Game;
+import com.example.harshgoel.nussportsmatch.Logic.ratings;
+import com.example.harshgoel.nussportsmatch.ProfileDataPackage.handlephoto;
 import com.example.harshgoel.nussportsmatch.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -25,62 +33,6 @@ import java.util.List;
 
 public class ViewRate extends AppCompatActivity {
 
-    public class ratings{
-        private float awarevalue;
-        private float fitvalue;
-        private float skill4value;
-        private float skill1value;
-        private float skill3value;
-        private float skill2value;
-
-        public float getAwarevalue() {
-            return awarevalue;
-        }
-
-        public void setAwarevalue(float awarevalue) {
-            this.awarevalue = awarevalue;
-        }
-
-        public float getFitvalue() {
-            return fitvalue;
-        }
-
-        public void setFitvalue(float fitvalue) {
-            this.fitvalue = fitvalue;
-        }
-
-        public float getSkill4value() {
-            return skill4value;
-        }
-
-        public void setSkill4value(float skill4value) {
-            this.skill4value = skill4value;
-        }
-
-        public float getSkill1value() {
-            return skill1value;
-        }
-
-        public void setSkill1value(float skill1value) {
-            this.skill1value = skill1value;
-        }
-
-        public float getSkill3value() {
-            return skill3value;
-        }
-
-        public void setSkill3value(float skill3value) {
-            this.skill3value = skill3value;
-        }
-
-        public float getSkill2value() {
-            return skill2value;
-        }
-
-        public void setSkill2value(float skill2value) {
-            this.skill2value = skill2value;
-        }
-    }
     public TextView rating_awareness;
     public TextView rating_skill4;
     public TextView rating_skill1;
@@ -112,6 +64,12 @@ public class ViewRate extends AppCompatActivity {
         sport=getIntent().getStringExtra("sport");
         Gamekey=getIntent().getStringExtra("GameID");
         assignskilltext();
+
+        Toolbar k=(Toolbar)findViewById(R.id.q_bar);
+        k.setTitle(sport.toUpperCase());
+        setSupportActionBar(k);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         rating_awareness=(TextView)findViewById(R.id.awarerating) ;
@@ -150,19 +108,35 @@ public class ViewRate extends AppCompatActivity {
                     ref_uid=game.getPlayer1id();
                 }
                 DatabaseReference dataref=userref.child(ref_uid);
-                dataref.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        ratings rating=dataSnapshot.getValue(ratings.class);
-                        setFields(rating);
+                if(dataref!=null) {
+                    dataref.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            ratings rating = dataSnapshot.getValue(ratings.class);
+                            if(rating!=null) {
+                                setFields(rating);
+                            }
+                            else{
+                                AlertDialog.Builder notice=new AlertDialog.Builder(ViewRate.this);
+                                notice.setTitle("Guide");
+                                notice.setMessage(" You have not been rated yet.")
+                                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                dialog.cancel();
+                                            }
+                                        });
+                                notice.create().show();
+                            }
 
-                    }
+                        }
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
 
-                    }
-                });
+                        }
+                    });
+                }
 
             }
 
@@ -205,5 +179,18 @@ public class ViewRate extends AppCompatActivity {
         skill3.setEnabled(false);
         skill2.setEnabled(false);
         fitnessrating.setEnabled(false);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                Intent c = new Intent(ViewRate.this, AppLoginPage.class);
+                startActivity(c);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }

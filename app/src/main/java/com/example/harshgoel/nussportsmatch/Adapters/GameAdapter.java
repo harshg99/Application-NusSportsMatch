@@ -9,6 +9,9 @@ import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +30,7 @@ import com.example.harshgoel.nussportsmatch.Logic.Player;
 import com.example.harshgoel.nussportsmatch.ProfileDataPackage.Questionaire;
 import com.example.harshgoel.nussportsmatch.R;
 import com.example.harshgoel.nussportsmatch.Rate_Others.Rate;
+import com.example.harshgoel.nussportsmatch.Rate_Others.ViewRate;
 import com.google.android.gms.common.api.BooleanResult;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -72,6 +76,7 @@ public class GameAdapter extends ArrayAdapter<Game> {
         final ImageView imageprofile =(ImageView) custom.findViewById(R.id.profilepic);
         String uid=null;
         final String UID;
+        final Player[] player = new Player[1];
         final Boolean isRate;
         Boolean israted=true;
         if(singlegame!=null) {
@@ -97,9 +102,31 @@ public class GameAdapter extends ArrayAdapter<Game> {
                 public void onDataChange(DataSnapshot dataSnapshot) {
 
                     Player userplayer=dataSnapshot.getValue(Player.class);
+                    player[0] =userplayer;
                     if(userplayer!=null) {
                         Log.d("Userplayer:", "Got the snapshot" + userplayer.getUserID());
-                        Contenttext.setText(userplayer.getName());
+
+                        String namep=userplayer.getName();
+                        String content1="Game with ";
+                        String content2=namep;
+                        String content3=" for ";
+                        String content4=singlegame.getSport();
+                        String content5=" on ";
+                        String content6=singlegame.getDate();
+                        String content7=" at ";
+                        String content8=singlegame.getTime();
+                        String content=content1+content2+content3+content4+content5+content6+content7+content8;
+                        Spannable sb = new SpannableString( content );
+                        sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD),content.indexOf(namep), content.indexOf(namep)+ content2.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE); //bold
+                        sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD),content.indexOf(content4), content.indexOf(content4)+ content4.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD),content.indexOf(content6), content.indexOf(content6)+ content6.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD),content.indexOf(content8), content.indexOf(content8)+ content8.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                        Contenttext.setText(sb);
+
+
+
+
                         Log.d("Name: "+position, userplayer.getName());
                         if (userplayer.getProfilephoto().isEmpty()) {
                             if (userplayer.getGender().equals("Male")) {
@@ -138,8 +165,8 @@ public class GameAdapter extends ArrayAdapter<Game> {
                         .setData(CalendarContract.Events.CONTENT_URI)
                         .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, singlegame.getDatetimemillis())
                         .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, singlegame.getDatetimemillis()+3600000)
-                        .putExtra(CalendarContract.Events.TITLE, singlegame.getSport()+" with "+Contenttext.getText())
-                        .putExtra(CalendarContract.Events.DESCRIPTION, "Game with "+Contenttext.getText())
+                        .putExtra(CalendarContract.Events.TITLE, singlegame.getSport()+" with "+player[0].getName())
+                        .putExtra(CalendarContract.Events.DESCRIPTION, Contenttext.getText())
                         .putExtra(CalendarContract.Events.EVENT_LOCATION,singlegame.getSport()+"Court" )
                         .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY)
                         .putExtra(Intent.EXTRA_EMAIL, auth.getCurrentUser().getEmail());
@@ -194,6 +221,12 @@ public class GameAdapter extends ArrayAdapter<Game> {
         viewrate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                activity.finish();
+                Intent intent = new Intent().setClass(context, ViewRate.class);
+                intent.putExtra("sport", sport.get(position).toLowerCase());
+                intent.putExtra("Skills", sportskills.get(sport.get(position)));
+                intent.putExtra("GameID", singlegame.getKey());
+                context.startActivity(intent);
 
             }
         });

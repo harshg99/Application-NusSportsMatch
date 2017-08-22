@@ -10,6 +10,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -22,6 +23,7 @@ import com.example.harshgoel.nussportsmatch.Logic.Player;
 import com.example.harshgoel.nussportsmatch.Logic.Rating;
 import com.example.harshgoel.nussportsmatch.Logic.RatingCount;
 import com.example.harshgoel.nussportsmatch.ProfileDataPackage.Questionaire;
+import com.example.harshgoel.nussportsmatch.ProfileDataPackage.handlephoto;
 import com.example.harshgoel.nussportsmatch.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -69,6 +71,7 @@ public class Rate extends AppCompatActivity{
     private DatabaseReference ref_count;
     private DatabaseReference ref_game;
     private RatingCount counts;
+    private Game game;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,6 +110,8 @@ public class Rate extends AppCompatActivity{
         Toolbar k=(Toolbar)findViewById(R.id.q_bar);
         k.setTitle(sport.toUpperCase());
         setSupportActionBar(k);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         auth=FirebaseAuth.getInstance();
@@ -140,6 +145,18 @@ public class Rate extends AppCompatActivity{
 
             }
         });
+        ref_game.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                game=dataSnapshot.getValue(Game.class);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
 
         AlertDialog.Builder info=new AlertDialog.Builder(Rate.this);
         info.setMessage("This is an assessment of your partner's skill in the sport.Please assess wisely as it determines"+
@@ -270,7 +287,6 @@ public class Rate extends AppCompatActivity{
     }
     public void Set(View V){
         double skillvalue=(skill1value+skill2value+skill3value+skill4value)/4;
-        setRating();
         if(sport.equals("tennis")) {
             int currentcount=counts.getTenniscount();
             Rating rating=new Rating();
@@ -310,7 +326,15 @@ public class Rate extends AppCompatActivity{
         }
         userref.setValue(userplayer);
         ref_count.setValue(counts);
-        ref_game.child()
+        if(game.getPlayer1id().equals(auth.getCurrentUser().getUid())){
+            game.setRatingotherplayer1(true);
+            ref_game.child("ratingotherplayer1").setValue(true);
+        }
+        else {
+            game.setRatingotherplayer2(true);
+            ref_game.child("ratingotherplayer2").setValue(true);
+        }
+        setRating();
         Intent k=new Intent().setClass(this, AppLoginPage.class);
         startActivity(k);
         this.finish();
@@ -319,11 +343,11 @@ public class Rate extends AppCompatActivity{
     //the rating that is parsed from the current user should be displayed to the other user
     public void setRating(){
         ref_game.child(auth.getCurrentUser().getUid()).child("awarevalue").setValue(awarevalue);
-        ref_game.child(auth.getCurrentUser().getUid()).child("fitvalue").setValue(awarevalue);
-        ref_game.child(auth.getCurrentUser().getUid()).child("skill1value").setValue(awarevalue);
-        ref_game.child(auth.getCurrentUser().getUid()).child("skill2value").setValue(awarevalue);
-        ref_game.child(auth.getCurrentUser().getUid()).child("skill3value").setValue(awarevalue);
-        ref_game.child(auth.getCurrentUser().getUid()).child("skill4value").setValue(awarevalue);
+        ref_game.child(auth.getCurrentUser().getUid()).child("fitvalue").setValue(fitvalue);
+        ref_game.child(auth.getCurrentUser().getUid()).child("skill1value").setValue(skill1value);
+        ref_game.child(auth.getCurrentUser().getUid()).child("skill2value").setValue(skill2value);
+        ref_game.child(auth.getCurrentUser().getUid()).child("skill3value").setValue(skill3value);
+        ref_game.child(auth.getCurrentUser().getUid()).child("skill4value").setValue(skill4value);
 
     }
     public void note(View v){
@@ -384,5 +408,18 @@ public class Rate extends AppCompatActivity{
         }
 
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                Intent c = new Intent(Rate.this, AppLoginPage.class);
+                startActivity(c);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }
