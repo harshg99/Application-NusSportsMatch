@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -59,7 +60,7 @@ public class Fragment_game extends Fragment{
                         }
                     }
                 }
-
+                Collections.reverse(games);
                 if(getActivity()!=null){
                     listview.setAdapter(new GameAdapter(getContext(),games,getActivity()));
                 }

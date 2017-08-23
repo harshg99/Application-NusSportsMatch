@@ -87,24 +87,26 @@ public class ChatBarAdapter extends ArrayAdapter<chatbar> {
                             Log.d("Userplayer:", "Got the snapshot" + userplayer.getUserID());
                             nametext.setText(userplayer.getName());
                             Log.d("Name:::", userplayer.getName());
-                            if (userplayer.getProfilephoto().isEmpty()) {
-                                if (userplayer.getGender().equals("Male")) {
-                                    imageprofile.setImageDrawable(context.getResources().getDrawable(R.drawable.male));
-                                    imageprofile.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                                } else {
-                                    imageprofile.setImageDrawable(context.getResources().getDrawable(R.drawable.female));
-                                    imageprofile.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                                }
-                            } else {
-                                StorageReference storref = FirebaseStorage.getInstance().getReference().child("Photos").child(uid);
-                                storref.child(userplayer.getProfilephoto()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                    @Override
-                                    public void onSuccess(Uri uri) {
-                                        Picasso.with(context).load(uri).fit().into(imageprofile);
+                            if (userplayer.getProfilephoto() != null) {
+                                if (userplayer.getProfilephoto().isEmpty()) {
+                                    if (userplayer.getGender().equals("Male")) {
+                                        imageprofile.setImageDrawable(context.getResources().getDrawable(R.drawable.male));
+                                        imageprofile.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                                    } else {
+                                        imageprofile.setImageDrawable(context.getResources().getDrawable(R.drawable.female));
+                                        imageprofile.setScaleType(ImageView.ScaleType.CENTER_CROP);
                                     }
-                                });
-                            }
+                                } else {
+                                    StorageReference storref = FirebaseStorage.getInstance().getReference().child("Photos").child(uid);
+                                    storref.child(userplayer.getProfilephoto()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            Picasso.with(context).load(uri).fit().into(imageprofile);
+                                        }
+                                    });
+                                }
 
+                            }
                         }
 
                     }

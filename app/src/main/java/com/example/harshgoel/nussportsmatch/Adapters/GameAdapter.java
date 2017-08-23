@@ -79,6 +79,7 @@ public class GameAdapter extends ArrayAdapter<Game> {
         final Player[] player = new Player[1];
         final Boolean isRate;
         Boolean israted=true;
+
         if(singlegame!=null) {
 
 
@@ -91,6 +92,9 @@ public class GameAdapter extends ArrayAdapter<Game> {
                 uid=singlegame.getPlayer1id();
                 israted=singlegame.isRatingotherplayer2();
 
+            }
+            if(israted){
+                custom.setBackgroundColor(context.getResources().getColor(R.color.ltgrey));
             }
 
 

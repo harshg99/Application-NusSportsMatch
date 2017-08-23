@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7f795f4-96b9-49e9-8ae5-fa01443b041d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/ratings.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate$ratings.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
@@ -21,6 +19,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter$1$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter$2.class" />
@@ -29,8 +32,40 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationSent.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/NotificationSent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/register_new_sportsAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Adapters/register_new_sportsAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/AppLoginPage$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/AppLoginPage$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/AppLoginPage$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/AppLoginPage$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/AppLoginPage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/AppLoginPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Chats/ChatMessageActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Chats/ChatMessageActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Chats/ChatMessageActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Chats/ChatMessageActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match$7$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match$7$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match$checkfields.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match$checkfields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/ProfileDataPackage/EditProfile.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/ProfileDataPackage/EditProfile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/ProfileDataPackage/Questionaire.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/ProfileDataPackage/Questionaire.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/ProfileDataPackage/setSports.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/ProfileDataPackage/setSports.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$mipmap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/R$xml.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$11.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$4.class" />
@@ -40,25 +75,39 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/Rate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Service/NotificationService$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Service/NotificationService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Service/NotificationService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/Service/NotificationService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/ThisApplication.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/harshgoel/nussportsmatch/ThisApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/RPTkkRplNpIDmxsUqDZAbk5vvs8=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/RPTkkRplNpIDmxsUqDZAbk5vvs8=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_03828f489c918ed3be1b0c32453a887f502d2064.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_03828f489c918ed3be1b0c32453a887f502d2064.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/harshgoel/nussportsmatch/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/harshgoel/nussportsmatch/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/games_item_list.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/games_item_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/profilelogin.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/profilelogin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/AppLoginPage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/AppLoginPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Chats/ChatMessageActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Chats/ChatMessageActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/Rate.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/Rate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/games_item_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/games_item_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Service/NotificationService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Service/NotificationService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThisApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThisApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/profilelogin.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/profilelogin.xml" />
     </list>
     <ignored path="nussportsmatch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,12 +142,9 @@
       <file leaf-file-name="GameAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1419">
-              <caret line="168" column="71" selection-start-line="168" selection-start-column="71" selection-end-line="168" selection-end-column="71" />
-              <folding>
-                <element signature="e#10902#11403#0" expanded="true" />
-                <element signature="e#11402#11403#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="572">
+              <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,51 +152,61 @@
       <file leaf-file-name="Fragment_game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+            <state relative-caret-position="968">
+              <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fragment_chats.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_chats.java">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="60" />
+            <state relative-caret-position="597">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotificationRecieve.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="107" column="182" selection-start-line="93" selection-start-column="16" selection-end-line="107" selection-end-column="182" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Questionaire.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ProfileDataPackage/Questionaire.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
-              <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="105" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rate.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Rate.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/Rate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="365" column="31" selection-start-line="365" selection-start-column="31" selection-end-line="365" selection-end-column="31" />
+            <state relative-caret-position="627">
+              <caret line="130" column="53" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chatmessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Chats/chatmessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatMessageActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Chats/ChatMessageActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="113" column="50" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppLoginPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/AppLoginPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,8 +214,8 @@
       <file leaf-file-name="ViewRate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1459">
-              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+            <state relative-caret-position="125">
+              <caret line="172" column="59" selection-start-line="172" selection-start-column="59" selection-end-line="172" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,36 +223,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ratings.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/ratings.java">
+      <file leaf-file-name="Fragment_match.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state relative-caret-position="616">
+              <caret line="366" column="25" selection-start-line="366" selection-start-column="25" selection-end-line="366" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="handlephoto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ProfileDataPackage/handlephoto.java">
+      <file leaf-file-name="profilelogin.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/profilelogin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="149" column="5" selection-start-line="137" selection-start-column="4" selection-end-line="149" selection-end-column="5" />
+            <state relative-caret-position="132">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="games_item_list.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/games_item_list.xml">
           <provider editor-type-id="android-designer2">
             <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -2228,20 +2274,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ListViewReplacement.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Chats/chatbar.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/notifications.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/recieved_requests.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/request_sent2.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/NotificationSent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/AppLoginPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/NotificationBroadcastReciever/RestartNotificationService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/sports.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/messageother.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/messagethisuser.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThreadsForApp/ChatsMessages.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Chats/ChatMessageActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/ChatMessageAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/chats_message.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_chats.xml" />
@@ -2251,7 +2293,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/chat_barlist.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/divider_chats.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_chats.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThreadsForApp/requests.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThreadsForApp/requests_s.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThreadsForApp/requests_r.java" />
@@ -2263,22 +2304,27 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/RatingCount.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/SignUp.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/Request.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/Game.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThisApplication.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_calendar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Service/NotificationService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThreadsForApp/game_sync.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ProfileDataPackage/Questionaire.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/ratings.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/Rate.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/games_item_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThisApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Service/NotificationService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/SignIn.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/profilelogin.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/AppLoginPage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Chats/ChatMessageActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/Rate.java" />
       </list>
     </option>
   </component>
@@ -2313,10 +2359,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane />
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2407,6 +2454,28 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansm" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nussportsmatch" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Rate_Others" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2442,18 +2511,127 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nussportsmatch" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansm" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nussportsmatch" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansm" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nussportsmatch" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Connection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansm" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nussportsmatch" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansm" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nussportsmatch" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adapters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansm" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="device.picker.selection" value="Nexus_5X_API_24_2" />
+    <property name="device.picker.selection" value="Nexus_5X_API_24 Nexus_5X_API_24_2" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
@@ -2824,7 +3002,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3164706" sideWeight="0.4908397" order="7" side_tool="false" content_ui="tabs" />
@@ -2840,7 +3018,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22287862" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22287862" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2898,74 +3076,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/ProfileTabLayoutAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/SecurityAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chat_barlist.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThreadsForApp/requests_s.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/notifications.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/request_recieved.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/request_recieved.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/recieved_requests.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/recieved_requests.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/send.png">
@@ -2979,57 +3117,50 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/questionaire.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_child_sportsreg_layout.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_child_sportsreg_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chats.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chats.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="531">
           <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chats_display.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chats_display.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/listviewdesign.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/SignUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="265" column="26" selection-start-line="265" selection-start-column="26" selection-end-line="265" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -3044,20 +3175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThisApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Service/NotificationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3082,13 +3199,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_calendar.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThreadsForApp/Init_aboutyou_background.java">
@@ -3148,40 +3265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/ChatMessageAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="130" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="34" />
-          <folding>
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/register_new_sportsAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1342">
@@ -3211,7 +3294,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ProfileDataPackage/handlephoto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
+        <state relative-caret-position="2486">
           <caret line="149" column="5" selection-start-line="137" selection-start-column="4" selection-end-line="149" selection-end-column="5" />
           <folding />
         </state>
@@ -3219,75 +3302,179 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/ratings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="154">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1459">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/Rate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="365" column="31" selection-start-line="365" selection-start-column="31" selection-end-line="365" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="107" column="182" selection-start-line="93" selection-start-column="16" selection-end-line="107" selection-end-column="182" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1419">
-          <caret line="168" column="71" selection-start-line="168" selection-start-column="71" selection-end-line="168" selection-end-column="71" />
-          <folding>
-            <element signature="e#10902#11403#0" expanded="true" />
-            <element signature="e#11402#11403#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/games_item_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/ThisApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        <state relative-caret-position="267">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/NotificationRecieve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1210">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/ChatBarAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="90" column="77" selection-start-line="90" selection-start-column="77" selection-end-line="90" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/ChatMessageAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_chats.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="60" />
+        <state relative-caret-position="484">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Connection/ConnectionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Service/NotificationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-667">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/SignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="125" column="8" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/SignIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="149" column="52" selection-start-line="149" selection-start-column="52" selection-end-line="149" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/profilelogin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/AppLoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_match.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="366" column="25" selection-start-line="366" selection-start-column="25" selection-end-line="366" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/ViewRate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="172" column="59" selection-start-line="172" selection-start-column="59" selection-end-line="172" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Chats/chatmessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Chats/ChatMessageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="113" column="50" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Logic/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Fragments/Fragment_game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Adapters/GameAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harshgoel/nussportsmatch/Rate_Others/Rate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="130" column="53" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

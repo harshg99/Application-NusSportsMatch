@@ -361,8 +361,10 @@ public class Fragment_match extends Fragment {
                         matchlist.setList();
                         progressDialog.cancel();
                     } else {
-                        Toast.makeText(getContext(), "Could not generate matches for the sport.", Toast.LENGTH_LONG).show();
-                        progressDialog.cancel();
+                        if(getContext()!=null) {
+                            Toast.makeText(getContext(), "Could not generate matches for the sport.", Toast.LENGTH_LONG).show();
+                            progressDialog.cancel();
+                        }
                     }
                 }
 

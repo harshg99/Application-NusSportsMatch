@@ -62,6 +62,7 @@ public class Rate extends AppCompatActivity{
     private float skill2value;
     private FirebaseAuth auth;
     private DatabaseReference userref;
+    private DatabaseReference userrefo;
     private Player userplayer;
     public List<Float> value;
     private String sport;
@@ -72,6 +73,8 @@ public class Rate extends AppCompatActivity{
     private DatabaseReference ref_game;
     private RatingCount counts;
     private Game game;
+    private String thisuid;
+    private Player player2;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,6 +124,9 @@ public class Rate extends AppCompatActivity{
         ref_game=FirebaseDatabase.getInstance().getReference().child("game");
         ref_game=ref_game.child(Gamekey);
         ref_count=ref_count.child(auth.getCurrentUser().getUid());
+        userrefo= FirebaseDatabase.getInstance().getReference();
+        thisuid=auth.getCurrentUser().getUid();
+
 
         ref_count.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -149,6 +155,27 @@ public class Rate extends AppCompatActivity{
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 game=dataSnapshot.getValue(Game.class);
+                String uid;
+                if(game.getPlayer1id().equals(thisuid)){
+                    uid=game.getPlayer2id();
+                }
+                else{
+                    uid=game.getPlayer1id();
+                }
+                userrefo=userrefo.child("users").child(uid);
+                userrefo.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        player2=dataSnapshot.getValue(Player.class);
+                        dialog.cancel();
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
             }
 
             @Override
@@ -290,38 +317,42 @@ public class Rate extends AppCompatActivity{
         if(sport.equals("tennis")) {
             int currentcount=counts.getTenniscount();
             Rating rating=new Rating();
-            rating.setRatingAwareness((userplayer.getTennis().getRating().getRatingAwareness()*currentcount+awarevalue)/(++currentcount));
-            rating.setRatingFitness((userplayer.getTennis().getRating().getRatingFitness()*currentcount+fitvalue)/(currentcount));
-            rating.setRatingSkill((userplayer.getTennis().getRating().getRatingSkill()*currentcount+skillvalue)/(currentcount));
-            userplayer.getTennis().setRating(rating);
+            rating.setRatingAwareness((player2.getTennis().getRating().getRatingAwareness()*currentcount+awarevalue)/(++currentcount));
+            rating.setRatingFitness((player2.getTennis().getRating().getRatingFitness()*currentcount+fitvalue)/(currentcount));
+            rating.setRatingSkill((player2.getTennis().getRating().getRatingSkill()*currentcount+skillvalue)/(currentcount));
+            rating.setRatingNetSkill();
+            player2.getTennis().setRating(rating);
             counts.setTenniscount(currentcount);
 
         }
         else if(sport.equals("squash")){
             int currentcount=counts.getSquashcount();
             Rating rating=new Rating();
-            rating.setRatingAwareness((userplayer.getSquash().getRating().getRatingAwareness()*currentcount+awarevalue)/(++currentcount));
-            rating.setRatingFitness((userplayer.getSquash().getRating().getRatingFitness()*currentcount+fitvalue)/(currentcount));
-            rating.setRatingSkill((userplayer.getSquash().getRating().getRatingSkill()*currentcount+skillvalue)/(currentcount));
-            userplayer.getSquash().setRating(rating);
+            rating.setRatingAwareness((player2.getSquash().getRating().getRatingAwareness()*currentcount+awarevalue)/(++currentcount));
+            rating.setRatingFitness((player2.getSquash().getRating().getRatingFitness()*currentcount+fitvalue)/(currentcount));
+            rating.setRatingSkill((player2.getSquash().getRating().getRatingSkill()*currentcount+skillvalue)/(currentcount));
+            rating.setRatingNetSkill();
+            player2.getSquash().setRating(rating);
             counts.setSquashcount(currentcount);
         }
         else if(sport.equals("badminton")){
             int currentcount=counts.getBadmintoncount();
             Rating rating=new Rating();
-            rating.setRatingAwareness((userplayer.getBadminton().getRating().getRatingAwareness()*currentcount+awarevalue)/(++currentcount));
-            rating.setRatingFitness((userplayer.getBadminton().getRating().getRatingFitness()*currentcount+fitvalue)/(currentcount));
-            rating.setRatingSkill((userplayer.getBadminton().getRating().getRatingSkill()*currentcount+skillvalue)/(currentcount));
-            userplayer.getBadminton().setRating(rating);
+            rating.setRatingAwareness((player2.getBadminton().getRating().getRatingAwareness()*currentcount+awarevalue)/(++currentcount));
+            rating.setRatingFitness((player2.getBadminton().getRating().getRatingFitness()*currentcount+fitvalue)/(currentcount));
+            rating.setRatingSkill((player2.getBadminton().getRating().getRatingSkill()*currentcount+skillvalue)/(currentcount));
+            rating.setRatingNetSkill();
+            player2.getBadminton().setRating(rating);
             counts.setBadmintoncount(currentcount);
         }
         else if(sport.equals("tt")) {
             int currentcount=counts.getTtcount();
             Rating rating=new Rating();
-            rating.setRatingAwareness((userplayer.getTt().getRating().getRatingAwareness()*currentcount+awarevalue)/(++currentcount));
-            rating.setRatingFitness((userplayer.getTt().getRating().getRatingFitness()*currentcount+fitvalue)/(currentcount));
-            rating.setRatingSkill((userplayer.getTt().getRating().getRatingSkill()*currentcount+skillvalue)/(currentcount));
-            userplayer.getTt().setRating(rating);
+            rating.setRatingAwareness((player2.getTt().getRating().getRatingAwareness()*currentcount+awarevalue)/(++currentcount));
+            rating.setRatingFitness((player2.getTt().getRating().getRatingFitness()*currentcount+fitvalue)/(currentcount));
+            rating.setRatingSkill((player2.getTt().getRating().getRatingSkill()*currentcount+skillvalue)/(currentcount));
+            rating.setRatingNetSkill();
+            player2.getTt().setRating(rating);
             counts.setTtcount(currentcount);
         }
         userref.setValue(userplayer);

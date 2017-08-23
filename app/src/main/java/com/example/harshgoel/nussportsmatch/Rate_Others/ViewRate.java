@@ -168,10 +168,10 @@ public class ViewRate extends AppCompatActivity {
         rating_skill3.setText(rating.getSkill3value()+"/5.00");
 
         awarerating.setProgress((int)rating.getAwarevalue()*20);
-        skill1.setProgress((int)rating.getSkill1value());
-        skill4.setProgress((int)rating.getSkill4value());
-        skill3.setProgress((int)rating.getSkill3value());
-        skill2.setProgress((int)rating.getSkill2value());
+        skill1.setProgress((int)rating.getSkill1value()*20);
+        skill4.setProgress((int)rating.getSkill4value()*20);
+        skill3.setProgress((int)rating.getSkill3value()*20);
+        skill2.setProgress((int)rating.getSkill2value()*20);
         fitnessrating.setProgress((int)rating.getFitvalue()*20) ;
         awarerating.setEnabled(false);
         skill4.setEnabled(false);

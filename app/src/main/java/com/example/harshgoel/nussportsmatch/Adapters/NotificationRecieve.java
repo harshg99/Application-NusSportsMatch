@@ -102,11 +102,13 @@ public class NotificationRecieve extends ArrayAdapter<Request> {
                 String content8=singlereq.getTime();
                 String content=content1+content2+content3+content4+content5+content6+content7+content8;
                 Spannable sb = new SpannableString( content );
-                sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD),content.indexOf(namep), content.indexOf(namep)+ content2.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE); //bold
-                sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD),content.indexOf(content4), content.indexOf(content4)+ content4.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD),content.indexOf(content6), content.indexOf(content6)+ content6.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD),content.indexOf(content8), content.indexOf(content8)+ content8.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                Textcontent.setText(sb);
+                if(content2!=null) {
+                    sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), content.indexOf(content2), content.indexOf(namep) + content2.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE); //bold
+                    sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), content.indexOf(content4), content.indexOf(content4) + content4.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), content.indexOf(content6), content.indexOf(content6) + content6.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    sb.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), content.indexOf(content8), content.indexOf(content8) + content8.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    Textcontent.setText(sb);
+                }
                 setSport(((ImageView)custom.findViewById(R.id.imageView3)),singlereq);
 
             }

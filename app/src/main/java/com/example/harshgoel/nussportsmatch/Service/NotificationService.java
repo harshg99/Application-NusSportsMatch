@@ -47,7 +47,9 @@ public class NotificationService extends Service {
                     Request newreq = dataSnapshot.getValue(Request.class);
                     String name = newreq.namesender;
                     if (newreq.getPlayerrecievedID().equals(accountuid)) {
-                        notification(name);
+                        if(newreq.accepted!=0) {
+                            notification(name);
+                        }
                     }
                 }
 

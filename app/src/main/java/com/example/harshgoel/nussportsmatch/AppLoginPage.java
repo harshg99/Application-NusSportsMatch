@@ -16,9 +16,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import com.example.harshgoel.nussportsmatch.Adapters.ProfileTabLayoutAdapter;
 
+import com.example.harshgoel.nussportsmatch.Connection.ConnectionManager;
 import com.example.harshgoel.nussportsmatch.Service.NotificationService;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
@@ -56,6 +58,7 @@ public class AppLoginPage extends AppCompatActivity {
 
         tool_bar=(Toolbar)findViewById(R.id.profile_bar);
         setSupportActionBar(tool_bar);
+        RelativeLayout layout=(RelativeLayout)findViewById(R.id.ProfileLoginlayout);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         tab_layout=(TabLayout)findViewById(R.id.profile_tab);
@@ -63,6 +66,8 @@ public class AppLoginPage extends AppCompatActivity {
         pager.setAdapter(new ProfileTabLayoutAdapter(getSupportFragmentManager(),AppLoginPage.this));
         pager.setCurrentItem(2);
         tab_layout.setupWithViewPager(pager);
+
+        new ConnectionManager(layout,AppLoginPage.this).execute();
     }
 
     @Override

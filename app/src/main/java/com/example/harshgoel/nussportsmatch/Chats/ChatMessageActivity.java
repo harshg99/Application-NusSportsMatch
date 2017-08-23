@@ -95,20 +95,23 @@ public class ChatMessageActivity extends AppCompatActivity {
         });
 
     }
+    private List<chatmessage> messagelist;
 
     private void initialisechatmessages(){
         DatabaseReference ref2=ref.child(key).child("messages");
-        final List<chatmessage> messagelist=new ArrayList<>();
+
         ref2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.d("Count: ", "" + dataSnapshot.getChildrenCount());
+                messagelist=new ArrayList<chatmessage>();
                 for(DataSnapshot chat : dataSnapshot.getChildren()){
                     chatmessage message=chat.getValue(chatmessage.class);
                     messagelist.add(message);
                 }
                 if(messagelist.size()!=0) {
                     ChatMessageAdapter adapter = new ChatMessageAdapter(ChatMessageActivity.this,messagelist, auth);
+                    chatsalllist.setAdapter(null);
                     chatsalllist.setAdapter(adapter);
                     chatsalllist.setSelection(adapter.getCount() - 1);
                 }

@@ -21,6 +21,7 @@ public class ThisApplication extends Application {
         super.onCreate();
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         FirebaseAuth author=FirebaseAuth.getInstance();
+        //author.signOut();
         if(!isNotificationServiceRunning(NotificationService.class)) {
             if(author!=null && author.getCurrentUser()!=null) {
                 Intent intent = new Intent(this, NotificationService.class);
